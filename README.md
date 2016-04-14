@@ -1,7 +1,7 @@
 # webAppsFinalProject
 This is the Web Apps Final Project.
 
-Candy Website (Title Pending)
+Campus Book Marketplace
 Group: Colin Gallaway, Jeanmarie Metelus Jr., Christopher Chiang
 
 4/11 
