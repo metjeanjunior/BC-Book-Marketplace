@@ -182,3 +182,37 @@ insert into transaction (transaction_id, classBook_id, sender_id, reciever_id, t
 	values (9, 4, 9, null, now(), 'swap');
 insert into transaction (transaction_id, classBook_id, sender_id, reciever_id, transaction_date, transaction_type) 
 	values (10, 5, 10, null, now(), 'swap');
+
+#Buyer choosing a transaction:
+
+update transaction set reciever_id = 10;
+	insert into rent (rent_id, transaction_id, rent_status, rent_return_date)
+	values (1, 1, 'in progress', 10/25/30) 
+update transaction set reciever_id = 9;
+	insert into rent (rent_id, transaction_id, rent_status, rent_return_date)
+	values (2, 2, 'in progress', 10/25/30) 
+update transaction set reciever_id = 8;
+	insert into rent (rent_id, transaction_id, rent_status, rent_return_date)
+	values (3, 3, 'in progress', 10/25/30) 
+update transaction set reciever_id = 7;
+	insert into sell (sell_id, transaction_id, sell_status, sell_return_date)
+	values (4, 4, now()) 
+update transaction set reciever_id = 6;
+	insert into sell (sell_id, transaction_id, sell_status, sell_return_date)
+	values (5, 5, now()) 
+update transaction set reciever_id = 5;
+	insert into sell (sell_id, transaction_id, sell_status, sell_return_date)
+	values (6, 6, now()) 
+update transaction set reciever_id = 4;
+	insert into swap (swap_id, transaction_id, book2_id swap_status, swap_type, swap_return_date)
+	values (7, 7, 1, 'in progress', 'temp', 10/25/30) 
+update transaction set reciever_id = 3;
+	insert into swap (swap_id, transaction_id, book2_id swap_status, swap_type, swap_return_date)
+	values (8, 8, 2, 'in progress', 'temp', 10/25/30) 
+update transaction set reciever_id = 2;
+	insert into swap (swap_id, transaction_id, book2_id swap_status, swap_type, swap_return_date)
+	values (9, 9, 3, 'in progress', 'permanent', 10/25/30) 
+update transaction set reciever_id = 1;
+	insert into swap (swap_id, transaction_id, book2_id swap_status, swap_type, swap_return_date)
+	values (10, 10, 5, 'in progress', 'permanent', 10/25/30) 
+

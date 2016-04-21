@@ -124,12 +124,20 @@ create table swap
 (
 	swap_id int(3) auto_increment primary key,
 	transaction_id int,
-	book1_id int,
+	-- book1_id int,
 	book2_id int,
 	foreign key(transaction_id) references transaction(transaction_id),
 	foreign key(book1_id) references book(book_id),
 	foreign key(book2_id) references book(book_id),
-	swap_type set('temp', 'permanent') not null,
 	swap_status set('in progress', 'completed'),
+	swap_type set('temp', 'permanent') not null,
 	swap_return_date date
+);
+
+create table sell
+(
+	sell_id int(3) auto_increment primary key,
+	transaction_id int,
+	sell_date date;
+	foreign key(transaction_id) references transaction(transaction_id),
 );
