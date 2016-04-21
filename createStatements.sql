@@ -8,9 +8,11 @@ create table customer
 	customer_firstname varchar(256) not null,
 	customer_lastname varchar(256) not null,
 	customer_username varchar(256) not null unique,
-	customer_password varchar(256) not null,
+	customer_password varchar(256) not null, --sha1 encrypted
 	customer_date_joined timestamp not null
 );
+alter table customer
+	add customer_email varchar(256) not null;
 
 create table admin
 (
@@ -18,9 +20,11 @@ create table admin
 	admin_firstname varchar(256) not null,
 	admin_lastname varchar(256) not null,
 	admin_username varchar(256) not null unique,
-	admin_password varchar(256) not null,
+	admin_password varchar(256) not null,  --sha1 encrypted
 	admin_date_joined timestamp not null
 );
+alter table admin
+	add admin_email varchar(256) not null;
 
 create table professor
 (
