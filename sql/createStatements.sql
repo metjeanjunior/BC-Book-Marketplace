@@ -29,7 +29,7 @@ create table admin
 alter table admin
 	add admin_email varchar(256) not null;
 alter table admin 
-	change column customer_date_joined customer_date_joined timestamp after customer_email;
+	change column admin_date_joined admin_date_joined timestamp after admin_email;
 
 create table professor
 (

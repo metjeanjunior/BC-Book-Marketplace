@@ -24,7 +24,7 @@
 	    <td><a href="status" class="btn btn-primary btn-lg">Your Transactions</a></td>
 	  </tr>
 </table>
-	<img src="cat.jpeg">
-	<img src="dog.jpeg">
+	<img src="img/cat.jpeg">
+	<img src="img/dog.jpeg">
 </body>
 </html>
