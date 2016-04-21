@@ -1,750 +1,250 @@
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (1, 'Andrea', 'Barnes', '2/15/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (2, 'Robin', 'Medina', '9/13/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (3, 'Michelle', 'Mills', '5/7/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (4, 'Doris', 'Campbell', '5/20/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (5, 'Joyce', 'Gomez', '10/19/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (6, 'Pamela', 'Simpson', '11/21/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (7, 'Ashley', 'Grant', '10/6/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (8, 'Doris', 'Pierce', '12/31/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (9, 'Ronald', 'Webb', '10/9/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (10, 'Shawn', 'Bowman', '10/13/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (11, 'Terry', 'Kelley', '12/18/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (12, 'Donald', 'Bennett', '8/20/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (13, 'Sandra', 'Meyer', '2/16/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (14, 'Joan', 'Palmer', '8/23/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (15, 'Carlos', 'Henderson', '6/3/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (16, 'Anna', 'Ray', '1/7/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (17, 'Carol', 'Fields', '5/29/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (18, 'Lawrence', 'Burns', '12/8/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (19, 'Jonathan', 'Willis', '11/16/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (20, 'Jason', 'Andrews', '11/25/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (21, 'Sara', 'Howell', '3/23/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (22, 'Alice', 'Little', '5/7/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (23, 'Aaron', 'Fuller', '5/25/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (24, 'Rebecca', 'Lawson', '11/19/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (25, 'Karen', 'Thomas', '3/7/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (26, 'Anne', 'Morales', '11/16/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (27, 'Jimmy', 'Romero', '5/24/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (28, 'David', 'Owens', '5/24/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (29, 'Timothy', 'Brooks', '4/9/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (30, 'Carlos', 'Myers', '7/23/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (31, 'Craig', 'Cox', '6/30/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (32, 'Martin', 'Elliott', '9/22/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (33, 'James', 'Long', '3/29/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (34, 'Carol', 'Stephens', '8/9/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (35, 'Pamela', 'Garrett', '3/7/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (36, 'Daniel', 'Gray', '11/4/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (37, 'Maria', 'Elliott', '9/15/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (38, 'Janice', 'Morris', '3/1/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (39, 'Jack', 'Garza', '10/16/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (40, 'Margaret', 'Dunn', '6/4/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (41, 'Kenneth', 'Hart', '11/13/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (42, 'Margaret', 'Boyd', '10/1/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (43, 'Victor', 'Willis', '2/22/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (44, 'Robert', 'Hunt', '4/13/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (45, 'Kenneth', 'Franklin', '5/2/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (46, 'Dennis', 'Snyder', '7/9/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (47, 'Carl', 'Gordon', '6/9/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (48, 'Jeremy', 'Sanchez', '4/17/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (49, 'Barbara', 'Hunter', '4/24/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (50, 'Andrew', 'Flores', '5/1/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (51, 'Arthur', 'Snyder', '12/22/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (52, 'George', 'Marshall', '4/9/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (53, 'Keith', 'Snyder', '11/8/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (54, 'Fred', 'Bishop', '1/29/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (55, 'Joshua', 'Robinson', '5/21/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (56, 'Russell', 'Rice', '4/28/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (57, 'Billy', 'Ross', '7/25/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (58, 'Karen', 'Black', '9/24/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (59, 'Arthur', 'Andrews', '5/19/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (60, 'Teresa', 'Wood', '7/7/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (61, 'Larry', 'Payne', '2/2/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (62, 'Steve', 'Clark', '1/8/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (63, 'Nicole', 'Mason', '5/21/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (64, 'Philip', 'Nguyen', '5/16/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (65, 'Sandra', 'Lawrence', '1/29/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (66, 'Jonathan', 'Ferguson', '10/28/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (67, 'Billy', 'Kelly', '1/1/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (68, 'Angela', 'Simmons', '10/16/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (69, 'Douglas', 'Mcdonald', '1/21/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (70, 'Billy', 'Burke', '1/9/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (71, 'Peter', 'Campbell', '10/9/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (72, 'Paula', 'Cruz', '5/17/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (73, 'Anne', 'Garza', '11/21/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (74, 'Joyce', 'Martin', '11/18/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (75, 'Laura', 'Sanchez', '6/24/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (76, 'Johnny', 'Rivera', '10/25/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (77, 'Anna', 'Kennedy', '9/14/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (78, 'Teresa', 'Miller', '10/25/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (79, 'Amy', 'Harvey', '8/12/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (80, 'Jimmy', 'Flores', '12/7/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (81, 'Gary', 'Alvarez', '12/21/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (82, 'Debra', 'Webb', '8/23/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (83, 'Louise', 'Ferguson', '12/26/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (84, 'Debra', 'Bishop', '12/10/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (85, 'Karen', 'Wagner', '10/23/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (86, 'Scott', 'Howard', '4/6/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (87, 'Joseph', 'Wagner', '10/17/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (88, 'Dennis', 'Crawford', '6/8/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (89, 'Samuel', 'Hanson', '8/29/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (90, 'Joyce', 'Gray', '7/10/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (91, 'Joe', 'Lee', '10/11/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (92, 'Carlos', 'Hughes', '10/7/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (93, 'Tammy', 'Wells', '6/28/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (94, 'Aaron', 'Carroll', '12/6/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (95, 'William', 'Long', '7/9/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (96, 'Ruth', 'Hanson', '7/21/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (97, 'Helen', 'Richardson', '12/18/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (98, 'Judy', 'Coleman', '12/12/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (99, 'Margaret', 'Boyd', '7/19/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (100, 'Gloria', 'Sims', '9/3/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (101, 'Annie', 'Welch', '4/24/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (102, 'Kathy', 'Hicks', '8/12/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (103, 'Gary', 'Riley', '4/8/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (104, 'Amy', 'Wells', '4/17/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (105, 'Robin', 'Burton', '4/7/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (106, 'Keith', 'Baker', '4/24/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (107, 'Brenda', 'Coleman', '1/4/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (108, 'Lisa', 'Martinez', '8/17/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (109, 'Steve', 'Hunter', '9/25/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (110, 'Richard', 'Kennedy', '4/22/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (111, 'Tina', 'Flores', '9/25/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (112, 'Ryan', 'Ortiz', '8/21/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (113, 'Donna', 'Flores', '1/13/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (114, 'Steven', 'Olson', '2/22/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (115, 'Marie', 'Butler', '1/30/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (116, 'Robin', 'Rose', '8/19/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (117, 'Eric', 'Kelly', '3/18/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (118, 'Paul', 'Watson', '8/29/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (119, 'Lori', 'Hughes', '9/25/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (120, 'Michelle', 'Scott', '12/1/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (121, 'Shawn', 'Day', '4/15/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (122, 'Gary', 'Sanchez', '3/23/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (123, 'Frances', 'Burns', '7/15/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (124, 'Mark', 'Fuller', '4/16/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (125, 'Craig', 'Morrison', '8/14/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (126, 'Debra', 'Carr', '7/8/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (127, 'Michelle', 'Morgan', '7/27/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (128, 'Bonnie', 'Martinez', '10/25/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (129, 'Arthur', 'Matthews', '7/17/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (130, 'David', 'Campbell', '11/12/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (131, 'Matthew', 'Gomez', '9/1/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (132, 'Ashley', 'Welch', '1/30/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (133, 'Jennifer', 'Parker', '7/18/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (134, 'Brandon', 'Porter', '12/13/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (135, 'Douglas', 'Murphy', '2/2/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (136, 'Joan', 'Mccoy', '9/1/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (137, 'Brian', 'Duncan', '8/22/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (138, 'Joe', 'Weaver', '1/3/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (139, 'Timothy', 'Stewart', '5/4/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (140, 'Antonio', 'Fuller', '10/6/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (141, 'Jimmy', 'Bowman', '8/18/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (142, 'Jonathan', 'Brown', '5/20/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (143, 'Louis', 'Butler', '3/18/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (144, 'Dorothy', 'Bennett', '5/13/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (145, 'Philip', 'Perry', '11/7/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (146, 'Craig', 'Nelson', '5/28/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (147, 'Earl', 'Bowman', '1/14/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (148, 'Eugene', 'Kelley', '1/2/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (149, 'Matthew', 'Bailey', '7/22/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (150, 'Justin', 'Long', '4/15/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (151, 'Raymond', 'Dean', '9/20/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (152, 'Matthew', 'Stevens', '4/2/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (153, 'Donna', 'Carter', '10/23/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (154, 'Jason', 'Torres', '1/26/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (155, 'Donald', 'Bowman', '5/6/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (156, 'Ann', 'Murphy', '7/20/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (157, 'Jimmy', 'Bryant', '12/16/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (158, 'Aaron', 'Perez', '2/24/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (159, 'Ann', 'Alvarez', '1/11/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (160, 'Jonathan', 'Castillo', '12/18/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (161, 'Gary', 'Franklin', '5/15/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (162, 'Henry', 'Gomez', '2/13/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (163, 'Diana', 'Fuller', '7/28/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (164, 'Phillip', 'Perkins', '12/17/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (165, 'Andrea', 'Patterson', '12/1/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (166, 'Louis', 'Hicks', '1/12/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (167, 'Jennifer', 'Nichols', '7/24/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (168, 'Christopher', 'Cox', '10/26/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (169, 'Tammy', 'Burns', '3/23/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (170, 'Michael', 'Garza', '9/17/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (171, 'Wanda', 'Graham', '8/12/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (172, 'Lois', 'Nguyen', '6/21/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (173, 'Cynthia', 'Mcdonald', '2/21/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (174, 'Julie', 'Bowman', '5/12/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (175, 'Lisa', 'Jenkins', '12/7/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (176, 'Mark', 'Collins', '7/14/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (177, 'Mildred', 'Sullivan', '6/17/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (178, 'Catherine', 'Powell', '9/6/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (179, 'Jose', 'Green', '12/5/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (180, 'Sharon', 'Bell', '5/1/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (181, 'Patrick', 'Thomas', '11/24/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (182, 'Eric', 'Mendoza', '3/13/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (183, 'Cheryl', 'Henry', '11/21/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (184, 'Arthur', 'Warren', '10/17/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (185, 'Gloria', 'Dean', '6/22/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (186, 'Terry', 'Coleman', '1/11/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (187, 'Walter', 'Morris', '8/22/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (188, 'Maria', 'Davis', '9/15/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (189, 'Theresa', 'Freeman', '4/19/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (190, 'Jerry', 'Watson', '8/24/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (191, 'Christina', 'Edwards', '11/4/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (192, 'Aaron', 'Butler', '3/29/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (193, 'Anna', 'Banks', '7/11/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (194, 'Robert', 'Edwards', '7/15/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (195, 'Fred', 'Robinson', '7/27/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (196, 'Michael', 'Fuller', '12/10/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (197, 'Joshua', 'Meyer', '2/26/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (198, 'Ruth', 'Richardson', '5/5/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (199, 'Christine', 'Black', '6/19/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (200, 'Paul', 'Jenkins', '2/3/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (201, 'Daniel', 'Romero', '8/10/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (202, 'Robin', 'Bailey', '5/5/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (203, 'George', 'Roberts', '3/10/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (204, 'Katherine', 'Stewart', '2/8/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (205, 'Louis', 'Hudson', '4/5/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (206, 'Teresa', 'Carter', '3/7/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (207, 'Evelyn', 'Black', '1/25/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (208, 'Harry', 'Franklin', '12/31/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (209, 'Frances', 'Woods', '4/11/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (210, 'Pamela', 'Jordan', '10/7/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (211, 'Bonnie', 'Walker', '4/8/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (212, 'Beverly', 'Austin', '4/13/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (213, 'Pamela', 'Lane', '1/2/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (214, 'Sean', 'Shaw', '10/27/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (215, 'Ronald', 'Kelly', '6/28/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (216, 'Theresa', 'Cunningham', '6/2/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (217, 'Randy', 'Cooper', '12/13/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (218, 'Gary', 'Chapman', '8/28/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (219, 'Louis', 'Powell', '3/17/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (220, 'Norma', 'Simmons', '8/14/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (221, 'Catherine', 'Gutierrez', '2/10/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (222, 'Carol', 'Campbell', '1/16/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (223, 'Jessica', 'Chapman', '10/1/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (224, 'Doris', 'Stevens', '11/20/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (225, 'Albert', 'Powell', '6/23/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (226, 'Juan', 'Cook', '6/27/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (227, 'Julia', 'Price', '4/11/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (228, 'Earl', 'Tucker', '1/31/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (229, 'Susan', 'Peters', '9/1/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (230, 'Jeffrey', 'Gardner', '1/9/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (231, 'Howard', 'Reed', '3/3/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (232, 'Christine', 'Freeman', '4/8/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (233, 'Margaret', 'Gray', '7/17/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (234, 'Heather', 'Perkins', '8/10/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (235, 'William', 'Sanchez', '12/19/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (236, 'Gerald', 'Schmidt', '10/16/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (237, 'Christina', 'Kelley', '12/3/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (238, 'Larry', 'Stanley', '8/15/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (239, 'Johnny', 'Lopez', '12/25/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (240, 'Jerry', 'Lawrence', '6/11/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (241, 'Albert', 'Lawson', '11/8/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (242, 'Jack', 'Gomez', '5/7/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (243, 'Beverly', 'Peterson', '10/15/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (244, 'Christina', 'Gutierrez', '4/28/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (245, 'Bobby', 'Austin', '8/10/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (246, 'Deborah', 'Ramirez', '6/20/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (247, 'Steve', 'Wells', '9/27/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (248, 'Adam', 'Alvarez', '1/4/2016');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (249, 'Donald', 'Meyer', '10/22/2015');
-insert into professor 
-	(professor_id, professor_firstname, professor_lastname, professor_date_added) 
-	values (250, 'Samuel', 'Green', '4/21/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (1, 'Paula', 'Woods', 9, '4/14/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (2, 'Jesse', 'Martinez', 7, '7/20/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (3, 'Anthony', 'Green', 10, '3/28/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (4, 'Eric', 'Graham', 12, '9/4/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (5, 'Brenda', 'Ramos', 9, '10/30/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (6, 'Maria', 'Jackson', 4, '10/15/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (7, 'Gloria', 'Bowman', 6, '6/7/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (8, 'Howard', 'Morris', 9, '3/26/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (9, 'Brian', 'Gordon', 10, '5/10/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (10, 'Robert', 'Nichols', 5, '8/16/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (11, 'Aaron', 'Rice', 9, '10/25/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (12, 'Bobby', 'Ferguson', 3, '4/9/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (13, 'Andrea', 'Allen', 9, '1/6/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (14, 'Patrick', 'Olson', 1, '9/8/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (15, 'Evelyn', 'Moore', 2, '11/26/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (16, 'Susan', 'Brown', 9, '6/20/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (17, 'John', 'West', 2, '10/21/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (18, 'Patricia', 'Bowman', 1, '8/10/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (19, 'Doris', 'Nguyen', 14, '8/1/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (20, 'Brian', 'Ortiz', 10, '1/15/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (21, 'Jane', 'Willis', 7, '7/22/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (22, 'Lisa', 'Barnes', 8, '7/10/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (23, 'Theresa', 'Turner', 7, '2/14/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (24, 'Kimberly', 'Black', 3, '6/14/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (25, 'Gregory', 'Fisher', 11, '1/3/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (26, 'Michael', 'Cruz', 3, '4/21/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (27, 'Randy', 'Williams', 13, '3/14/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (28, 'Theresa', 'Walker', 6, '4/8/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (29, 'Jerry', 'Sanders', 10, '1/13/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (30, 'Steven', 'Fernandez', 11, '3/16/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (31, 'Jason', 'Garcia', 13, '11/25/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (32, 'Amanda', 'Hunt', 11, '2/25/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (33, 'Rebecca', 'Perez', 5, '8/13/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (34, 'Christina', 'Mitchell', 6, '8/11/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (35, 'Betty', 'Mendoza', 11, '1/14/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (36, 'Nicole', 'Henry', 12, '7/24/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (37, 'Samuel', 'Reynolds', 8, '3/31/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (38, 'Elizabeth', 'Rivera', 10, '1/2/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (39, 'Frank', 'Wilson', 13, '2/22/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (40, 'Gerald', 'Garrett', 6, '7/19/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (41, 'Paula', 'Russell', 1, '7/2/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (42, 'Rose', 'Ross', 8, '8/20/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (43, 'Sean', 'Walker', 7, '9/4/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (44, 'David', 'Gilbert', 11, '7/30/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (45, 'Sara', 'Alvarez', 11, '11/10/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (46, 'Lillian', 'Jacobs', 7, '12/22/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (47, 'Wayne', 'Fuller', 11, '8/12/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (48, 'Kathleen', 'Nelson', 13, '10/31/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (49, 'Elizabeth', 'Ellis', 9, '11/14/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (50, 'Doris', 'White', 11, '5/12/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (51, 'Justin', 'Wells', 6, '3/4/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (52, 'Willie', 'Dean', 13, '4/8/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (53, 'Donna', 'Schmidt', 6, '3/18/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (54, 'Craig', 'Peters', 1, '2/13/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (55, 'Judy', 'Young', 10, '6/18/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (56, 'Daniel', 'Dean', 3, '12/31/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (57, 'Betty', 'Burton', 7, '4/22/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (58, 'Howard', 'Fuller', 1, '12/2/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (59, 'Pamela', 'Moore', 8, '6/10/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (60, 'Louise', 'Foster', 9, '2/20/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (61, 'Larry', 'Harris', 9, '4/17/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (62, 'Bobby', 'Lee', 12, '9/8/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (63, 'Mildred', 'Sullivan', 7, '4/29/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (64, 'Lori', 'Garza', 9, '7/29/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (65, 'Phillip', 'George', 13, '5/21/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (66, 'Amanda', 'Grant', 9, '5/2/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (67, 'Joe', 'Fernandez', 12, '6/12/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (68, 'Amy', 'Lynch', 12, '7/9/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (69, 'Wayne', 'Ferguson', 10, '2/15/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (70, 'Rebecca', 'Pierce', 1, '8/10/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (71, 'Frances', 'Stevens', 8, '5/12/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (72, 'Joe', 'Knight', 4, '6/16/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (73, 'Earl', 'Lee', 11, '9/13/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (74, 'Andrew', 'Washington', 11, '1/26/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (75, 'Anthony', 'Barnes', 10, '7/27/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (76, 'Ernest', 'Lane', 9, '4/27/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (77, 'Lisa', 'Diaz', 1, '5/29/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (78, 'Rose', 'Watkins', 5, '7/29/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (79, 'Nancy', 'Powell', 2, '5/27/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (80, 'Stephen', 'Chavez', 15, '2/8/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (81, 'Steve', 'Phillips', 6, '12/11/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (82, 'Martha', 'Miller', 11, '1/13/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (83, 'Frank', 'Armstrong', 10, '2/1/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (84, 'Dorothy', 'Diaz', 6, '6/10/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (85, 'Louis', 'Fisher', 15, '1/31/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (86, 'Phillip', 'Smith', 13, '2/28/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (87, 'Russell', 'Rogers', 14, '2/26/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (88, 'Andrew', 'Garcia', 6, '4/26/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (89, 'Andrea', 'Reid', 14, '3/24/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (90, 'Benjamin', 'Vasquez', 9, '12/16/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (91, 'Lisa', 'Fisher', 2, '1/24/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (92, 'Lillian', 'Hanson', 6, '7/7/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (93, 'Michelle', 'Barnes', 11, '8/10/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (94, 'Joe', 'Romero', 4, '10/28/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (95, 'Randy', 'Morris', 14, '1/9/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (96, 'Michael', 'Ross', 15, '7/27/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (97, 'Robin', 'Bowman', 7, '9/23/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (98, 'Edward', 'Olson', 13, '11/28/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (99, 'Clarence', 'Gibson', 3, '3/24/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (100, 'Helen', 'Harris', 7, '4/18/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (101, 'Roy', 'Meyer', 7, '5/25/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (102, 'Shirley', 'Nguyen', 9, '8/20/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (103, 'Dennis', 'Long', 9, '2/20/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (104, 'Thomas', 'Watson', 4, '12/13/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (105, 'Joyce', 'Brown', 2, '6/11/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (106, 'Phillip', 'Hall', 2, '1/20/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (107, 'Stephanie', 'James', 12, '7/20/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (108, 'Christopher', 'Morris', 4, '11/9/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (109, 'Daniel', 'Reynolds', 4, '2/6/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (110, 'Jeffrey', 'Jacobs', 1, '8/16/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (111, 'Daniel', 'Tucker', 13, '9/11/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (112, 'Shirley', 'Woods', 2, '2/26/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (113, 'Evelyn', 'Stone', 15, '3/1/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (114, 'Judith', 'Lee', 7, '9/17/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (115, 'Julie', 'Diaz', 15, '3/30/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (116, 'Joseph', 'Carpenter', 5, '12/9/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (117, 'Jesse', 'Reyes', 13, '5/7/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (118, 'Steve', 'Reyes', 5, '5/31/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (119, 'Ann', 'Harrison', 1, '9/6/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (120, 'Sharon', 'Mason', 11, '3/17/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (121, 'Sarah', 'Hughes', 8, '10/29/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (122, 'Catherine', 'Greene', 5, '3/23/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (123, 'Joseph', 'Romero', 3, '8/12/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (124, 'Jonathan', 'Thompson', 7, '12/18/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (125, 'Ruth', 'Lane', 9, '12/9/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (126, 'Steve', 'Patterson', 15, '7/19/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (127, 'Paul', 'Kim', 12, '5/12/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (128, 'Edward', 'White', 7, '4/14/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (129, 'Eric', 'Dixon', 13, '2/28/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (130, 'Justin', 'Hudson', 2, '12/28/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (131, 'Virginia', 'Hall', 7, '5/2/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (132, 'Melissa', 'Hill', 8, '1/31/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (133, 'Joe', 'Welch', 7, '4/19/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (134, 'Clarence', 'Watkins', 2, '9/4/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (135, 'Todd', 'Sanchez', 12, '10/27/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (136, 'Larry', 'Richardson', 1, '4/25/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (137, 'Carl', 'Powell', 4, '8/14/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (138, 'Carlos', 'Austin', 10, '12/30/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (139, 'Sharon', 'Hawkins', 7, '2/7/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (140, 'Michael', 'Garza', 3, '2/4/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (141, 'Debra', 'Gutierrez', 8, '7/6/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (142, 'Cynthia', 'Walker', 10, '2/26/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (143, 'Norma', 'Alvarez', 8, '11/1/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (144, 'Barbara', 'Cruz', 8, '5/30/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (145, 'Rachel', 'Cole', 2, '2/2/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (146, 'Virginia', 'Rice', 9, '4/21/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (147, 'Julia', 'Miller', 3, '9/5/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (148, 'Christopher', 'Carter', 11, '1/6/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (149, 'Arthur', 'Cooper', 14, '2/15/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (150, 'Jessica', 'Fowler', 14, '2/20/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (151, 'Raymond', 'Holmes', 11, '8/27/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (152, 'George', 'Bryant', 7, '5/18/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (153, 'Dorothy', 'Butler', 14, '1/13/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (154, 'Adam', 'Hunt', 1, '4/17/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (155, 'Virginia', 'Alvarez', 13, '5/1/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (156, 'Sarah', 'Reyes', 4, '5/10/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (157, 'Shawn', 'Ellis', 11, '5/10/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (158, 'Andrew', 'Washington', 1, '3/24/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (159, 'Frances', 'Mitchell', 5, '3/17/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (160, 'Nancy', 'Knight', 4, '4/6/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (161, 'Julia', 'Morales', 9, '7/2/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (162, 'Carl', 'Willis', 4, '7/5/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (163, 'Annie', 'Hicks', 15, '8/23/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (164, 'Virginia', 'Chavez', 4, '9/22/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (165, 'Ronald', 'Oliver', 9, '11/12/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (166, 'Irene', 'Bennett', 12, '2/16/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (167, 'Nicole', 'Peterson', 15, '1/26/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (168, 'Cheryl', 'Reed', 15, '7/30/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (169, 'Deborah', 'Lewis', 11, '3/19/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (170, 'Deborah', 'Mitchell', 12, '1/16/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (171, 'Tina', 'Kennedy', 10, '5/3/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (172, 'Matthew', 'Owens', 15, '7/29/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (173, 'Laura', 'Barnes', 8, '1/25/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (174, 'Philip', 'Weaver', 9, '5/5/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (175, 'Ryan', 'Mitchell', 5, '8/21/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (176, 'Joseph', 'Olson', 1, '1/20/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (177, 'Patricia', 'Flores', 6, '6/6/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (178, 'George', 'Jordan', 13, '5/14/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (179, 'Deborah', 'Marshall', 12, '7/29/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (180, 'Johnny', 'Henry', 11, '1/29/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (181, 'Aaron', 'Dunn', 1, '1/16/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (182, 'Walter', 'Bishop', 5, '1/31/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (183, 'Elizabeth', 'Robertson', 4, '6/16/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (184, 'Walter', 'Murray', 10, '10/2/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (185, 'Aaron', 'Taylor', 15, '6/17/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (186, 'Beverly', 'Fowler', 11, '1/11/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (187, 'Louise', 'Riley', 8, '9/16/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (188, 'James', 'Duncan', 13, '10/6/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (189, 'Lisa', 'Diaz', 7, '11/26/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (190, 'Deborah', 'Foster', 9, '4/6/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (191, 'Marilyn', 'Scott', 13, '10/11/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (192, 'Michelle', 'Ward', 2, '9/2/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (193, 'Ruby', 'Knight', 4, '1/17/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (194, 'Billy', 'Bailey', 7, '9/25/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (195, 'Emily', 'Johnson', 2, '1/2/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (196, 'Harry', 'Hansen', 11, '2/12/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (197, 'Alan', 'Henderson', 8, '9/19/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (198, 'Justin', 'Gordon', 8, '3/9/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (199, 'Sandra', 'Roberts', 5, '6/19/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (200, 'Denise', 'Vasquez', 12, '11/20/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (201, 'Janice', 'Reynolds', 8, '5/27/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (202, 'Peter', 'Little', 15, '9/15/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (203, 'Lillian', 'Morris', 8, '9/20/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (204, 'Judith', 'Spencer', 14, '12/11/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (205, 'Denise', 'Brooks', 3, '12/22/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (206, 'Dennis', 'Morgan', 4, '12/13/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (207, 'Benjamin', 'Palmer', 12, '3/30/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (208, 'Beverly', 'Long', 2, '2/24/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (209, 'Susan', 'Morris', 9, '10/14/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (210, 'Raymond', 'Patterson', 11, '9/11/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (211, 'Joe', 'Knight', 7, '6/11/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (212, 'Dennis', 'Jordan', 8, '11/22/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (213, 'Cheryl', 'Sanders', 4, '2/22/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (214, 'Jason', 'Duncan', 8, '2/28/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (215, 'Eric', 'Russell', 10, '5/29/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (216, 'Chris', 'Wells', 4, '3/31/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (217, 'Lillian', 'Watson', 2, '10/1/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (218, 'Thomas', 'Weaver', 9, '9/22/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (219, 'Kathleen', 'Washington', 14, '7/14/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (220, 'Terry', 'Powell', 2, '11/30/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (221, 'Timothy', 'Smith', 4, '8/22/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (222, 'Jeremy', 'James', 2, '5/3/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (223, 'Bobby', 'Johnson', 9, '4/15/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (224, 'Jason', 'Riley', 1, '12/24/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (225, 'Diana', 'Owens', 6, '11/9/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (226, 'Albert', 'Gonzales', 13, '3/23/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (227, 'Daniel', 'Bennett', 7, '1/29/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (228, 'Julie', 'Fields', 1, '1/2/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (229, 'Alice', 'Henderson', 9, '6/12/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (230, 'Joan', 'Hayes', 4, '8/1/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (231, 'Andrea', 'Gomez', 11, '11/28/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (232, 'Paul', 'Lane', 8, '9/11/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (233, 'Bruce', 'Bell', 15, '2/15/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (234, 'Bonnie', 'Ross', 15, '6/4/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (235, 'David', 'Stevens', 6, '3/14/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (236, 'Gloria', 'Marshall', 7, '11/7/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (237, 'Judy', 'Stone', 12, '9/4/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (238, 'Anne', 'Berry', 8, '9/27/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (239, 'Wanda', 'Spencer', 4, '12/20/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (240, 'Larry', 'Murphy', 11, '3/25/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (241, 'Henry', 'Gray', 13, '11/21/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (242, 'Debra', 'Stanley', 5, '7/12/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (243, 'Ashley', 'Hart', 9, '9/23/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (244, 'Mark', 'Walker', 13, '2/20/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (245, 'Marilyn', 'Rose', 5, '9/8/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (246, 'Samuel', 'Reed', 1, '9/27/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (247, 'Kimberly', 'Murphy', 7, '4/11/2016');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (248, 'Maria', 'Ford', 1, '8/6/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (249, 'James', 'Williams', 1, '8/2/2015');
+insert into professor (professor_id, professor_firstname, professor_lastname, department_id, professor_date_added) values (250, 'Jose', 'Cruz', 10, '7/31/2015');
