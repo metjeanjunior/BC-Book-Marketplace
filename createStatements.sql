@@ -1,78 +1,101 @@
+-- these tables are hosted on the metelusj database
+-- While, this currently serves all our needs, 
+-- the tables might be adjusted as the developers see fit
+
 create table customer
 (
-	id int(3) auto_increment primary key,
-	firstname varchar(256) not null,
-	lastname varchar(256) not null,
-	username varchar(256) not null unique,
-	password varchar(256) not null,
-	date_joined timestamp() not null
+	customer_id int(3) auto_increment primary key,
+	customer_firstname varchar(256) not null,
+	customer_lastname varchar(256) not null,
+	customer_username varchar(256) not null unique,
+	customer_password varchar(256) not null,
+	customer_date_joined timestamp not null
 );
 
 create table admin
 (
-	id int(3) auto_increment primary key,
-	firstname varchar(256) not null,
-	lastname varchar(256) not null,
-	username varchar(256) not null unique,
-	password varchar(256) not null,
-	date_joined timestamp() not null
+	admin_id int(3) auto_increment primary key,
+	admin_firstname varchar(256) not null,
+	admin_lastname varchar(256) not null,
+	admin_username varchar(256) not null unique,
+	admin_password varchar(256) not null,
+	admin_date_joined timestamp not null
 );
 
 create table professor
 (
-	id int(3) auto_increment primary key,
-	firstname varchar(256) not null,
-	lastname varchar(256) not null,
-	date_added date not null
+	professor_id int(3) auto_increment primary key,
+	professor_firstname varchar(256) not null,
+	professor_lastname varchar(256) not null,
+	professor_date_added date not null
 );
 
 create table course
 (
-	id int(3) auto_increment primary key,
-	name varchar(256) not null,
-	description text(1000),
-	date_added date
+	course_id int(3) auto_increment primary key,
+	course_name varchar(256) not null,
+	course_description text(1000),
+	course_date_added date not null
+);
+
+create table bookCategory
+(
+	bookCategory_id int(3) auto_increment primary key,
+	bookCategory_name varchar(256) not null
 );
 
 create table book
 (
-	id int(3) auto_increment primary key,;
-	name varchar(256) not null
-	description text(1000),
-	category varchar(256),
-	date_added date
+	book_id int(3) auto_increment primary key,
+	book_name varchar(256) not null,
+	category_id int,
+	foreign key(category_id) references bookCategory(bookCategory_id),
+	book_description text(1000),
+	book_date_added date not null
 );
 
-create table class 
+create table requiredBooks --find better name
 (
-	class_id int(3) auto_increment primary key,
-	foreign key(book) references book(id),
-	foreign key(professor) references professor(id)
+	requiredBooks_id int(3) auto_increment primary key,
+	professor_id int,
+	book_id int,
+	foreign key(book_id) references book(book_id),
+	foreign key(professor_id) references professor(professor_id)
 );
 
-create table trasaction
+create table transaction
 (
-	order_id int(3) auto_increment primary key,
-	foreign key(class) references class(class_id),
-	foreign key(sender) references customer(id) not null,
-	foreign key(reciever) references customer(id),
-	oder_date date,
-	order_type set('rent', 'sell', 'swap'),
+	transaction_id int(3) auto_increment primary key,
+	requiredBooks_id int,
+	sender_id int,
+	reciever_id int,
+	foreign key(requiredBooks_id) references requiredBooks(requiredBooks_id),
+	foreign key(sender_id) references customer(customer_id),
+	foreign key(reciever_id) references customer(customer_id),
+	transaction_date timestamp,
+	transaction_type set('rent', 'sell', 'swap') not null
 );
 
 
 create table rent
 (
 	rent_id int(3) auto_increment primary key,
-	foreign key(transaction) references transaction(id),
-	return_date date not null,
-	status set('in progress', 'completed')
+	transaction_id int,
+	foreign key(transaction_id) references transaction(transaction_id),
+	rent_status set('in progress', 'completed'),
+	rent_return_date date not null
 );
 
 create table swap
 (
 	swap_id int(3) auto_increment primary key,
-	foreign key(transaction) references transaction(id),
-	foreign key(book1) references book(id),
-	foreign key(book2) references book(id),
+	transaction_id int,
+	book1_id int,
+	book2_id int,
+	foreign key(transaction_id) references transaction(transaction_id),
+	foreign key(book1_id) references book(book_id),
+	foreign key(book2_id) references book(book_id),
+	swap_type set('temp', 'permanent') not null,
+	swap_status set('in progress', 'completed'),
+	swap_return_date date
 );
