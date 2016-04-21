@@ -13,6 +13,9 @@ create table customer
 );
 alter table customer
 	add customer_email varchar(256) not null;
+alter table customer 
+	change column customer_date_joined customer_date_joined timestamp after customer_email;
+
 
 create table admin
 (
@@ -25,6 +28,8 @@ create table admin
 );
 alter table admin
 	add admin_email varchar(256) not null;
+alter table admin 
+	change column customer_date_joined customer_date_joined timestamp after customer_email;
 
 create table professor
 (
