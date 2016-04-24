@@ -3,6 +3,7 @@ This is the Web Apps Final Project.
 
 Campus Book Marketplace
 Group: Colin Gallaway, Jeanmarie Metelus Jr., Christopher Chiang
+More Info can be found in [on the wiki page](https://github.com/metjeanjunior/webAppsFinalProject/wiki)
 
 4/11 
 - Please use pdf, md, or txt files.
