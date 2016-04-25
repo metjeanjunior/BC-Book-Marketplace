@@ -1,0 +1,54 @@
+html 
+{
+  position: relative;
+  min-height: 100%;
+}
+
+body 
+{ 
+	background-color: Maroon; 
+	color: white; 
+}
+
+marquee
+{
+	color: cyan;
+}
+
+.form-signin {
+  max-width: 25%;
+  padding: 30%px;
+  margin: 0 auto;
+}
+
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 4%;
+  font-size: 125%;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.footer 
+{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  background-color: grey;
+  text-align: center;
+  color: cyan;
+}

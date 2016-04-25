@@ -19,24 +19,10 @@ marquee
 {
 	position: relative;
 }
-
-h1
-{
-	position: absolute; 
-	left: 0; 
-	top: 0;
-}
-
 .header
 {
 	position: absolute;
 	right: 0; 
-	/*top: 0; */
-}
-
-#login-ling
-{
-	/*padding-left:5em;*/
 }
 
 #add-link
@@ -59,20 +45,6 @@ h1
 	text-align: center;
 }
 
-#login-box
-{
-	border: ridge;
-	margin: 0 auto;
-	display: inline-block;
-	padding: 2%;
-}
-
-#login-form
-{
-	text-align: center;
-	margin: 5%;
-}
-
 .footer 
 {
   position: absolute;
@@ -82,4 +54,22 @@ h1
   background-color: grey;
   text-align: center;
   color: cyan;
+}
+
+/*.stylish-input-group .input-group-addon
+{
+    background: white !important; 
+}*/
+
+.stylish-input-group .form-control
+{
+	border-right:0; 
+	box-shadow:0 0 0; 
+	border-color:#ccc;
+}
+
+.stylish-input-group button
+{
+    border:0;
+    background:transparent;
 }
