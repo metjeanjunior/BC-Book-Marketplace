@@ -22,6 +22,12 @@
 	 	<div id="logo">BC's MarketPlace</div>
 	 	<input type="search" id="book-search"></input>
 
+	 	<footer class="footer">
+	 	    <div class="container">
+		 	    <p class="text-muted">Designed by the people of BC for the People of BC</p>
+	 	    </div>
+ 	    </footer>
+
 	 	<!-- <br><br><br><br><br><br> -->
 		<!-- <img src="img/cat.jpeg"> -->
 		<!-- <img src="img/dog.jpeg"> -->

@@ -1,3 +1,9 @@
+html 
+{
+  position: relative;
+  min-height: 100%;
+}
+
 body 
 { 
 	background-color: Maroon; 
@@ -65,4 +71,15 @@ h1
 {
 	text-align: center;
 	margin: 5%;
+}
+
+.footer 
+{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  background-color: grey;
+  text-align: center;
+  color: cyan;
 }

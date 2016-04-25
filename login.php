@@ -19,7 +19,8 @@
 				<input type="text" name="userName" placeholder="Username"></input><br><br>
 				<input type="password" name="password" placeholder="Password"></input><br>
 				<a href="Reset">Forgot your password?</a><br><br>
-				<input type="submit" name="submit-login" value="Give me the Goodies" />
+				<input class ="btn btn-lg btn-primary btn-block" type="submit" 
+					name="submit-login" value="Sign inputmode="" " />
 			</form>
 		</div>
 	</body>
