@@ -1,0 +1,68 @@
+body 
+{ 
+	background-color: Maroon; 
+	color: white; 
+}
+
+marquee
+{
+	color: cyan;
+}
+
+#header
+{
+	position: relative;
+}
+
+h1
+{
+	position: absolute; 
+	left: 0; 
+	top: 0;
+}
+
+.header
+{
+	position: absolute;
+	right: 0; 
+	/*top: 0; */
+}
+
+#login-ling
+{
+	/*padding-left:5em;*/
+}
+
+#add-link
+{
+	padding-left:2em;
+	padding-right:2em;	
+}
+
+#logo
+{
+	text-align: center;
+	/*background-color: cyan;*/
+	font-size: 300%;
+	margin: 10%;
+}
+
+#book-search
+{
+	margin: 0 auto;
+	text-align: center;
+}
+
+#login-box
+{
+	border: ridge;
+	margin: 0 auto;
+	display: inline-block;
+	padding: 2%;
+}
+
+#login-form
+{
+	text-align: center;
+	margin: 5%;
+}

@@ -13,17 +13,14 @@
 		But we are under construction
 		Here is something to keep you happy until launch :)</marquee><br>
 
-		<div class="header">
-			<a  id="login-ling" href="login.php">Login</a>
-			<a id="add-link" href="addbook">Lend/Sell</a>
-	 	</div>
-
-
-	 	<div id="logo">BC's MarketPlace</div>
-	 	<input type="search" id="book-search"></input>
-
-	 	<!-- <br><br><br><br><br><br> -->
-		<!-- <img src="img/cat.jpeg"> -->
-		<!-- <img src="img/dog.jpeg"> -->
+		<div id="login-box">
+			<form id="login-form" method="post" action="php/stuff.php">
+				Enter your Info<br>
+				<input type="text" name="userName" placeholder="Username"></input><br><br>
+				<input type="password" name="password" placeholder="Password"></input><br>
+				<a href="Reset">Forgot your password?</a><br><br>
+				<input type="submit" name="submit-login" value="Give me the Goodies" />
+			</form>
+		</div>
 	</body>
 </html>
