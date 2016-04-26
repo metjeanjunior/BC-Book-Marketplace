@@ -24,12 +24,22 @@
 		        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
 
 				<?php
-					if (isset($_GET['badPass']) and $_GET['badPass'] = true) 
+					if (isset($_GET['badInfo']) and $_GET['badInfo'] = true) 
 					{
 						?>
 						<div class="alert alert-danger fade in">
 						    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-						    <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+						    You entered the wrong email or password. <strong>Please Try Again</strong>
+						</div>
+						<?php
+					}
+					elseif (isset($_GET['error']) and $_GET['error'] = true) 
+					{
+						?>
+						<div class="alert alert-danger fade in">
+						    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						    <strong>Something is wrong!</strong> That's all we can tell you.<br>
+						    If the problem persists, please contact the developers through the contact us page.
 						</div>
 						<?php
 					}
@@ -37,7 +47,7 @@
 
 		        <div class="checkbox">
 		          <label>
-		            <input type="checkbox" value="remember-me"> Remember me
+		            <input type="checkbox" name="remember" value="remember-me"> Remember me
 		          </label>
 		        </div>
 		        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>

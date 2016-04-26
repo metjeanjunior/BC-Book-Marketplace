@@ -2,13 +2,18 @@
 	$debug = 1;
 	if ( 0 == checklogin( $_POST['inputEmail'], $_POST['inputPassword']))
 	{
-		header("Location: ../login.php?badPass=true");
+		header("Location: ../login.php?badInfo=true");
 	} 
+	elseif ( -1 == checklogin( $_POST['inputEmail'], $_POST['inputPassword']))
+	{	
+		header("Location: ../login.php?error=true");
+	}
 	else 
 	{ 
 		
 		// Store the login information in cookies	
-		setcookie('loginCookieUser', $_POST['name']);
+		if (isset($_POST['remember']))
+			setcookie('loginCookieUser', $_POST['name']);
 	  	header("Location: showcustomer.php");
 	}
 	// checklogin sees if an entry exists with the name password pair passed.
@@ -16,7 +21,9 @@
 
 	function checklogin($name, $passwd)
 	{
-		$dbc = connectToDB("jed");
+		$dbc = connectToDB("csci2254");
+		if ($dbc = 'bad')
+			return -1;
 		$encodepw = sha1($passwd);
 		$result = performQuery($dbc, 
 			"select * FROM pwdemo where name='$name' and pass='$encodepw'");
@@ -29,8 +36,8 @@
 
 	function connectToDB($database)
 	{
-		$dbc= @mysqli_connect("localhost", "jed", "dej", $database) or
-						die("Connect failed: ". mysqli_connect_error());
+		$dbc= @mysqli_connect("localhost", "metelusj", "23JD5h5z", $database) or
+			$dbc = 'bad';
 		return ($dbc);
 	}
 
