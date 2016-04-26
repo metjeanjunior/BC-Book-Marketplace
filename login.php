@@ -53,6 +53,7 @@
 						    Please do so and try again.
 						</div>
 						<?php
+						echo $_GET['redirect'];
 					}
 				?>
 
@@ -63,10 +64,10 @@
 		        </div>
 
 		        <?php 
-		        	if (isset($_GET['notLogged']) and $_GET['notLogged'] = true)
+		        	if (isset($_GET['redirect']) and $_GET['redirect'] = true)
 		        	{
 		        		?>
-		        		<input type="text" hidden="hidden" name="redirect" value=<?php $_GET['redirect']?>>
+		        		<input type="text" hidden="hidden" name="redirect" value="<?php $_GET['redirect']?>">
 		        		<?php
 		        	}
 		        ?>

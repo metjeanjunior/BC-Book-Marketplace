@@ -13,15 +13,42 @@
 		But we are under construction
 		Here is something to keep you happy until launch :)</marquee><br>
 
+		<div class="container">
+			<form class="form-signin" id="add-book-form" method="get" action="php/loginCheck.php">
+				<h2 class="form-signin-heading">Add a new book</h2>
 
-		<img src="../img/dog.jpeg">
-		<img src="../img/cat.jpeg">
+				<!-- Form filler thru ibsn -->
+				<div>
+					<p>Have the IBSN? Let us fill the rest for you</p>
+					<div class="row">
+						<div class="col-sm-10">
+							<label for="book-ibsn" class="sr-only">Email address</label>
+							<input type="text" id="book-ibsn" class="form-control" placeholder="Book IBSN" required autofocus><br>
+							
+						</div>
+						<div class="col-sm-2">
+					        <button class="btn btn-success" id="autofill-book-button" type="button" id="forgot-login">Go!</button>
+				        </div>
+					</div>
+				</div>
+
+				<!-- book info -->
+				<div>
+					<input type="text" name="book-name" class="form-control" placeholder="Book Name">
+				</div>
+
+		        <button class="btn btn-md btn-primary btn-block" id="reset" type="submit">Add Book</button>
+	        </form>
+		</div>
+
+		<!-- <img src="../img/dog.jpeg">
+		<img src="../img/cat.jpeg"> -->
 	</body>
 </html>
 
 <?php
-	if (!isset($_COOKIE['loginCookieUser']))
-	{
-		$selfLink = 'http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]';
-		header('Location: ../login.php?notLogged=true&redirect=$selfLink');
-	}
+	// if (!isset($_COOKIE['loginCookieUser']))
+	// {
+	// 	$selfLink = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+	// 	header('Location: ../login.php?notLogged=true&redirect='.$selfLink);
+	// }

@@ -6,14 +6,14 @@
 	} 
 	elseif ( -1 == checklogin( $_POST['inputEmail'], $_POST['inputPassword']))
 	{	
-		header("Location: ../login.php?error=true");
+		header("Location: ../login.php?error=true&redirect=".$_POST['redirect']);
 	}
 	else 
 	{ 
 		
 		// Store the login information in cookies	
 		if (isset($_POST['remember']))
-			setcookie('loginCookieUser', $_POST['name']);
+			setcookie('loginCookieUser', $_POST['name'], time() + 900);
 	  	header("Location: showcustomer.php");
 	}
 	// checklogin sees if an entry exists with the name password pair passed.
