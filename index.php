@@ -3,7 +3,7 @@
 	<head>
 		<title>Book Marketplace</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-		<script src="js/index.js"></script>
+		<script src="js/marquee.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/index.css">
 	</head>
@@ -43,9 +43,5 @@
 		 	    <p class="text-muted">Designed by the people of BC for the People of BC</p>
 	 	    </div>
  	    </footer>
-
-	 	<!-- <br><br><br><br><br><br> -->
-		<!-- <img src="img/cat.jpeg"> -->
-		<!-- <img src="img/dog.jpeg"> -->
 	</body>
 </html>

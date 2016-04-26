@@ -4,9 +4,10 @@
 		<title>Book Marketplace</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-		<script src="js/index.js"></script>
+		<script src="js/marquee.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/body.css">
+		<link rel="stylesheet" type="text/css" href="css/login.css">
+		<link rel="stylesheet" type="text/css" href="css/global.css">
 	</head>
 
 	<body>
@@ -14,9 +15,9 @@
 		But we are under construction
 		Here is something to keep you happy until launch :)</marquee><br>
 		
-		<div class="container">
+		<div class="container" id="div-forms">
 
-			<form class="form-signin" method="post" action="php/loginCheck.php">
+			<form class="form-signin" id="login-form" method="post" action="php/loginCheck.php">
 		        <h2 class="form-signin-heading">Please sign in</h2>
 		        <label for="inputEmail" class="sr-only">Email address</label>
 		        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
@@ -45,16 +46,53 @@
 					}
 				?>
 
-		        <div class="checkbox">
+		        <div class="checkbox" id="remember">
 		          <label>
 		            <input type="checkbox" name="remember" value="remember-me"> Remember me
 		          </label>
 		        </div>
+
 		        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
+		        <button class="btn btn-link" type="button" id="login-forgot">Forgot my password</button>
+		        <button class="btn btn-link" type="button" id="login-register">Sign Up</button>
+	        </form>
+
+			<!-- Forgot password form -->
+			<form class="form-signin" id="forgot-form" method="post" action="php/loginCheck.php" hidden="hidden">
+				<h2 class="form-signin-heading">Forgot my Password</h2>
+
+				<label for="inputEmail" class="sr-only">Email address</label>
+				<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus><br>
+
+		        <button class="btn btn-md btn-primary btn-block" id="reset" type="submit">Reset my password</button>
+
+		        <button class="btn btn-link" type="button" id="forgot-login">Sign In</button>
+		        <button class="btn btn-link" type="button" id="forgot-register">Sign Up</button>
+	        </form>
+
+	        <!-- Register form -->
+			<form class="form-signin" id="register-form" method="post" action="php/loginCheck.php" hidden="hidden">
+				<h2 class="form-signin-heading">Register</h2>
+
+				<label for="inputEmail" class="sr-only">Email address</label>
+				<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus><br>
+
+				<label for="inputPassword" class="sr-only">Password</label>
+		        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+
+				<label for="inputPasswordCheck" class="sr-only">Password</label>
+		        <input type="password" id="inputPasswordCheck" class="form-control" placeholder="Re-enter Password" required>
+
+		        <button class="btn btn-md btn-primary btn-block" type="submit">Sign up</button>
+
+		        <button class="btn btn-link" type="button" id="register-login">Sign In</button>
+		        <button class="btn btn-link" type="button" id="register-forgot">Forgot my password</button>
 	        </form>
 		</div>
 		
-		<footer class="footer">
+		<footer class="panel-footer footer">
+		<!-- <footer class="footer"> -->
 	 	    <div class="container">
 		 	    <p class="text-muted">Designed by the people of BC for the People of BC</p>
 	 	    </div>

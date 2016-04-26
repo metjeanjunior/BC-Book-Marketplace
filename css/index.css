@@ -45,17 +45,6 @@ marquee
 	text-align: center;
 }
 
-.footer 
-{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  background-color: grey;
-  text-align: center;
-  color: cyan;
-}
-
 /*.stylish-input-group .input-group-addon
 {
     background: white !important; 
