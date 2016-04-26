@@ -5,8 +5,8 @@
 	</head>
 	<body>
 		<?php
-			echo "this is a place holder";
-			echo "'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];";
+			echo "this is a place holder<br>";
+			echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 		?>
 	</body>
 </html>

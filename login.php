@@ -44,6 +44,16 @@
 						</div>
 						<?php
 					}
+					elseif (isset($_GET['notLogged']) and $_GET['notLogged'] = true) 
+					{
+						?>
+						<div class="alert alert-danger fade in">
+						    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						    <strong>You're not logged IN!</strong>
+						    Please do so and try again.
+						</div>
+						<?php
+					}
 				?>
 
 		        <div class="checkbox" id="remember">
@@ -51,6 +61,15 @@
 		            <input type="checkbox" name="remember" value="remember-me"> Remember me
 		          </label>
 		        </div>
+
+		        <?php 
+		        	if (isset($_GET['notLogged']) and $_GET['notLogged'] = true)
+		        	{
+		        		?>
+		        		<input type="text" hidden="hidden" name="redirect" value=<?php $_GET['redirect']?>>
+		        		<?php
+		        	}
+		        ?>
 
 		        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 

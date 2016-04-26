@@ -22,5 +22,6 @@
 <?php
 	if (!isset($_COOKIE['loginCookieUser']))
 	{
-		header("Location: ../login.php?notLogged=true&redirect=")
+		$selfLink = 'http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]';
+		header('Location: ../login.php?notLogged=true&redirect=$selfLink');
 	}
