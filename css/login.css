@@ -1,19 +1,6 @@
-html 
-{
-  position: relative;
-  min-height: 100%;
-}
-
 body 
 { 
-	background-color: Maroon; 
-	color: white; 
   text-align: center;
-}
-
-marquee
-{
-	color: cyan;
 }
 
 #remember

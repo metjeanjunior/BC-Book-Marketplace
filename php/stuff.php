@@ -6,6 +6,7 @@
 	<body>
 		<?php
 			echo "this is a place holder";
+			echo "'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];";
 		?>
 	</body>
 </html>
