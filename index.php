@@ -6,6 +6,7 @@
 		<script src="js/marquee.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/global.css">
 	</head>
 
 	<body>
@@ -15,7 +16,7 @@
 
 		<div class="header">
 			<a  id="login-ling" href="login.php">Login</a>
-			<a id="add-link" href="addbook">Lend/Sell</a>
+			<a id="add-link" href="php/addBook.php">Lend/Sell</a>
 	 	</div>
 
 
@@ -38,7 +39,7 @@
 	 		</div>
 	 	</div>
 	 	
-	 	<footer class="footer">
+	 	<footer class="panel-footer footer">
 	 	    <div class="container">
 		 	    <p class="text-muted">Designed by the people of BC for the People of BC</p>
 	 	    </div>
