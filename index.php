@@ -42,7 +42,8 @@
 			                <div id="div-forms">
 			                
 			                    <!-- Begin # Login Form -->
-			                    <form id="login-form">
+			                    <!-- <form id="login-form"> -->
+								<form method="post" action="php/loginCheck.php">
 			                        <div class="modal-body">
 			                            <div id="div-login-msg">
 			                                <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
