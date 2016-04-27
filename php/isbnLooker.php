@@ -3,10 +3,32 @@
 	// 	header("Location: ../index.php");
 	// $page = 'http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords='.$_GET['isbn'];
 	$page = 'http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=1338097679';
-	echo "The url is ".$page.'<br>';
+	// echo "The url is ".$page.'<br>';
 	$content = file_get_contents($page);
-	$pattern = 'href="http:\/\/www.amazon.com\/[\-\/a-z0-9_-]';
-	preg_match_all($pattern, $content, $res);
-	echo "The pattern is " . htmlentities($pattern) . " <br />\n";
-	echo "<br>The entire match is: " . htmlentities($res) . "<br />\n";
-	// echo "<br> $content[2]";
+	$pattern = '$http:\/\/www.amazon.com\/([A-Za-z]*-*)*\/dp\/1338097679\/ref=.*"><img$';
+	preg_match_all ($pattern, $content, $res);
+	// echo "The pattern is " . htmlentities($pattern) . " <br />\n";
+	if (is_null($res[0][0]))
+		echo "empty(var)";
+	// echo $res[0][0];
+	$page = $res[0][0];
+
+	// $titlePattern = '$<span id="productTitle" class="a-size-large">[\S- ]*<\/span>$';
+	// $page = $res[0][0];
+	// $content = file_get_contents($page);
+	// preg_match_all ($titlePattern, $content, $res);
+	// // echo $res;
+	// if (is_null($res[0][0]))
+	// 	echo "empty(var)";
+	// $bookTitle = $res[0][0];
+	// echo "the book title is $bookTitle";	
+
+	$titlePattern = '<title>[\S ]*<\/title>';
+	$page = $res[0][0];
+	// echo ;
+	$content = file_get_contents($page);
+	preg_match_all ($titlePattern, $content, $res);
+	if (is_null($res[0][0]))
+		echo "empty(var)";
+	else
+		echo $res[0][0].'test';
