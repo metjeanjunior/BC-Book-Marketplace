@@ -80,6 +80,6 @@ create table sell
 (
 	sell_id int(6) auto_increment primary key,
 	transaction_id int,
-	sell_date timestamp default now();
-	foreign key(transaction_id) references transaction(transaction_id),
+	sell_date timestamp default now(),
+	foreign key(transaction_id) references transaction(transaction_id)
 );

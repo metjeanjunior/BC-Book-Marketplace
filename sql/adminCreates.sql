@@ -1,45 +1,15 @@
-insert into admin 
-	(admin_id, admin_firstname, admin_lastname, admin_username, admin_password, admin_email, admin_date_joined) 
-	values (1, 'Michael', 'Day', 'mday0', 'c71dqzK7YjU', 'mday0@scribd.com', '9/9/2015');
-insert into admin 
-	(admin_id, admin_firstname, admin_lastname, admin_username, admin_password, admin_email, admin_date_joined) 
-	values (2, 'Stephanie', 'Diaz', 'sdiaz1', 'TzshNPo4W', 'sdiaz1@nih.gov', '8/22/2015');
-insert into admin 
-	(admin_id, admin_firstname, admin_lastname, admin_username, admin_password, admin_email, admin_date_joined) 
-	values (3, 'Wanda', 'Harper', 'wharper2', '4HhMdP', 'wharper2@hugedomains.com', '5/17/2015');
-insert into admin 
-	(admin_id, admin_firstname, admin_lastname, admin_username, admin_password, admin_email, admin_date_joined) 
-	values (4, 'Thomas', 'Medina', 'tmedina3', 'yXmL8TVw', 'tmedina3@archive.org', '4/2/2016');
-insert into admin 
-	(admin_id, admin_firstname, admin_lastname, admin_username, admin_password, admin_email, admin_date_joined) 
-	values (5, 'Antonio', 'Warren', 'awarren4', 'LXqZqJ', 'awarren4@fc2.com', '3/17/2016');
-insert into admin 
-	(admin_id, admin_firstname, admin_lastname, admin_username, admin_password, admin_email, admin_date_joined) 
-	values (6, 'Russell', 'Perry', 'rperry5', 'rSkqAHEzXNr', 'rperry5@mac.com', '10/8/2015');
-insert into admin 
-	(admin_id, admin_firstname, admin_lastname, admin_username, admin_password, admin_email, admin_date_joined) 
-	values (7, 'Richard', 'Torres', 'rtorres6', '06tsVuxDd7', 'rtorres6@umich.edu', '4/2/2016');
-insert into admin 
-	(admin_id, admin_firstname, admin_lastname, admin_username, admin_password, admin_email, admin_date_joined) 
-	values (8, 'Shawn', 'Howell', 'showell7', 'DdxUsSoC', 'showell7@ted.com', '5/19/2015');
-insert into admin 
-	(admin_id, admin_firstname, admin_lastname, admin_username, admin_password, admin_email, admin_date_joined) 
-	values (9, 'Heather', 'Marshall', 'hmarshall8', 'afT87UvzX', 'hmarshall8@flavors.me', '5/13/2015');
-insert into admin 
-	(admin_id, admin_firstname, admin_lastname, admin_username, admin_password, admin_email, admin_date_joined) 
-	values (10, 'Judy', 'Perkins', 'jperkins9', 'FGV2tC', 'jperkins9@instagram.com', '2/21/2016');
-insert into admin 
-	(admin_id, admin_firstname, admin_lastname, admin_username, admin_password, admin_email, admin_date_joined) 
-	values (11, 'Billy', 'Frazier', 'bfraziera', 'iaTfUwG', 'bfraziera@google.com', '7/5/2015');
-insert into admin 
-	(admin_id, admin_firstname, admin_lastname, admin_username, admin_password, admin_email, admin_date_joined) 
-	values (12, 'Alan', 'Hawkins', 'ahawkinsb', 'W4UAq5Zyqre', 'ahawkinsb@walmart.com', '10/31/2015');
-insert into admin 
-	(admin_id, admin_firstname, admin_lastname, admin_username, admin_password, admin_email, admin_date_joined) 
-	values (13, 'Jose', 'Lane', 'jlanec', 'rGlRbqgkEA', 'jlanec@epa.gov', '6/5/2015');
-insert into admin 
-	(admin_id, admin_firstname, admin_lastname, admin_username, admin_password, admin_email, admin_date_joined) 
-	values (14, 'Roy', 'Henry', 'rhenryd', '0HIuilpZ4', 'rhenryd@auda.org.au', '2/2/2016');
-insert into admin 
-	(admin_id, admin_firstname, admin_lastname, admin_username, admin_password, admin_email, admin_date_joined) 
-	values (15, 'Barbara', 'Hanson', 'bhansone', 'xXyKGarWuVn', 'bhansone@businessinsider.com', '11/19/2015');
+insert into admin (admin_id, admin_username, admin_password, admin_email, admin_date_joined) values (1, 'khoward0', '39AodNSc', 'chughes0@alexa.com', '10/3/2015');
+insert into admin (admin_id, admin_username, admin_password, admin_email, admin_date_joined) values (2, 'mcook1', 'jpMxVwWSjRIX', 'lcampbell1@nps.gov', '11/2/2015');
+insert into admin (admin_id, admin_username, admin_password, admin_email, admin_date_joined) values (3, 'landrews2', 'WV9xWvf', 'tfranklin2@cbslocal.com', '3/31/2016');
+insert into admin (admin_id, admin_username, admin_password, admin_email, admin_date_joined) values (4, 'jpeterson3', 'vpObHMXz', 'fharrison3@gmpg.org', '1/19/2016');
+insert into admin (admin_id, admin_username, admin_password, admin_email, admin_date_joined) values (5, 'ebanks4', 'rk0nkvoy', 'lvasquez4@archive.org', '3/4/2016');
+insert into admin (admin_id, admin_username, admin_password, admin_email, admin_date_joined) values (6, 'bcole5', 'ZMIV88Ddy', 'jhoward5@meetup.com', '12/1/2015');
+insert into admin (admin_id, admin_username, admin_password, admin_email, admin_date_joined) values (7, 'rbell6', 'qbiOnIWo9', 'hspencer6@de.vu', '2/14/2016');
+insert into admin (admin_id, admin_username, admin_password, admin_email, admin_date_joined) values (8, 'jalexander7', 'tgGUSXo0Mxx', 'wnelson7@cafepress.com', '7/7/2015');
+insert into admin (admin_id, admin_username, admin_password, admin_email, admin_date_joined) values (9, 'hriley8', '4lM3SM', 'cwagner8@upenn.edu', '8/10/2015');
+insert into admin (admin_id, admin_username, admin_password, admin_email, admin_date_joined) values (10, 'jgordon9', 'UUg726icli', 'bruiz9@jimdo.com', '8/8/2015');
+insert into admin (admin_id, admin_username, admin_password, admin_email, admin_date_joined) values (11, 'jmyersa', 'OTuYUk0yYyXv', 'kbanksa@meetup.com', '9/23/2015');
+insert into admin (admin_id, admin_username, admin_password, admin_email, admin_date_joined) values (12, 'phartb', 'ZVNrk5zQuDf', 'jgonzalezb@xinhuanet.com', '6/3/2015');
+insert into admin (admin_id, admin_username, admin_password, admin_email, admin_date_joined) values (13, 'sdeanc', 'on1quvpv3m43', 'jjacobsc@discovery.com', '10/21/2015');
+insert into admin (admin_id, admin_username, admin_password, admin_email, admin_date_joined) values (14, 'rhartd', '0jsBw3', 'mgibsond@businessweek.com', '2/2/2016');
+insert into admin (admin_id, admin_username, admin_password, admin_email, admin_date_joined) values (15, 'wwilliamsone', '0GRlrwsdAeY', 'sbradleye@columbia.edu', '7/8/2015');
