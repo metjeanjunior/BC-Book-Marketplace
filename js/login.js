@@ -51,27 +51,31 @@ function emailExits()
 		return false;
 	}
 
-	var count = 0;
+	// var count = 0;
 
-	var ajax = new XMLHttpRequest();
-	ajax.onreadystatechange = function() 
-	{
-		if (ajax.readyState == 4) 
-		{
-			count = ajax.responseText;
-			alert(email);
-		}
-	};
+	// var ajax = new XMLHttpRequest();
+	// ajax.onreadystatechange = function() 
+	// {
+	// 	if (ajax.readyState == 4) 
+	// 		count = ajax.responseText;
+	// };
 
-	ajax.open("GET", "../php/forgotPass.php?find="+email, true);
-	ajax.send();
+	// ajax.open("GET", "../php/forgotPass.php?find="+email, true);
+	// ajax.send(count);
 
+	// if (count == 0)
+	// {
+	// 	emailErr.innerHTML = "Your email was not found in our database.<br> Please try again";
+	// 	$("#emailErr").toggle();
+	// 	return false;
+	// }
 	
-	if (count == 0)
-	{
-		emailErr.innerHTML = "Your email was not found in our database.<br> Please try again";
-		$("#emailErr").toggle();
-		return false;
-	}
+	// else if (count = -1)
+	// {
+	// 	emailErr.innerHTML = "<strong>Something is wrong!</strong> That's all we can tell you.<br> If the problem persists, please contact the developers through the contact us page.";
+	// 	$("#emailErr").toggle();
+	// 	return false;
+	// }
+
 	return true;
 }

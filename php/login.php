@@ -86,7 +86,7 @@
 			<div class="col-md-4 col-md-offset-4">
 				<div class="panel-body">
 					<div class="text-center">
-						<form id="forgot-form" action="get" method="post" action="forgotPass.php" onsubmit="return validateForgot()" hidden="hidden">
+						<form id="forgot-form" method="get" method="post" action="forgotPass.php" onsubmit="return validateForgot()" hidden="hidden">
 							<h3><i class="fa fa-lock fa-4x"></i></h3>
 							<h2 class="text-center">Forgot Password?</h2>
 							<p>You can reset your password here.</p>
@@ -94,7 +94,7 @@
 								<div class="input-group">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
 									<label for="forgot-email" class="sr-only">Email address</label>
-									<input type="email" id="forgot-email" class="form-control" placeholder="Email address" required autofocus><br>
+									<input type="email" name="forgot-email" id="forgot-email" class="form-control" placeholder="Email address" required autofocus><br>
 								</div>
 							</div>
 							<div class="form-group">
@@ -106,6 +106,30 @@
 						</form>
 
 						<div class="alert alert-danger fade in" id="emailErr" hidden="hidden">
+							<?php
+								if (isset($_GET['success-forgot-email']) and $_GET['success-forgot-email'] = true) 
+								{
+									?>
+									<div class="alert alert-success fade in">
+									    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+									    <strong>Congrats!</strong>
+									    Your password was updated and emailed to you.
+									</div>
+									<?php
+									echo $_GET['redirect'];
+								}
+								elseif (isset($_GET['bad-forgot-email']) and $_GET['bad-forgot-email'] = true) 
+								{
+									?>
+									<div class="alert alert-danger fade in">
+									    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+									    <strong>Wrong Email!</strong>
+									    Your email is not in our database. Please try again.
+									</div>
+									<?php
+									echo $_GET['redirect'];
+								}
+							?>
 						</div>
 					</div>
                 </div>
