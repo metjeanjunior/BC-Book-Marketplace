@@ -2,11 +2,11 @@
 	$debug = 1;
 	if ( 0 == checklogin( $_POST['inputEmail'], $_POST['inputPassword']))
 	{
-		header("Location: ../login.php?badInfo=true");
+		header("Location: login.php?badInfo=true");
 	} 
 	elseif ( -1 == checklogin( $_POST['inputEmail'], $_POST['inputPassword']))
 	{	
-		header("Location: ../login.php?error=true&redirect=".$_POST['redirect']);
+		header("Location: login.php?error=true&redirect=".$_POST['redirect']);
 	}
 	else 
 	{ 
