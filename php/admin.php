@@ -30,7 +30,7 @@ include("../include/dbconn.php");
 ?>
 </body>
 </html>
-<script type="text/javascript" src="js/validate.js"> </script>
+<script type="text/javascript" src="../js/validate.js"> </script>
 <?php
 function displayEmailForm(){
 ?>
@@ -44,20 +44,23 @@ function displayEmailForm(){
       <div class="col-lg-10">
         <input type="text" class="form-control" name="subject" value="">
       </div>
+      <style>#sEMSG{text-align:center;}</style>
       <span id="sEMSG" class="warning"></span><br>
     </div>
     <div class="form-group">
-	  <label for="inputMessage" class="col-lg-2 control-label">Subject</label>
+	  <label for="inputMessage" class="col-lg-2 control-label">Message</label>
 	  <div class="col-lg-10">
 	  	<textarea name="message" class="form-control" value="" rows="4" cols="50"></textarea>
 	  </div>
+	  <style>#mEMSG{text-align:center;}</style>
 	  <span id="mEMSG" class="warning"></span><br>
     </div>
     <div class="form-group">
-	  <label for="inputReceiver" class="col-lg-2 control-label">Receiver Username</label>
+	  <label for="inputReceiver" class="col-lg-2 control-label">Receiver Email</label>
 	  <div class="col-lg-10">
 	    <input type="text" class="form-control" name="receiver" value="">
 	  </div>
+	  <style>#rEMSG{text-align:center;}</style>
 	  <span id="rEMSG" class="warning"></span><br>
     </div>
     <div class="form-group">
@@ -74,16 +77,16 @@ function handleEmailForm(){
 	$subject = $_POST['subject'];
 	$receiver = $_POST['receiver'];
 	$message = $_POST['message'];
-	$queryEmails = "SELECT customer_email FROM customer WHERE customer_username = '$receiver'";
+	$queryEmails = "SELECT customer_email FROM customer WHERE customer_email = '$receiver';";
 	$dbname = "metelusj";
 	$dbc = @connect_to_db($dbname);
 	$resultEmails = @perform_query($dbc, $queryEmails);
 	while($row = @mysqli_fetch_array($resultEmails, MYSQLI_ASSOC))
 	{
-		$email = $row['email'];
+		$email = $row['customer_email'];
 		mail($email,$subject,$message);
 	}
-	disconnect_from_db($dbc, $result );
+	@disconnect_from_db($dbc, $result );
 }
 function displayNewAdminForm(){
 ?>
@@ -93,38 +96,19 @@ function displayNewAdminForm(){
   <fieldset>
     <legend><font color="white">New Admin</font></legend>
     <div class="form-group">
-      <label for="inputFirstName" class="col-lg-2 control-label">First Name</label>
-      <div class="col-lg-10">
-        <input type="text" class="form-control" name="adminFirstName" value="">
-      </div>
-      <span id="fAMSG" class="warning"></span><br>
-    </div>
-    <div class="form-group">
-      <label for="inputLastName" class="col-lg-2 control-label">Last Name</label>
-      <div class="col-lg-10">
-        <input type="text" class="form-control" name="adminLastName" value="">
-      </div>
-      <span id="lAMSG" class="warning"></span><br>
-    </div>
-    <div class="form-group">
       <label for="inputEmail" class="col-lg-2 control-label">Email</label>
       <div class="col-lg-10">
         <input type="text" class="form-control" name="adminEmail" value="">
       </div>
+      <style>#eAMSG{text-align:center;}</style>
       <span id="eAMSG" class="warning"></span><br>
-    </div>
-    <div class="form-group">
-      <label for="inputUsername" class="col-lg-2 control-label">Username</label>
-      <div class="col-lg-10">
-        <input type="text" class="form-control" name="adminUsername" value="">
-      </div>
-      <span id="uAMSG" class="warning"></span><br>
     </div>
     <div class="form-group">
       <label for="inputPassword" class="col-lg-2 control-label">Password</label>
       <div class="col-lg-10">
         <input type="password" class="form-control" name="adminPassword" value="">
       </div>
+      <style>#pAMSG{text-align:center;}</style>
       <span id="pAMSG" class="warning"></span><br>
     </div>
     <div class="form-group">
@@ -138,19 +122,16 @@ function displayNewAdminForm(){
 <?php
 }
 function handleNewAdminForm(){
-	$firstName = $_POST['adminFirstName'];
-	$lastName = $_POST['adminLastName'];
-	$username = $_POST['adminUsername'];
 	$password = $_POST['adminPassword'];
 	$email = $_POST['adminEmail'];
 	$query = "insert into admin
-	(admin_firstname, admin_lastname, admin_username, admin_password, admin_email, admin_date_joined)
-	values ('$firstName', '$lastName', '$username', SHA1('$password'), '$email', CURDATE());";
+	(admin_password, admin_email, admin_date_joined)
+	values (SHA1('$password'), '$email', CURDATE());";
 	$dbname = "metelusj";
 	$dbc = @connect_to_db($dbname);
 	$result = @perform_query($dbc, $query);
-	echo "$firstName $lastName $username $email";
-	disconnect_from_db($dbc, $result );
+	echo "$email";
+	@disconnect_from_db($dbc, $result );
 }
 function displayRemoveBookForm(){
 ?>
@@ -164,6 +145,7 @@ function displayRemoveBookForm(){
       <div class="col-lg-10">
         <input type="text" class="form-control" name="bookName" value="">
       </div>
+      <style>#bMSG{text-align:center;}</style>
       <span id="bMSG" class="warning"></span><br>
     </div>
     <div class="form-group">
@@ -181,9 +163,9 @@ function handleRemoveBookForm(){
 	$query = "delete from book where book_name = '$bookName';";
 	$dbname = "metelusj";
 	$dbc = @connect_to_db($dbname);
-	$result = @perform_query($dbc, $query);
+	$result = @perform_query($dbc,$query);
 	echo "$bookName";
-	disconnect_from_db($dbc, $result );
+	@disconnect_from_db($dbc,$result);
 }
 function displayRemoveUserForm(){
 ?>
@@ -193,10 +175,11 @@ function displayRemoveUserForm(){
   <fieldset>
     <legend><font color="white">Remove User</font></legend>
     <div class="form-group">
-      <label for="inputUserName" class="col-lg-2 control-label">Username</label>
+      <label for="inputUserName" class="col-lg-2 control-label">User Email</label>
       <div class="col-lg-10">
         <input type="text" class="form-control" name="userName" value="">
       </div>
+      <style>#uMSG{text-align:center;}</style>
       <span id="uMSG" class="warning"></span><br>
     </div>
     <div class="form-group">
@@ -210,13 +193,13 @@ function displayRemoveUserForm(){
 <?php
 }
 function handleRemoveUserForm(){
-	$username = $_POST['username'];
-	$query = "delete from customer where customer_username = '$username';";
+	$username = $_POST['userName'];
+	$query = "delete from customer where customer_email = '$username';";
 	$dbname = "metelusj";
 	$dbc = @connect_to_db($dbname);
 	$result = @perform_query($dbc, $query);
 	echo "$username";
-	disconnect_from_db($dbc, $result );
+	@disconnect_from_db($dbc, $result );
 }
 function displayRemoveAdminForm(){
 ?>
@@ -226,10 +209,11 @@ function displayRemoveAdminForm(){
   <fieldset>
     <legend><font color="white">Remove Admin</font></legend>
     <div class="form-group">
-      <label for="inputAName" class="col-lg-2 control-label">Username</label>
+      <label for="inputAName" class="col-lg-2 control-label">Admin Email</label>
       <div class="col-lg-10">
         <input type="text" class="form-control" name="aUsername" value="">
       </div>
+      <style>#aMSG{text-align:center;}</style>
       <span id="aMSG" class="warning"></span><br>
     </div>
     <div class="form-group">
@@ -244,11 +228,11 @@ function displayRemoveAdminForm(){
 }
 function handleRemoveAdminForm(){
 	$username = $_POST['aUsername'];
-	$query = "delete from admin where admin_username = '$username';";
+	$query = "delete from admin where admin_email = '$username';";
 	$dbname = "metelusj";
 	$dbc = @connect_to_db($dbname);
 	$result = @perform_query($dbc, $query);
 	echo "$username";
-	disconnect_from_db($dbc, $result );
+	@disconnect_from_db($dbc, $result );
 }
 ?>

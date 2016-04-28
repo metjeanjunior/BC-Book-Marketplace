@@ -14,7 +14,6 @@ drop table customer;
 create table customer
 (
 	customer_id int(6) auto_increment primary key,
-	customer_username varchar(256) not null unique,
 	customer_password varchar(256) not null,
 	customer_email varchar(256) not null unique,
 	customer_date_joined timestamp default now()
@@ -23,9 +22,8 @@ create table customer
 create table admin
 (
 	admin_id int(6) auto_increment primary key,
-	admin_username varchar(256) not null unique,
 	admin_password varchar(256) not null, 
-	admin_email varchar(256) not null,
+	admin_email varchar(256) not null unique,
 	admin_date_joined timestamp default now()
 );
 
