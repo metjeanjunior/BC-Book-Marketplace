@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Book Marketplace</title>
+		<title>Sign in</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<script src="../js/marquee.js"></script>
@@ -24,9 +24,9 @@
 			<form class="form-signin" id="login-form" method="post" action="loginCheck.php">
 		        <h2 class="form-signin-heading">Please sign in</h2>
 		        <label for="login-email" class="sr-only">Email address</label>
-		        <input type="email" id="login-email" class="form-control" placeholder="Email address" required autofocus>
+		        <input type="email" name="login-email" id="login-email" class="form-control" placeholder="Email address" required autofocus>
 		        <label for="login-password" class="sr-only">Password</label>
-		        <input type="password" id="login-password" class="form-control" placeholder="Password" required>
+		        <input type="password" name="login-password" id="login-password" class="form-control" placeholder="Password" required>
 
 				<?php
 					if (isset($_GET['badInfo']) and $_GET['badInfo'] = true) 
@@ -76,7 +76,8 @@
 		        	}
 		        ?>
 
-		        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+		        <!-- <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button> -->
+		        <input class="btn btn-lg btn-primary btn-block" type="submit" value="Sign in">
 
 		        <button class="btn btn-link" type="button" id="login-forgot">Forgot my password</button>
 		        <button class="btn btn-link" type="button" id="login-register">Sign Up</button>
