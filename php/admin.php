@@ -65,7 +65,7 @@ function displayEmailForm(){
     </div>
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
-      	<input type="submit" name="submitRemoveBook" class="btn btn-primary" value="Submit" />
+      	<input type="submit" name="submitEmail" class="btn btn-primary" value="Submit" />
       </div>
     </div>
   </fieldset>
@@ -78,15 +78,19 @@ function handleEmailForm(){
 	$receiver = $_POST['receiver'];
 	$message = $_POST['message'];
 	$queryEmails = "SELECT customer_email FROM customer WHERE customer_email = '$receiver';";
+	$queryAdmins = "SELECT admin_email FROM admin WHERE admin_email = '$receiver';";
 	$dbname = "metelusj";
 	$dbc = @connect_to_db($dbname);
-	$resultEmails = @perform_query($dbc, $queryEmails);
-	while($row = @mysqli_fetch_array($resultEmails, MYSQLI_ASSOC))
-	{
-		$email = $row['customer_email'];
-		mail($email,$subject,$message);
-	}
-	@disconnect_from_db($dbc, $result );
+	$resultEmail = @perform_query($dbc, $queryEmails);
+	$resultAdmin = @perform_query($dbc, $queryAdmins);
+	$row = @mysqli_fetch_array($resultEmail, MYSQLI_ASSOC);
+	$row = @mysqli_fetch_array($resultAdmin, MYSQLI_ASSOC);
+	$email = $row['customer_email'];
+	$admin = $row['admin_email'];
+	echo "$email $admin";
+	mail($email,$subject,$message);
+	mail($admin,$subject,$message);
+	@disconnect_from_db($dbc, $resultEmail );
 }
 function displayNewAdminForm(){
 ?>
