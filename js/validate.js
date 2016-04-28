@@ -1,70 +1,94 @@
-function validateRegistrationForm() {
-    var firstName = document.forms["registration"]["firstName"].value;
-    var fMSG=document.getElementById("fMSG");
-    var lastName = document.forms["registration"]["lastName"].value;
-    var lMSG=document.getElementById("lMSG");
-    var email = document.forms["registration"]["email"].value;
-    var eMSG=document.getElementById("eMSG");
-    var username = document.forms["registration"]["username"].value;
-    var uMSG=document.getElementById("uMSG");
-    var password = document.forms["registration"]["password"].value;
-    var pMSG=document.getElementById("pMSG");
+function validateEmail() {
+	var subject = document.forms["emailF"]["subject"].value;
+    var sEMSG=document.getElementById("sEMSG");
+    var messages = document.forms["emailF"]["message"].value;
+    var mEMSG=document.getElementById("mEMSG");
+    var receiver = document.forms["emailF"]["receiver"].value;
+    var rEMSG=document.getElementById("rEMSG");
+
+	var bool = true;
+    if (subject == null || subject == "") {
+        sEMSG.innerHTML = "No subject";
+		bool = false;
+    }
+    if (messages == null || messages == "") {
+	    mEMSG.innerHTML = "No message";
+	    bool = false;
+    }
+    if (receiver == null || receiver == "") {
+		rEMSG.innerHTML = "No receiver";
+		bool = false;
+    }
+    return bool;
+}
+
+function validateNewAdmin() {
+    var firstName = document.forms["newAdmin"]["adminFirstName"].value;
+    var fAMSG=document.getElementById("fAMSG");
+    var lastName = document.forms["newAdmin"]["adminLastName"].value;
+    var lAMSG=document.getElementById("lAMSG");
+    var email = document.forms["newAdmin"]["adminEmail"].value;
+    var eAMSG=document.getElementById("eAMSG");
+    var username = document.forms["newAdmin"]["adminUsername"].value;
+    var uAMSG=document.getElementById("uAMSG");
+    var password = document.forms["newAdmin"]["adminPassword"].value;
+    var pAMSG=document.getElementById("pAMSG");
 
 	var bool = true;
     if (firstName == null || firstName == "") {
-        fMSG.innerHTML = "Please enter a first name";
+        fAMSG.innerHTML = "Please enter a first name";
 		bool = false;
     }
     if (lastName == null || lastName == "") {
-	    lSG.innerHTML = "Please enter a last name";
+	    lAMSG.innerHTML = "Please enter a last name";
 		bool = false;
     }
     if (email == null || email == "") {
-	 	eMSG.innerHTML = "Please enter an email";
+	 	eAMSG.innerHTML = "Please enter an email";
 		bool = false;
     }
     if (username == null || username == "") {
-		uMSG.innerHTML = "Please enter a username";
+		uAMSG.innerHTML = "Please enter a username";
 		bool = false;
     }
     if (password == null || password == "") {
-		pMSG.innerHTML = "Please enter a password";
+		pAMSG.innerHTML = "Please enter a password";
 		bool = false;
     }
     return bool;
 }
 
-function validateRegistrationForm() {
-    var book = document.forms["registration"]["book"].value;
+function validateRemoveBook() {
+    var bookName = document.forms["removeBook"]["bookName"].value;
     var bMSG=document.getElementById("bMSG");
-    var sender = document.forms["registration"]["sender"].value;
-    var sMSG=document.getElementById("sMSG");
-    var receiver = document.forms["registration"]["receiver"].value;
-    var rMSG=document.getElementById("rMSG");
 
 	var bool = true;
-    if (book == null || book == "") {
+    if (bookName == null || bookName == "") {
         bMSG.innerHTML = "Please enter a book";
 		bool = false;
     }
-    if (sender == null || sender == "") {
-	    sSG.innerHTML = "Please enter a sender";
-		bool = false;
-    }
-    if (receiver == null || receiver == "") {
-	 	rMSG.innerHTML = "Please enter a receiver";
+    return bool;
+}
+
+function validateRemoveUser() {
+    var username = document.forms["removeUser"]["userName"].value;
+    var uMSG=document.getElementById("uMSG");
+
+	var bool = true;
+    if (username == null || username == "") {
+        uMSG.innerHTML = "Please enter a username";
 		bool = false;
     }
     return bool;
 }
 
-function validateAddDepartmentForm() {
-    var department = document.forms["addDepartment"]["department"].value;
-    var dMSG=document.getElementById("dMSG");
+function validateRemoveAdmin() {
+    var username = document.forms["removeAdmin"]["aUsername"].value;
+    var aMSG=document.getElementById("aMSG");
 
 	var bool = true;
-    if (department == null || department == "") {
-        dMSG.innerHTML = "Please enter a department";
+    if (username == null || username == "") {
+        aMSG.innerHTML = "Please enter a username";
 		bool = false;
     }
     return bool;
