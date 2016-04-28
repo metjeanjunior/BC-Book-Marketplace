@@ -35,7 +35,7 @@
 
 	function connectToDB()
 	{
-		$dbc= @mysqli_connect("localhost", "metelusj", "23JD5h5z", $database) or
+		$dbc= @mysqli_connect("localhost", "metelusj", "23JD5h5z", "csci2254") or
 			$dbc = 'bad';
 		return ($dbc);
 	}
