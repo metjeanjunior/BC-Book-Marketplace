@@ -25,7 +25,8 @@
 			header("Location: login.php?error=true&redirect=".$_POST['redirect']);
 		else
 		{
-			$query = 'select lower(customer_email) from customer where customer_email = lower('.$_GET['forgot-email'].')';
+			$email = $_GET['forgot-email'];
+			$query = "select lower(customer_email) from customer where customer_email = lower('$email')";
 			$result = performQuery($dbc, $query);
 			$matches = mysqli_num_rows($result);
 			if ($matches == 0)
@@ -33,7 +34,7 @@
 			else
 			{
 				$pass = genPass();
-				$query = 'udpate customer set customer_password = \''.sha1(pass).'\' where customer_email = '.$_GET['forgot-email'];
+				$query = "udpate customer set customer_password = ".sha1($pass)."'' where customer_email = lower('$email')";
 				
 				$to = $_GET['forgot-email'];
 				$subject = 'Email reset from bc book swap';
