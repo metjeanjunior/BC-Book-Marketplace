@@ -37,15 +37,41 @@ function validateForgot()
 function emailExits()
 {
 	var email = document.getElementById('forgot-email').value;
+	var emailregex = /^\S+\@{1}\S+\.{1}\S+/;
+
+	if (email.length == 0)
+	{
+		emailErr.innerHTML = "Please enter an <b>Email<b>.";
+		return false;
+	}
+
+	if (!emailregex.test(email))
+	{
+		emailErr.innerHTML = "Please enter a valid <b>Email<b>." + email;
+		return false;
+	}
+
 	var count = 0;
-	$.getJSON("forgtoPass.php?find=$email", 
-		function(data)
+
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function() 
+	{
+		if (ajax.readyState == 4) 
 		{
-			$.each(data, function(i, info)
-			{
-				count ++;
-			});
+			count = ajax.responseText;
+			alert(email);
 		}
-	);
-	return count > 0;
+	};
+
+	ajax.open("GET", "../php/forgotPass.php?find="+email, true);
+	ajax.send();
+
+	
+	if (count == 0)
+	{
+		emailErr.innerHTML = "Your email was not found in our database.<br> Please try again";
+		$("#emailErr").toggle();
+		return false;
+	}
+	return true;
 }

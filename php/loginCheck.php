@@ -20,7 +20,7 @@
 
 	function checklogin($name, $passwd)
 	{
-		$dbc = connectToDB("csci2254");
+		$dbc = connectToDB();
 		if ($dbc == 'bad')
 			return -1;
 		$encodepw = sha1($passwd);
@@ -33,7 +33,7 @@
 	}
 	// Modified connectToDB takes database as an argument, returns database connection
 
-	function connectToDB($database)
+	function connectToDB()
 	{
 		$dbc= @mysqli_connect("localhost", "metelusj", "23JD5h5z", $database) or
 			$dbc = 'bad';

@@ -1,13 +1,13 @@
 <?php
-include("include/dbconn.php");
+include("../include/dbconn.php");
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Book Marketplace</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-	<link rel="stylesheet" type="text/css" href="css/global.css" />
-	<link rel="stylesheet" type="text/css" href="css/admin.css" />
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/global.css" />
+	<link rel="stylesheet" type="text/css" href="../css/admin.css" />
 </head>
 <body>
 	<div id="admin">Admin Page</div>
