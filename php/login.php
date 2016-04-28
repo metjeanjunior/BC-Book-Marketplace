@@ -145,12 +145,12 @@
 								
 								<div class="form-group col-lg-12">
 									<label for="signup-username" class="sr-only">Username</label>
-									<input type="test" id="signup-username" class="form-control" placeholder="Username" required autofocus><br>
+									<input type="text" name="signup-username" id="signup-username" class="form-control" placeholder="Username" required autofocus><br>
 								</div>
 												
 								<div class="form-group col-lg-6">
 									<label for="signup-email" class="sr-only">Email address</label>
-									<input type="email" id="signup-email" class="form-control" placeholder="Email address" required autofocus><br>
+									<input type="email" name="signup-email" id="signup-email" class="form-control" placeholder="Email address" required autofocus><br>
 								</div>
 								
 								<div class="form-group col-lg-6">
@@ -160,7 +160,7 @@
 								
 								<div class="form-group col-lg-6">
 									<label for="signup-password" class="sr-only">Password</label>
-							        <input type="password" id="signup-password" class="form-control" placeholder="Password" required>
+							        <input type="password" name="signup-password" id="signup-password" class="form-control" placeholder="Password" required>
 								</div>
 								
 								<div class="form-group col-lg-6">
@@ -202,6 +202,43 @@
 						</div>
 					</section>
 				</form>
+			</div>
+			<div class="alert alert-danger fade in" id="emailErr" hidden="hidden">
+				<?php
+					if (isset($_GET['success-signup']) and $_GET['success-signup'] = true) 
+					{
+						?>
+						<div class="alert alert-success fade in">
+						    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						    <strong>Congrats!</strong>
+						    Your password was updated and emailed to you.
+						</div>
+						<?php
+						echo $_GET['redirect'];
+					}
+					elseif (isset($_GET['bad-signup-username']) and $_GET['bad-signup-username'] = true) 
+					{
+						?>
+						<div class="alert alert-danger fade in">
+						    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						    <strong>Duplicate Username!</strong>
+						    This username is already taken.
+						</div>
+						<?php
+						echo $_GET['redirect'];
+					}
+					elseif (isset($_GET['bad-signup-email']) and $_GET['bad-signup-email'] = true) 
+					{
+						?>
+						<div class="alert alert-danger fade in">
+						    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						    <strong>Duplicate Email!</strong>
+						    This email is already taken.
+						</div>
+						<?php
+						echo $_GET['redirect'];
+					}
+				?>
 			</div>
 		</div>
 		

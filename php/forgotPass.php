@@ -44,6 +44,7 @@
 			}
 
 		}
+		disconnectFromDB($dbc);
 	}
 
 	function connectToDB()
