@@ -1,5 +1,3 @@
-// inspired by: http://bootsnipp.com/snippets/featured/modal-login-with-jquery-effects
-
 $(function() {
 	var $formLogin = $("#login-form");
 	var $formRegister = $("#register-form");
@@ -30,3 +28,24 @@ $(function() {
 		$formForgot.toggle();
 	});
 });
+
+function validateForgot()
+{
+	return emailExits();
+}
+
+function emailExits()
+{
+	var email = document.getElementById('forgot-email').value;
+	var count = 0;
+	$.getJSON("forgtoPass.php?find=$email", 
+		function(data)
+		{
+			$.each(data, function(i, info)
+			{
+				count ++;
+			});
+		}
+	);
+	return count > 0;
+}

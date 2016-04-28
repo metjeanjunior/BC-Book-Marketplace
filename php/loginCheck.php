@@ -1,5 +1,4 @@
 <?php
-	$debug = 1;
 	if ( 0 == checklogin( $_POST['inputEmail'], $_POST['inputPassword']))
 	{
 		header("Location: login.php?badInfo=true");
@@ -22,7 +21,7 @@
 	function checklogin($name, $passwd)
 	{
 		$dbc = connectToDB("csci2254");
-		if ($dbc = 'bad')
+		if ($dbc == 'bad')
 			return -1;
 		$encodepw = sha1($passwd);
 		$result = performQuery($dbc, 

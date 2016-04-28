@@ -1,4 +1,6 @@
 <!-- Registration form from: http://bootsnipp.com/snippets/featured/basic-register-page -->
+<!-- Forgot inspired by: http://www.bootply.com/SIndReNe7i -->
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -21,10 +23,10 @@
 
 			<form class="form-signin" id="login-form" method="post" action="loginCheck.php">
 		        <h2 class="form-signin-heading">Please sign in</h2>
-		        <label for="email" class="sr-only">Email address</label>
-		        <input type="email" id="email" class="form-control" placeholder="Email address" required autofocus>
-		        <label for="password" class="sr-only">Password</label>
-		        <input type="password" id="password" class="form-control" placeholder="Password" required>
+		        <label for="login-email" class="sr-only">Email address</label>
+		        <input type="email" id="login-email" class="form-control" placeholder="Email address" required autofocus>
+		        <label for="login-password" class="sr-only">Password</label>
+		        <input type="password" id="login-password" class="form-control" placeholder="Password" required>
 
 				<?php
 					if (isset($_GET['badInfo']) and $_GET['badInfo'] = true) 
@@ -91,8 +93,8 @@
 							<div class="form-group">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-									<label for="email" class="sr-only">Email address</label>
-									<input type="email" id="email" class="form-control" placeholder="Email address" required autofocus><br>
+									<label for="forgot-email" class="sr-only">Email address</label>
+									<input type="email" id="forgot-email" class="form-control" placeholder="Email address" required autofocus><br>
 								</div>
 							</div>
 							<div class="form-group">
@@ -115,29 +117,29 @@
 								<h3 class="dark-grey">Registration</h3>
 								
 								<div class="form-group col-lg-12">
-									<label for="username" class="sr-only">Username</label>
-									<input type="test" id="username" class="form-control" placeholder="Username" required autofocus><br>
-								</div>
-								
-								<div class="form-group col-lg-6">
-									<label for="password" class="sr-only">Password</label>
-							        <input type="password" id="password" class="form-control" placeholder="Password" required>
-								</div>
-								
-								<div class="form-group col-lg-6">
-									<label for="passwordCheck" class="sr-only">Repeat Password</label>
-							        <input type="password" id="passwordCheck" class="form-control" placeholder="Re-enter Password" required>
+									<label for="signup-username" class="sr-only">Username</label>
+									<input type="test" id="signup-username" class="form-control" placeholder="Username" required autofocus><br>
 								</div>
 												
 								<div class="form-group col-lg-6">
-									<label for="email" class="sr-only">Email address</label>
-									<input type="email" id="email" class="form-control" placeholder="Email address" required autofocus><br>
+									<label for="signup-email" class="sr-only">Email address</label>
+									<input type="email" id="signup-email" class="form-control" placeholder="Email address" required autofocus><br>
 								</div>
 								
 								<div class="form-group col-lg-6">
-									<label class="sr-only">Repeat Email Address</label>
-									<input type="email" id="email" class="form-control" placeholder="Re-enter Email address" required autofocus><br>
+									<label for="signup-re-email" class="sr-only">Repeat Email Address</label>
+									<input type="email" id="signup-re-email" class="form-control" placeholder="Re-enter Email address" required autofocus><br>
 								</div>			
+								
+								<div class="form-group col-lg-6">
+									<label for="signup-password" class="sr-only">Password</label>
+							        <input type="password" id="signup-password" class="form-control" placeholder="Password" required>
+								</div>
+								
+								<div class="form-group col-lg-6">
+									<label for="signup-re-password" class="sr-only">Repeat Password</label>
+							        <input type="password" id="signup-re-password" class="form-control" placeholder="Re-enter Password" required>
+								</div>
 								
 								<div class="col-sm-6">
 									<input type="checkbox" class="checkbox" />Sigh up for our newsletter
@@ -155,15 +157,12 @@
 									By clicking on "Register", you understand that we do nothing more than connect 
 									students togheter.
 								</p>
-
 								<p> 
 									We don not even host a payment option. 
 								</p>
-
 								<p>
 									You also fully understand that should an issue arise with a transcation, we are neither responsible nor can we help in any way. 
 								</p>
-
 								<p>
 									If some of this does not make sense, feel free to reach out to us through
 									the contact page.
