@@ -81,17 +81,30 @@
 	        </form>
 
 			<!-- Forgot password form -->
-			<form class="form-signin" id="forgot-form" method="post" action="forgotPass.php" hidden="hidden">
-				<h2 class="form-signin-heading">Forgot my Password</h2>
+			<div class="col-md-4 col-md-offset-4">
+				<div class="panel-body">
+					<div class="text-center">
+						<form id="forgot-form" method="post" action="forgotPass.php" hidden="hidden">
+							<h3><i class="fa fa-lock fa-4x"></i></h3>
+							<h2 class="text-center">Forgot Password?</h2>
+							<p>You can reset your password here.</p>
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+									<label for="email" class="sr-only">Email address</label>
+									<input type="email" id="email" class="form-control" placeholder="Email address" required autofocus><br>
+								</div>
+							</div>
+							<div class="form-group">
+								<input class="btn btn-lg btn-primary btn-block" value="Send My Password" type="submit">
 
-				<label for="email" class="sr-only">Email address</label>
-				<input type="email" id="email" class="form-control" placeholder="Email address" required autofocus><br>
-
-		        <button class="btn btn-md btn-primary btn-block" id="reset" type="submit">Reset my password</button>
-
-		        <button class="btn btn-link" type="button" id="forgot-login">Sign In</button>
-		        <button class="btn btn-link" type="button" id="forgot-register">Sign Up</button>
-	        </form>
+								<button class="btn btn-link" type="button" id="forgot-login">Sign In</button>
+								<button class="btn btn-link" type="button" id="forgot-register">Sign Up</button>
+							</div>
+						</form>
+					</div>
+                </div>
+			</div>
 
 	        <!-- Register form -->
 			<div class="container-fluid">
@@ -155,7 +168,10 @@
 									If some of this does not make sense, feel free to reach out to us through
 									the contact page.
 								</p>
-								<button type="submit" class="btn btn-primary">Register</button>
+								<button class="btn btn-md btn-primary btn-block" type="submit">Sign up</button>
+
+						        <button class="btn btn-link" type="button" id="register-login">Sign In</button>
+						        <button class="btn btn-link" type="button" id="register-forgot">Forgot my password</button>
 							</div>
 						</div>
 					</section>
