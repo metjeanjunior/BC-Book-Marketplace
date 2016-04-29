@@ -37,7 +37,7 @@
             </div>
         </div>
 
-        <div class="container results">
+        <div class="container">
             <div class="well well-sm res-header">
                 <strong>Category Title</strong>
                 <div class="btn-group">
@@ -47,115 +47,62 @@
                 </div>
             </div>
             <div id="products" class="row list-group">
-                <div class="item  col-xs-4 col-lg-4">
-                    <div class="thumbnail">
-                        <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
-                        <div class="caption">
-                            <h4 class="group inner list-group-item-heading">
-                                Product title</h4>
-                            <p class="group inner list-group-item-text">
-                                Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                            <div class="row">
-                                <div class="col-xs-12 col-md-6">
-                                    <p class="lead">
-                                        $21.000</p>
-                                </div>
-                                <div class="col-xs-12 col-md-6">
-                                    <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item  col-xs-4 col-lg-4">
-                    <div class="thumbnail">
-                        <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
-                        <div class="caption">
-                            <h4 class="group inner list-group-item-heading">
-                                Product title</h4>
-                            <p class="group inner list-group-item-text">
-                                Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                            <div class="row">
-                                <div class="col-xs-12 col-md-6">
-                                    <p class="lead">
-                                        $21.000</p>
-                                </div>
-                                <div class="col-xs-12 col-md-6">
-                                    <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item  col-xs-4 col-lg-4">
-                    <div class="thumbnail">
-                        <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
-                        <div class="caption">
-                            <h4 class="group inner list-group-item-heading">
-                                Product title</h4>
-                            <p class="group inner list-group-item-text">
-                                Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                            <div class="row">
-                                <div class="col-xs-12 col-md-6">
-                                    <p class="lead">
-                                        $21.000</p>
-                                </div>
-                                <div class="col-xs-12 col-md-6">
-                                    <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 
             </div>
         </div>
     </body>
 </html>
 <?php
-    $tofind = $_GET['search-bar']
+    $tofind = $_GET['search-bar'];
     $dbc = connectToDB();
 
     if ($dbc == 'bad')
         header("Location: login.php?error=true&redirect=".$_POST['redirect']);
 
-    $query = "select * from book where book_name like %$tofind% or book_description like %$tofind% 
-        or book_ibsn like %$tofind%";
+    $query = "select * from book where book_name like '%$tofind%' or book_description like '%$tofind%' 
+        or book_ibsn like '%$tofind%'";
     $result = performQuery($dbc, $query);
 
-    for ($result as $row)
+    if (mysqli_num_rows($result) == 0)
     {
-        ?>
-            <script type="text/javascript">
-                var newDiv = `
-                    <div class="item  col-xs-4 col-lg-4">
-                    <div class="thumbnail">
-                        <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
-                        <div class="caption">
-                            <h4 class="group inner list-group-item-heading">
-                                <?php echo $row[2].'-'.$row[1]; ?></h4>
-                            <p class="group inner list-group-item-text">
-                                <?php echo $row[3]; ?></p>
-                            <div class="row">
-                                <div class="col-xs-12 col-md-6">
-                                    <p class="lead">
-                                        <?php echo $row[4]; ?></p>
-                                </div>
-                                <div class="col-xs-12 col-md-6">
-                                    <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>`
-                $("#results").append(newDiv);
-            </script>
-        <?php
+        echo 'empty';
+        return -1;
     }
+
+    $arrayRes = array();
+    while ( $obj = mysqli_fetch_object( $result ) )
+        $arrayRes[] = $obj;
+
+    $res = json_encode($arrayRes);
+    ?>
+        <script type="text/javascript">
+            $.each(<?php echo $res; ?>, function(i, info)
+            {
+                var newDiv = "\
+                    <div class=\"item  col-xs-4 col-lg-4\">\
+                    <div class=\"thumbnail\">\
+                        <img class=\"group list-group-image\" src=\"http://placehold.it/400x250/000/fff\"/>\
+                        <div class=\"caption\">\
+                            <h4 class=\"group inner list-group-item-heading\">\
+                                "+ info.book_name + "-" + info.book_ibsn +"</h4> \
+                            <p class=\"group inner list-group-item-text\">\
+                                "+ info.book_description +"</p>\
+                            <div class=\"row\">\
+                                <div class=\"col-xs-12 col-md-6\">\
+                                    <p class=\"lead\">\
+                                        "+ info.book_price +"</p>\
+                                </div>\
+                                <div class=\"col-xs-12 col-md-6\">\
+                                    <a class=\"btn btn-success\" href=\"http://www.jquery2dotnet.com\">Add to cart</a>\
+                                </div>\
+                            </div>\
+                        </div>\
+                    </div>\
+                </div>";
+                $("#products").append(newDiv);
+            });
+        </script>
+    <?php
 
     function connectToDB()
     {
