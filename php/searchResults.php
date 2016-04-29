@@ -90,10 +90,13 @@
                             <div class=\"row\">\
                                 <div class=\"col-xs-12 col-md-6\">\
                                     <p class=\"lead\">\
-                                        "+ info.book_price +"</p>\
+                                        $"+ info.book_price +"</p>\
                                 </div>\
                                 <div class=\"col-xs-12 col-md-6\">\
-                                    <a class=\"btn btn-success\" href=\"http://www.jquery2dotnet.com\">Add to cart</a>\
+                                    <form method=\"post\" action=\"viewBook.php\">\
+                                        <input type=\"text\" name=\"bookID\" value=\""+ info.book_id +"\" hidden=\"hidden\">\
+                                        <input type=\"submit\" class=\"btn btn-success\" value=\"View Book\">\
+                                    </form>\
                                 </div>\
                             </div>\
                         </div>\
