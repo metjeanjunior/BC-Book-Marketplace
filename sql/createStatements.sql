@@ -31,9 +31,11 @@ create table admin
 
 create table book
 (
-	book_ibsn int(13) primary key,
+	book_id int(6) auto_increment primary key, 
+	book_ibsn int(13) not null,
 	book_name varchar(256) not null,
 	book_description text(1000),
+	book_price int(4) not null,
 	book_condition set('new', 'used- Like new', 'used - minor damage', 'used - damaged') not null,
 	book_date_added timestamp  default now()
 );
