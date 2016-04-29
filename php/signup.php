@@ -34,6 +34,7 @@
 			// echo $query;
 			$result = performQuery($dbc, $query);
 			$matches = mysqli_num_rows($result);
+			disconnectFromDB($dbc);
 			if($matches != 0)
 				header("Location: login.php?bad-signup-email=true");
 			return $matches == 0;
@@ -49,6 +50,7 @@
 		{
 			$query = "insert into customer values (DEFAULT, '$username', '$password', '$email', now())";
 			$result = performQuery($dbc, $query);
+			disconnectFromDB($dbc);
 			header("Location: login.php?success-signup=true");
 		}
 	}

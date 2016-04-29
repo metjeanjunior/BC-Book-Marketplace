@@ -117,4 +117,26 @@
     </body>
 </html>
 <?php
-    
+    $tofind = $_GET['search-bar']
+    $dbc = connectToDB();
+
+    if ($dbc == 'bad')
+        header("Location: login.php?error=true&redirect=".$_POST['redirect']);
+    $query = "select * from book where book_name like %$tofind% or book_description like %$tofind% "
+    function connectToDB()
+    {
+        $dbc= @mysqli_connect("localhost", "metelusj", "23JD5h5z", "metelusj") or
+            $dbc = 'bad';
+        return ($dbc);
+    }
+
+    function performQuery($dbc, $query)
+    {
+        $result = mysqli_query($dbc, $query) or die("bad query".mysqli_error($dbc));
+        return $result;
+    }
+
+    function disconnectFromDB($dbc)
+    {
+        mysqli_close($dbc);
+    }
