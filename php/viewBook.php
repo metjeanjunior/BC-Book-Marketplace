@@ -73,6 +73,15 @@ include("../include/dbconn.php");
 	  <p>
 	  <form method="post" action="transaction.php">
 	  	<input type="text" name="bookID" value="<?php echo $bookID; ?>" hidden="hidden">
+	  	<input type="text" name="bookSellerID" value="<?php echo $bookSellerID; ?>" hidden="hidden">
+	  	<input type="text" name="sellerEmail" value="<?php echo $SellerEmail; ?>" hidden="hidden">
+	  	<input type="text" name="bookISBN" value="<?php echo $bookISBN; ?>" hidden="hidden">
+	  	<input type="text" name="bookDescription" value="<?php echo $bookDescription; ?>" hidden="hidden">
+	  	<input type="text" name="bookPrice" value="<?php echo $bookPrice; ?>" hidden="hidden">
+	  	<input type="text" name="bookCondition" value="<?php echo $bookCondition; ?>" hidden="hidden">
+	  	<input type="text" name="bookDate" value="<?php echo $bookDate; ?>" hidden="hidden">
+	  	<input type="text" name="bookName" value="<?php echo $bookName; ?>" hidden="hidden">
+
 	   	<input type="submit" class="btn btn-primary btn-lg" value="Perform Transaction">
       </form>
 	</div>
