@@ -15,5 +15,5 @@ function scroll()
 	        }
 	    };
 	    mar.data('interval',setInterval(mar.marquee,1000/60));
-	});​
-}
+	})
+};
