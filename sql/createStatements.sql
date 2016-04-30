@@ -36,6 +36,8 @@ create table book
 	book_name varchar(256) not null,
 	book_description text(1000),
 	book_price int(4) not null,
+	seller_id int,
+	foreign key(sender_id) references customer(customer_id),
 	book_condition set('new', 'used- Like new', 'used - minor damage', 'used - damaged') not null,
 	book_date_added timestamp  default now()
 );
