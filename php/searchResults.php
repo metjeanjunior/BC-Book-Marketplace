@@ -57,7 +57,7 @@
     $dbc = connectToDB();
 
     if ($dbc == 'bad')
-        header("Location: login.php?error=true&redirect=".$_POST['redirect']);
+        header("Location: ../index.php");
 
     $query = "select * from book where book_name like '%$tofind%' or book_description like '%$tofind%' 
         or book_ibsn like '%$tofind%'";

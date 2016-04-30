@@ -1,126 +1,81 @@
-<!-- Inspired by: http://bootsnipp.com/snippets/featured/list-grid-view -->
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Search Results</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-        <script src="../js/marquee.js"></script>
-        <script src="../js/viewRes.js"></script>
-        <script src="../js/searchbar.js"></script>
-        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="../css/global.css">
-        <link rel="stylesheet" type="text/css" href="../css/index.css">
-        <link rel="stylesheet" type="text/css" href="../css/viewRes.css">
-    </head>
-    <body>
-        <marquee>Thanks for visiting so soon!
-        But we are under construction
-        Here is something to keep you happy until launch :)</marquee><br>
-
-        <div class="container">
-            <div class="row">
-                <form method="get" action="searchResults.php">
-                    <div class="col-sm-6 col-sm-offset-3">
-                        <div id="imaginary_container"> 
-                            <div class="input-group stylish-input-group">
-                                <input type="text" class="form-control"  placeholder="Search" 
-                                    name="search-bar" id="search-bar-1" onkeyup="search(this.value)">
-                                <span class="input-group-addon">
-                                    <button type="submit" onclick="">
-                                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                    </button>  
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="well well-sm res-header">
-                <strong>Category Title</strong>
-                <div class="btn-group">
-                    <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
-                    </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
-                        class="glyphicon glyphicon-th"></span>Grid</a>
-                </div>
-            </div>
-            <div id="products" class="row list-group">
-                
-            </div>
-        </div>
-    </body>
-</html>
 <?php
-    $tofind = $_GET['search-bar'];
-    $dbc = connectToDB();
+    $test = '{
+ "kind": "books#volumes",
+ "totalItems": 1,
+ "items": [
+  {
+   "kind": "books#volume",
+   "id": "Jx1ojwEACAAJ",
+   "etag": "9AwxlvbXsBg",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/Jx1ojwEACAAJ",
+   "volumeInfo": {
+    "title": "Harry Potter and the Cursed Child - Parts I & II (Special Rehearsal Edition): The Official Script Book of the Original West End Production",
+    "authors": [
+     "J. K. Rowling",
+     "Jack Thorne",
+     "John Tiffany"
+    ],
+    "publisher": "Arthur A. Levine Books",
+    "publishedDate": "2016-07-31",
+    "description": "Seashells, sand castles, waves, and sun! A day at the beach has never been more fun.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1338099132"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781338099133"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 320,
+    "printType": "BOOK",
+    "categories": [
+     "Juvenile Nonfiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=Jx1ojwEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=Jx1ojwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=Jx1ojwEACAAJ&dq=isbn:1338099132&hl=&cd=1&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=Jx1ojwEACAAJ&dq=isbn:1338099132&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com/books/about/Harry_Potter_and_the_Cursed_Child_Parts.html?hl=&id=Jx1ojwEACAAJ"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com/books/reader?id=Jx1ojwEACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "Seashells, sand castles, waves, and sun! A day at the beach has never been more fun."
+   }
+  }
+ ]
+}';
 
-    if ($dbc == 'bad')
-        header("Location: login.php?error=true&redirect=".$_POST['redirect']);
-
-    $query = "select * from book where book_name like '%$tofind%' or book_description like '%$tofind%' 
-        or book_ibsn like '%$tofind%'";
-    $result = performQuery($dbc, $query);
-
-    if (mysqli_num_rows($result) == 0)
-    {
-        echo 'empty';
-        return -1;
-    }
-
-    $arrayRes = array();
-    while ( $obj = mysqli_fetch_object( $result ) )
-        $arrayRes[] = $obj;
-
-    $res = json_encode($arrayRes);
-    ?>
-        <script type="text/javascript">
-            $.each(<?php echo $res; ?>, function(i, info)
-            {
-                var newDiv = "\
-                    <div class=\"item  col-xs-4 col-lg-4\">\
-                    <div class=\"thumbnail\">\
-                        <img class=\"group list-group-image\" src=\"http://placehold.it/400x250/000/fff\"/>\
-                        <div class=\"caption\">\
-                            <h4 class=\"group inner list-group-item-heading\">\
-                                "+ info.book_name + "-" + info.book_ibsn +"</h4> \
-                            <p class=\"group inner list-group-item-text\">\
-                                "+ info.book_description +"</p>\
-                            <div class=\"row\">\
-                                <div class=\"col-xs-12 col-md-6\">\
-                                    <p class=\"lead\">\
-                                        "+ info.book_price +"</p>\
-                                </div>\
-                                <div class=\"col-xs-12 col-md-6\">\
-                                    <form method=\"post\" action=\"viewBook.php\">\
-                                        <input type=\"text\" name=\"bookID\" value=\""+ info.book_id +"\" hidden=\"hidden\">\
-                                        <input type=\"submit\" class=\"btn btn-success\" value=\"View Book\">\
-                                    </form>\
-                                </div>\
-                            </div>\
-                        </div>\
-                    </div>\
-                </div>";
-                $("#products").append(newDiv);
-            });
-        </script>
-    <?php
-
-    function connectToDB()
-    {
-        $dbc= @mysqli_connect("localhost", "metelusj", "23JD5h5z", "metelusj") or
-            $dbc = 'bad';
-        return ($dbc);
-    }
-
-    function performQuery($dbc, $query)
-    {
-        $result = mysqli_query($dbc, $query) or die("bad query".mysqli_error($dbc));
-        return $result;
-    }
-
-    function disconnectFromDB($dbc)
-    {
-        mysqli_close($dbc);
-    }
+$res = json_encode($test);
+echo $res;

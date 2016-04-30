@@ -4,6 +4,7 @@
 		<title>Sell/Lend/Rent an Item</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 		<script src="../js/marquee.js"></script>
+		<script src="../js/addBook.js"></script>
 		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="../css/global.css">
 	</head>
@@ -27,7 +28,7 @@
 							
 						</div>
 						<div class="col-sm-2">
-					        <button class="btn btn-success" id="autofill-book-button" type="button" id="forgot-login">Go!</button>
+					        <button class="btn btn-success" id="autofill-book-button" type="button" id="forgot-login" onclick="fillForm();">Go!</button>
 				        </div>
 					</div>
 				</div>
