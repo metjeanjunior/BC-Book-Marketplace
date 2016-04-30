@@ -17,6 +17,9 @@ include("../include/dbconn.php");
 		<marquee>Thanks for visiting so soon!
 		But we are under construction
 		Here is something to keep you happy until launch :)</marquee><br>
+	<div>
+		<a  href="../index.php">Home</a>
+	 </div>
 	</body>
 </html>
 <?php
