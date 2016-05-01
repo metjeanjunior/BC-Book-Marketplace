@@ -15,7 +15,7 @@
 		Here is something to keep you happy until launch :)</marquee><br>
 
 		<div class="container">
-			<form class="form-signin" id="add-book-form" method="get" action="php/loginCheck.php">
+			<form class="form-signin" id="add-book-form" method="get" action="loginCheck.php">
 				<h2 class="form-signin-heading">Add a new book</h2>
 
 				<!-- Form filler thru ibsn -->
