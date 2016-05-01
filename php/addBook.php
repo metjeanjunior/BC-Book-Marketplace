@@ -24,7 +24,7 @@
 					<div class="row">
 						<div class="col-sm-10">
 							<label for="book-ibsn" class="sr-only">Email address</label>
-							<input type="text" id="book-ibsn" class="form-control" placeholder="Book IBSN" required autofocus><br>
+							<input type="text" id="book-ibsn" class="form-control" placeholder="Book IBSN" autofocus><br>
 							
 						</div>
 						<div class="col-sm-2">
@@ -41,7 +41,11 @@
 		        <button class="btn btn-md btn-primary btn-block" id="reset" type="submit">Add Book</button>
 	        </form>
 		</div>
-
+		<div class="container">
+			<div id="standby">
+				
+			</div>
+		</div>
 		<!-- <img src="../img/dog.jpeg">
 		<img src="../img/cat.jpeg"> -->
 	</body>
