@@ -51,3 +51,6 @@ marquee
 	text-align: center;
 	color: cyan;
 }
+
+textarea {
+  resize: vertical; 
