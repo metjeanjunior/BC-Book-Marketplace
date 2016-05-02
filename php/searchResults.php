@@ -63,7 +63,8 @@
                         </div>\
                     </div>\
                 </div>";
-                $("#products").append(newDiv);
+                $("#result").append(newDiv);
+                
             });
         </script>
     <?php
