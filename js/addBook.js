@@ -8,7 +8,8 @@ function fillForm()
 			setTimeout(function() {
 				$("#standby").html(data.items[0].volumeInfo.title + "<br>");		
 				$("#standby").append(data.items[0].volumeInfo.description + "<br>");
-				$("input[name=book-name]").val(data.items[0].volumeInfo.title);			
+				$("input[name=book-name]").val(data.items[0].volumeInfo.title);		
+				$("textarea#description").val(data.items[0].volumeInfo.description);	
 			}, 0);
 
 			// $.each(data, function(i,info)
