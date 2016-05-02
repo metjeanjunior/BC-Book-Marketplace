@@ -15,16 +15,16 @@
 		Here is something to keep you happy until launch :)</marquee><br>
 
 		<div class="container">
-			<form class="form-signin" id="add-book-form" method="get" action="loginCheck.php">
+			<form class="form-signin" id="add-book-form" method="post" action="loginCheck.php">
 				<h2 class="form-signin-heading">Add a new book</h2>
 
 				<!-- Form filler thru ibsn -->
 				<div>
-					<p>Have the IBSN? Let us fill the rest for you</p>
+					<p>Have the ISBN? Let us fill the rest for you</p>
 					<div class="row">
 						<div class="col-sm-10">
-							<label for="book-ibsn" class="sr-only">Email address</label>
-							<input type="text" id="book-ibsn" class="form-control" placeholder="Book IBSN" autofocus><br>
+							<label for="book-ibsn" class="sr-only">Fill out ISBN</label>
+							<input type="text" name="book-ibsn" id="book-ibsn" class="form-control" placeholder="Book ISBN" autofocus><br>
 							
 						</div>
 						<div class="col-sm-2">
@@ -35,15 +35,17 @@
 
 				<!-- book info -->
 				<div>
-					<input type="text" name="book-name" class="form-control" placeholder="Book Name">
+					<input type="text" name="book-name" id="bookname" class="form-control" placeholder="Book Name">
+				    <textarea name="description" class="form-control" rows="5" placeholder="Book Description" id="description"></textarea>
+					<input type="text" name="condition" id="condition" class="form-control" placeholder="Book Condition">
+					<input type="text" name="price" id="price" class="form-control" placeholder="Book Price ($)">
 				</div>
-
 		        <button class="btn btn-md btn-primary btn-block" id="reset" type="submit">Add Book</button>
 	        </form>
 		</div>
 		<div class="container">
 			<div id="standby">
-				
+
 			</div>
 		</div>
 		<!-- <img src="../img/dog.jpeg">
