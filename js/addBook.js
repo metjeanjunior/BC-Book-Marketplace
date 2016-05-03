@@ -3,7 +3,6 @@ function fillForm()
 	$.getJSON("../php/newIbsnCrawler.php?ibsn="+$("#book-ibsn").val(), 
 	function(data)
 	{
-		$("#standby").html("Looking up ISBN...Please wait...")
 		if (data.totalItems >= 1 && verifyISBN() == true) {
 			setTimeout(function() {
 				var res = "\
@@ -30,7 +29,7 @@ function fillForm()
 				    <strong>Sorry :(</strong>\
 				    The ISBN number you typed is either invalid or has not been assigned yet. Please try again.\
 				</div>";
-			$("#standby").append("")
+			$("#standby").append(res);
 		}
 	});
 }
