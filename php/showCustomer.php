@@ -24,42 +24,48 @@ $result = perform_query($dbc, "SELECT * from transaction");
 		</marquee>
 		<div class="container">
 			<div class="centerstuff">
-				<h2>Customer Settings</h2>
-				<button class="btn btn-primary" type="button" id="transactions">View Transactions</button>
-				<button class="btn btn-primary" type="button" id="updateEmail">Update Email</button>
-				<button class="btn btn-primary" type="button" id="updatePassword">Update Password</button>
+				<h2>Customer Portal</h2>
+				<button class="btn btn-primary" type="button" id="transactions-button">View Transactions</button>
+				<button class="btn btn-primary" type="button" id="update-email-button">Update Email</button>
+				<button class="btn btn-primary" type="button" id="update-password-button">Update Password</button>
 			</div>
-			<table class="table table-bordered" hidden="hidden">
-				<thead>
-					<tr>
-						<th>Transaction ID</th>
-						<th>Sender ID</th>
-						<th>Receiver ID</th>
-						<th>Book ISBN</th>
-						<th>Transaction Price</th>
-						<th>Transaction Type</th>
-						<th>Transaction Date</th>
-					</tr>
-				</thead>
-				<tbody>
-				<?php 
-					while($row = $result->fetch_assoc()) { 
-				?>
-					<tr>
-						<td><?php echo $row['transaction_id']; ?></td>
-						<td><?php echo $row['sender_id']; ?></td>
-						<td><?php echo $row['receiver_id']; ?></td>
-						<td><?php echo $row['book_ibsn']; ?></td>
-						<td><?php echo $row['transaction_price']; ?></td>
-						<td><?php echo $row['transaction_type']; ?></td>
-						<td><?php echo $row['transaction_date']; ?></td>
-					</tr>
-				<?php 
-				} 
-				?>
-				</tbody>
-			</table>
-			<div class="col-md-4 col-md-offset-4">
+
+			<!-- Transactions -->
+			<div id="transactions-div">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>Transaction ID</th>
+							<th>Sender ID</th>
+							<th>Receiver ID</th>
+							<th>Book ISBN</th>
+							<th>Transaction Price</th>
+							<th>Transaction Type</th>
+							<th>Transaction Date</th>
+						</tr>
+					</thead>
+					<tbody>
+					<?php 
+						while($row = $result->fetch_assoc()) { 
+					?>
+						<tr>
+							<td><?php echo $row['transaction_id']; ?></td>
+							<td><?php echo $row['sender_id']; ?></td>
+							<td><?php echo $row['receiver_id']; ?></td>
+							<td><?php echo $row['book_ibsn']; ?></td>
+							<td><?php echo $row['transaction_price']; ?></td>
+							<td><?php echo $row['transaction_type']; ?></td>
+							<td><?php echo $row['transaction_date']; ?></td>
+						</tr>
+					<?php 
+					} 
+					?>
+					</tbody>
+				</table>
+			</div>
+
+			<!-- Update email -->
+			<div class="col-md-4 col-md-offset-4" id="update-email-div" hidden="hidden">
 				<div class="panel-body">
 					<div class="text-center">
 						<form id="update-email-form" method="get" method="post" action="updateEmail.php" onsubmit="return true">
@@ -75,7 +81,7 @@ $result = perform_query($dbc, "SELECT * from transaction");
 								<div class="input-group">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
 									<label for="current-email" class="sr-only">Current Email address</label>
-									<input type="email" name="current-email" id="current-email" class="form-control" placeholder="Current Email address" required autofocus>	
+									<input type="email" name="current-email" id="current-email" class="form-control" placeholder="New Email address" required autofocus>	
 								</div>
 							</div>
 							<div class="form-group">
@@ -92,7 +98,7 @@ $result = perform_query($dbc, "SELECT * from transaction");
 									    Your email was updated and a confirmation email was sent to you!
 									</div>
 									<?php
-									echo $_GET['redirect'];
+									// echo $_GET['redirect'];
 								}
 								elseif (isset($_GET['bad-old-email']) and $_GET['bad-old-email'] = true) 
 								{
@@ -108,6 +114,56 @@ $result = perform_query($dbc, "SELECT * from transaction");
 							?>
 						</div>
 					</div>
+				</div>
+
+				<!-- Update Passwords -->
+				<div class="col-md-4 col-md-offset-4" id="update-password-div" hidden="hidden">
+					<div class="panel-body">
+						<div class="text-center">
+							<form id="forgot-form" method="get" method="post" action="forgotPass.php" onsubmit="">
+								<h3><i class="fa fa-lock fa-4x"></i></h3>
+								<h2 class="text-center">Dont like your old Password?</h2>
+								<p>You can reset your password here.</p>
+								<div class="form-group">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+										<input type="email" name="old-password" id="old-password" class="form-control" placeholder="Old Password" required autofocus><br>
+										<input type="email" name="new-password" id="new-password" class="form-control" placeholder="New Password" required autofocus><br>
+									</div>
+								</div>
+								<div class="form-group">
+									<input class="btn btn-lg btn-primary btn-block" value="Send My Password" type="submit">
+								</div>
+							</form>
+
+							<div class="alert alert-danger fade in" id="emailErr" hidden="hidden">
+								<?php
+									if (isset($_GET['success-forgot-email']) and $_GET['success-forgot-email'] = true) 
+									{
+										?>
+										<div class="alert alert-success fade in">
+										    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+										    <strong>Congrats!</strong>
+										    Your password was updated and emailed to you.
+										</div>
+										<?php
+										echo $_GET['redirect'];
+									}
+									elseif (isset($_GET['bad-forgot-email']) and $_GET['bad-forgot-email'] = true) 
+									{
+										?>
+										<div class="alert alert-danger fade in">
+										    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+										    <strong>Wrong Email!</strong>
+										    Your email is not in our database. Please try again.
+										</div>
+										<?php
+										echo $_GET['redirect'];
+									}
+								?>
+							</div>
+						</div>
+	                </div>
 				</div>
 			</div>
 		</div>

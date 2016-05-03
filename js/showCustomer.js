@@ -1,4 +1,27 @@
-function validateForgot()
+$(function()
+{
+	var $transactions = $("#transactions-div");
+	var $email = $("#update-email-div");
+	var $password = $("#update-password-div");
+
+	$("#transactions-button").click(function(){
+		$email.hide();
+		$password.hide();
+		$transactions.show();
+	});
+	$("#update-email-button").click(function(){
+		$email.show();
+		$password.hide();
+		$transactions.hide();
+	});
+	$("#update-password-button").click(function(){
+		$email.hide();
+		$password.show();
+		$transactions.hide();
+	});
+});
+
+function validateEmail()
 {
 	return emailExists();
 }
