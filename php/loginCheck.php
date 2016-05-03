@@ -1,6 +1,6 @@
 <?php
 	if (isset($_COOKIE['loginCookieUser']))
-		header("Location: ".$_POST['redirect']);
+		header("Location: ".$_GET['redirect']);
 	if ( 0 == checklogin( $_POST['login-email'], $_POST['login-password']))
 	{
 		header("Location: login.php?badInfo=true");
@@ -13,8 +13,19 @@
 	{ 		
 		// Store the login information in cookies	
 		if (isset($_POST['remember']))
-			setcookie('loginCookieUser', $_POST['name'], time() + 900);
-	  	header("Location: ../index.php");
+			setcookie("loginCookieUser", "null", time() + (365 * 24 * 60 * 60));
+		else
+			setcookie("loginCookieUser", "null", 900);
+
+		echo $_COOKIE['loginCookieUser'];
+		echo "JUst set a cookie";
+		foreach ($_COOKIE as $key=>$value)
+			echo "\$_COOKIE['$key'] = $value<br />";
+		// if(isset($_GET['redirect']))
+		// 	header("Location: ".$_GET['redirect']);
+		// echo $_GET['redirect'];
+		// else
+		//   	header("Location: ../index.php");
 	}
 	// checklogin sees if an entry exists with the name password pair passed.
 	// returns true if so, false otherwise.

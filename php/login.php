@@ -20,8 +20,13 @@
 		Here is something to keep you happy until launch :)</marquee><br>
 		
 		<div class="container" id="div-forms">
-
-			<form class="form-signin" id="login-form" method="post" action="loginCheck.php">
+			<?php
+				if(isset($_GET['redirect']))
+					$action = "loginCheck.php?redirect=".$_GET['redirect'];
+				else
+					$action = "loginCheck.php";
+			?>
+			<form class="form-signin" id="login-form" method="post" action="<?php echo $action ?>">
 		        <h2 class="form-signin-heading">Please sign in</h2>
 		        <label for="login-email" class="sr-only">Email address</label>
 		        <input type="email" name="login-email" id="login-email" class="form-control" placeholder="Email address" required autofocus>

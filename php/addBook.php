@@ -1,6 +1,11 @@
 <?php
-	header("Location: loginCheck?")
+	if (!isset($_COOKIE['loginCookieUser']))
+	{
+		$selfLink = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+		header('Location: login.php?notLogged=true&redirect='.$selfLink);
+	}
 ?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -61,10 +66,3 @@
 		<img src="../img/cat.jpeg"> -->
 	</body>
 </html>
-
-<?php
-	// if (!isset($_COOKIE['loginCookieUser']))
-	// {
-	// 	$selfLink = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-	// 	header('Location: ../login.php?notLogged=true&redirect='.$selfLink);
-	// }
