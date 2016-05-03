@@ -6,7 +6,13 @@ function fillForm()
 		$("#standby").html("Looking up ISBN...Please wait...")
 		if (data.totalItems >= 1 && verifyISBN() == true) {
 			setTimeout(function() {
-				$("#standby").html("Success! We found a bookmatch for the ISBN you provided!" + "<br>");		
+				var res = "\
+					<div class=\"alert alert-success fade in\">\
+					    <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>\
+					    <strong>Sucess!</strong>\
+					    We found a bookmatch for the ISBN you provided!\
+					</div>";
+				$("#standby").html(res);		
 				$("input[name=book-name]").val(data.items[0].volumeInfo.title);		
 				$("textarea#description").val(data.items[0].volumeInfo.description);	
 			}, 0);
@@ -18,7 +24,13 @@ function fillForm()
 			// });
 		}
 		else {
-			$("#standby").append("The ISBN number you typed is either invalid or has not been assigned yet. Please try again. <br>")
+			var res ="\
+				<div class=\"alert alert-danger fade in\">\
+				    <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>\
+				    <strong>Sorry :(</strong>\
+				    The ISBN number you typed is either invalid or has not been assigned yet. Please try again.\
+				</div>";
+			$("#standby").append("")
 		}
 	});
 }

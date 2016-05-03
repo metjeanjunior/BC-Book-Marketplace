@@ -16,6 +16,8 @@ $result = perform_query($dbc, "SELECT * from transaction");
 		<script src="../js/showCustomer.js"></script>
 		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="../css/global.css">
+		<link rel="stylesheet" type="text/css" href="../css/index.css">
+		<link rel="stylesheet" type="text/css" href="../css/viewRes.css">
 	</head>
 	<body>
 		<marquee>Thanks for visiting so soon!
@@ -32,36 +34,46 @@ $result = perform_query($dbc, "SELECT * from transaction");
 
 			<!-- Transactions -->
 			<div id="transactions-div">
-				<table class="table table-bordered">
-					<thead>
-						<tr>
-							<th>Transaction ID</th>
-							<th>Sender ID</th>
-							<th>Receiver ID</th>
-							<th>Book ISBN</th>
-							<th>Transaction Price</th>
-							<th>Transaction Type</th>
-							<th>Transaction Date</th>
-						</tr>
-					</thead>
-					<tbody>
+				<div class="well well-sm res-header">
+				    <strong>Category Title</strong>
+				    <div class="btn-group">
+				        <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
+				        </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
+				            class="glyphicon glyphicon-th"></span>Grid</a>
+				    </div>
+				</div>
+				<div id="products" class="row list-group">
 					<?php 
 						while($row = $result->fetch_assoc()) { 
 					?>
-						<tr>
-							<td><?php echo $row['transaction_id']; ?></td>
-							<td><?php echo $row['sender_id']; ?></td>
-							<td><?php echo $row['receiver_id']; ?></td>
-							<td><?php echo $row['book_ibsn']; ?></td>
-							<td><?php echo $row['transaction_price']; ?></td>
-							<td><?php echo $row['transaction_type']; ?></td>
-							<td><?php echo $row['transaction_date']; ?></td>
-						</tr>
+					    <div class="item  col-xs-4 col-lg-4">
+						    <div class="thumbnail">
+						        <div class="caption">
+						            <h4 class="group inner list-group-item-heading">
+						                <?php echo $row['book_ibsn']; ?>-<?php echo $row['transaction_type']; ?></h4> 
+						            <p class="group inner list-group-item-text">
+						                On: <?php echo $row['transaction_date']; ?></p>
+						            <p>From: <?php echo $row['sender_id']; ?></p>
+						            <p>To: <?php echo $row['receiver_id']; ?></p>
+						            <div class="row">
+						                <div class="col-xs-12 col-md-6">
+						                    <p class="lead">
+						                        $<?php echo $row['transaction_price']; ?></p>
+						                </div>
+						                <div class="col-xs-12 col-md-6">
+						                    <form method="post" action="viewBook.php">
+						                        <input type="text" name="bookID" value=""+ info.book_id +"" hidden="hidden">
+						                        <input type="submit" class="btn btn-success" value="View Book">
+						                    </form>
+						                </div>
+						            </div>
+						        </div>
+						    </div>
+						</div>
 					<?php 
 					} 
 					?>
-					</tbody>
-				</table>
+				</div>
 			</div>
 
 			<!-- Update email -->

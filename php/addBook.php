@@ -1,9 +1,9 @@
 <?php
-	if (!isset($_COOKIE['loginCookieUser']))
-	{
-		$selfLink = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-		header('Location: login.php?notLogged=true&redirect='.$selfLink);
-	}
+	// if (!isset($_COOKIE['loginCookieUser']))
+	// {
+	// 	$selfLink = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+	// 	header('Location: login.php?notLogged=true&redirect='.$selfLink);
+	// }
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +46,7 @@
 					<input type="text" name="book-name" id="bookname" class="form-control" placeholder="Book Name" required>
 				    <textarea name="description" class="form-control" rows="5" placeholder="Book Description" id="description"></textarea>
 			        <select name="condition" class="form-control" id="condition" required>
-				        <option value="" disabled selected>Select your option</option>
+				        <option value="" disabled selected>Book Condition</option>
 				        <option value="new">New</option>
 				        <option value="used - Like new">Used - Like New</option>
 				        <option value="used - minor damage">Used - Minor Damage</option>
