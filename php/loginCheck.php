@@ -1,4 +1,6 @@
 <?php
+	if (isset($_COOKIE['loginCookieUser']))
+		header("Location: ".$_POST['redirect']);
 	if ( 0 == checklogin( $_POST['login-email'], $_POST['login-password']))
 	{
 		header("Location: login.php?badInfo=true");

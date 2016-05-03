@@ -1,3 +1,6 @@
+<?php
+	header("Location: loginCheck?")
+?>
 <!DOCTYPE html>
 <html>
 	<head>
