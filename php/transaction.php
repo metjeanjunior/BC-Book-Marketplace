@@ -22,7 +22,7 @@ include("../include/dbconn.php");
 		Here is something to keep you happy until launch :)</marquee><br>
 		<div>
 			<a  href="../index.php">Home</a>
-		</div>	
+		</div>
 
 		<div class="container">
 			<div class="jumbotron" id="message"></div>
@@ -38,8 +38,8 @@ include("../include/dbconn.php");
 	// if(isset($_COOKIE['loginCookieUser'])) {
 	// 	$user = $_COOKIE['loginCookieUser'];
 	// }
-	
-	$user = 
+
+	$user =
 	$bookName = $_POST['bookName'];
 	$sellerEmail = $_POST['sellerEmail'];
 	$bookISBN = $_POST['bookISBN'];
@@ -63,7 +63,7 @@ include("../include/dbconn.php");
 			var res = "\
 				<h1><?php echo $bookName; ?></h1>\
 				<p>\
-				Seller: <?php echo $SellerEmail; ?> <br>\
+				Seller: <?php echo $sellerEmail; ?> <br>\
 				ISBN: <?php echo $bookISBN; ?> <br>\
 				The seller/lender has been informed of your request!\
 				</p>\
