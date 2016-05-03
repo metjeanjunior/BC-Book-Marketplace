@@ -45,6 +45,10 @@
                     </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
                         class="glyphicon glyphicon-th"></span>Grid</a>
                 </div>
+                
+                <script type="text/javascript">
+                    $("#list").click();
+                </script>
             </div>
             <div id="products" class="row list-group">
                 
