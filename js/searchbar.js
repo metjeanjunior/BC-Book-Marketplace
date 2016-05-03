@@ -2,7 +2,7 @@ $(document).ready(function(){
 });
 
 function search(str) {
-    var url = "php/searchResults.php"; 
+    var url = "php/searchbar.php"; 
     if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest();
 
@@ -14,7 +14,7 @@ function search(str) {
             document.getElementById("result").innerHTML = xmlhttp.responseText;
         }
     };
-    xmlhttp.open("GET", url+"?search-bar="+str, true);
+    xmlhttp.open("GET", url+"?search="+str, true);
     xmlhttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
     xmlhttp.send();
     
