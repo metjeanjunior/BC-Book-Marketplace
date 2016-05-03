@@ -26,8 +26,10 @@ include("../include/dbconn.php");
 	// if(!isset($_GET['itemId']))
 	// 	header("Location: ../index.php");
 
-
-	$bookID = $_POST['bookID'];
+	if (isset($_GET['bookID']))
+		$bookID = $_GET['bookID'];
+	else
+		$bookID = $_POST['bookID'];
 	//$ibsn = '2147483647';
 
 	$dbc = connectToDB();

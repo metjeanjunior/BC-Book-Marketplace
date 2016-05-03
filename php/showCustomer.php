@@ -14,7 +14,7 @@ $result = perform_query($dbc, "SELECT * from transaction");
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<script src="../js/marquee.js"></script>
 		<script src="../js/showCustomer.js"></script>
-		<script src="../js/viewRes.js"></script>
+		<script src="../js/viewRes	.js"></script>
 		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="../css/global.css">
 		<link rel="stylesheet" type="text/css" href="../css/index.css">
@@ -46,16 +46,34 @@ $result = perform_query($dbc, "SELECT * from transaction");
 				<div id="products" class="row list-group">
 					<?php 
 						while($row = $result->fetch_assoc()) { 
+							$query = "Select customer_email from customer where customer_id = ".$row['sender_id'];
+							$result2 = perform_query($dbc, $query);
+							$email = mysqli_fetch_row($result2);
+							$sendEmail = $email[0];
+
+							$query = "Select customer_email from customer where customer_id = ".$row['receiver_id'];
+							$result2 = perform_query($dbc, $query);
+							$recEmail = mysqli_fetch_row($result2);
+							$recEmail = $recEmail[0];
+
+							$query = "Select book_id, book_name from book where seller_id = ".$row['sender_id']. " and book_ibsn = '".$row['book_ibsn']."' ";
+							// echo $query;
+							$result2 = perform_query($dbc, $query);
+							$bookInfo = mysqli_fetch_row($result2);
+							$bookInfoID = $bookInfo[0];
+							$bookInfoName = $bookInfo[1];
+
+
 					?>
 					    <div class="item  col-xs-4 col-lg-4">
 						    <div class="thumbnail">
 						        <div class="caption">
 						            <h4 class="group inner list-group-item-heading">
-						                <?php echo $row['book_ibsn']; ?>-<?php echo $row['transaction_type']; ?></h4> 
+						                <?php echo $bookInfoName."-".$row['book_ibsn']; ?></h4> 
 						            <p class="group inner list-group-item-text">
 						                On: <?php echo $row['transaction_date']; ?></p>
-						            <p>From: <?php echo $row['sender_id']; ?></p>
-						            <p>To: <?php echo $row['receiver_id']; ?></p>
+						            <p>From: <?php echo $sendEmail; ?></p>
+						            <p>To: <?php echo $recEmail; ?></p>
 						            <div class="row">
 						                <div class="col-xs-12 col-md-6">
 						                    <p class="lead">
@@ -63,8 +81,12 @@ $result = perform_query($dbc, "SELECT * from transaction");
 						                </div>
 						                <div class="col-xs-12 col-md-6">
 						                    <form method="post" action="viewBook.php">
-						                        <input type="text" name="bookID" value=""+ info.book_id +"" hidden="hidden">
+						                        <input type="text" name="bookID" value="<?php echo $bookInfoID ?>" hidden="hidden">
 						                        <input type="submit" class="btn btn-success" value="View Book">
+						                    </form>
+						                    <form method="post" action="transaction.php">
+						                        <input type="text" name="bookID" value=""+ <?php echo $row['transaction_id'] ?> +"" hidden="hidden">
+						                        <input type="submit" class="btn btn-success" value="View Transaction">
 						                    </form>
 						                </div>
 						            </div>
