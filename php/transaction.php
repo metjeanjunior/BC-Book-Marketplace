@@ -1,3 +1,6 @@
+<?php
+include("../include/dbconn.php");
+?>
 <!-- Inspired by: http://bootsnipp.com/snippets/featured/search-results -->
 <!DOCTYPE html>
 <html>
@@ -21,8 +24,63 @@
 		<!-- <div id="map" hidden="hidden"></div> -->
 		<div id="map"></div>
 		<button class="btn-primary" id="toggleButton" onclick="toggleMap();">Show/Hide Map</button>
-
+		<div>
+			<a  href="../index.php">Home</a>
+		</div>
 	</body>
 </html>
 <?php
-	
+
+	if(isset($_COOKIE['loginCookieUser'])) {
+		$user = $_COOKIE['loginCookieUser'];
+	}
+
+	$bookName = $_POST['bookName'];
+	$sellerEmail = $_POST['sellerEmail'];
+	$bookISBN = $_POST['bookISBN'];
+
+
+	$dbc = connectToDB();
+	$query = "UPDATE transaction SET receiver_id='$user' WHERE book_ibsn='$bookISBN'";
+	$result = performQuery($dbc, $query);
+	$row = mysqli_fetch_array($result,MYSQLI_NUM);
+
+	$subject = $bookName;
+	$receiver = $sellerEmail;
+	$message = "Your book has been requested by" . $user;
+	$message2 = "You requested a book from" . $sellerEmail;
+	mail($sellerEmail;,$subject,$message);
+	mail($user,$subject,$message2);
+	@disconnect_from_db($dbc, $resultEmail );
+
+	?>
+	<div class="jumbotron">
+	  <h1><?php echo $bookName; ?></h1>
+	  <p>
+	  Seller: <?php echo $SellerEmail; ?> <br>
+	  ISBN: <?php echo $bookISBN; ?> <br>
+	  The seller/lender has been informed of your request!
+	  </p>
+	  <p>
+	</div>
+	<?php
+	function connectToDB()
+	{
+		$dbc= @mysqli_connect("localhost", "metelusj", "23JD5h5z", "metelusj") or
+			$dbc = 'bad';
+		return ($dbc);
+	}
+
+	function disconnectFromDB($dbc)
+	{
+		mysqli_close($dbc);
+	}
+	// Modified PeformQuery, takes the database and query as arguments, returns result set
+
+	function performQuery($dbc, $query)
+	{
+		//echo "My query is >$query< <br />";
+		$result = mysqli_query($dbc, $query) or die("bad query: ".mysqli_error($dbc));
+		return ($result);
+	}
+	?>
