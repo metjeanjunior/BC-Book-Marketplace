@@ -35,16 +35,22 @@
 
 				<!-- book info -->
 				<div>
-					<input type="text" name="book-name" id="bookname" class="form-control" placeholder="Book Name">
+					<input type="text" name="book-name" id="bookname" class="form-control" placeholder="Book Name" required>
 				    <textarea name="description" class="form-control" rows="5" placeholder="Book Description" id="description"></textarea>
-					<input type="text" name="condition" id="condition" class="form-control" placeholder="Book Condition">
-					<input type="text" name="price" id="price" class="form-control" placeholder="Book Price ($)">
+			        <select name="condition" class="form-control" id="condition" required>
+				        <option value="" disabled selected>Select your option</option>
+				        <option value="new">New</option>
+				        <option value="used - Like new">Used - Like New</option>
+				        <option value="used - minor damage">Used - Minor Damage</option>
+				        <option value="used - damaged">Used - Damaged</option>
+			        </select>					
+        			<input type="text" name="price" id="price" class="form-control" placeholder="Book Price ($)" required>
 				</div>
-		        <button class="btn btn-md btn-primary btn-block" id="reset" type="submit">Add Book</button>
+		        <button class="btn btn-md btn-primary btn-block" id="reset" type="submit" onsubmit="true">Add Book</button>
 	        </form>
 		</div>
 		<div class="container">
-			<div id="standby">
+			<h2 id="standby"></h2>
 
 			</div>
 		</div>

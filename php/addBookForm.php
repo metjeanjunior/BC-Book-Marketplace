@@ -22,11 +22,11 @@
 	$bookname = mysql_escape_string($_POST['book-name']);
 	$description = mysql_escape_string($_POST['description']);
 	$bookibsn = $_POST['book-ibsn'];
-	// $condition = $_GET['condition']; How do you update a set type in MySQL from PHP????
+	$condition = mysql_escape_string($_POST['condition']); // How do you update a set type in MySQL from PHP????
 	$price = floatval($_POST['price']);
 	$price = round($price, 2);
-	$query = "INSERT into book (book_ibsn, book_name, book_description, book_price, book_date_added) values 
-			('$bookibsn', '$bookname', '$description', $price, now())";
+	$query = "INSERT into book (book_ibsn, book_name, book_description, book_price, book_condition, book_date_added) values 
+			('$bookibsn', '$bookname', '$description', $price, '$condition', now())";
 	performQuery($dbc, $query);
 
 	/*

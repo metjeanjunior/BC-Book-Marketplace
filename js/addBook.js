@@ -4,10 +4,9 @@ function fillForm()
 	function(data)
 	{
 		$("#standby").html("Looking up ISBN...Please wait...")
-		if (data.totalItems >= 1) {
+		if (data.totalItems >= 1 && verifyISBN() == true) {
 			setTimeout(function() {
-				$("#standby").html(data.items[0].volumeInfo.title + "<br>");		
-				$("#standby").append(data.items[0].volumeInfo.description + "<br>");
+				$("#standby").html("Success! We found a bookmatch for the ISBN you provided!" + "<br>");		
 				$("input[name=book-name]").val(data.items[0].volumeInfo.title);		
 				$("textarea#description").val(data.items[0].volumeInfo.description);	
 			}, 0);
@@ -22,4 +21,9 @@ function fillForm()
 			$("#standby").append("The ISBN number you typed is either invalid or has not been assigned yet. Please try again. <br>")
 		}
 	});
+}
+
+function verifyISBN() {
+	var ISBN = document.getElementById("book-ibsn").value;
+	return (ISBN.length == 10 || ISBN.length == 13);	
 }
