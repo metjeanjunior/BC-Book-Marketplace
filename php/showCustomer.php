@@ -14,6 +14,7 @@ $result = perform_query($dbc, "SELECT * from transaction");
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<script src="../js/marquee.js"></script>
 		<script src="../js/showCustomer.js"></script>
+		<script src="../js/viewRes.js"></script>
 		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="../css/global.css">
 		<link rel="stylesheet" type="text/css" href="../css/index.css">
