@@ -16,14 +16,6 @@ if ($result->num_rows > 0)
 {
 	while($row = $result->fetch_assoc()) 
 	{
-		echo "<tr>";
-		echo "<td>" . $row['book_id'] . "</td>";
-		echo "<td>" . $row['book_name'] . "</td>";
-		echo "<td>" . $row['book_description'] . "</td>";
-		echo "</tr>";
+		echo $row['book_name'] . "<br>";
 	}
 }
-echo "</tbody>";
-echo "</table>";
-
-?>

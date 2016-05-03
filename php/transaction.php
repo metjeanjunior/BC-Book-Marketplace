@@ -20,49 +20,57 @@ include("../include/dbconn.php");
 		<marquee>Thanks for visiting so soon!
 		But we are under construction
 		Here is something to keep you happy until launch :)</marquee><br>
+		<div>
+			<a  href="../index.php">Home</a>
+		</div>	
+
+		<div class="container">
+			<div class="jumbotron" id="message"></div>
+		</div>
 
 		<!-- <div id="map" hidden="hidden"></div> -->
 		<div id="map"></div>
 		<button class="btn-primary" id="toggleButton" onclick="toggleMap();">Show/Hide Map</button>
-		<div>
-			<a  href="../index.php">Home</a>
-		</div>
 	</body>
 </html>
 <?php
 
-	if(isset($_COOKIE['loginCookieUser'])) {
-		$user = $_COOKIE['loginCookieUser'];
-	}
-
+	// if(isset($_COOKIE['loginCookieUser'])) {
+	// 	$user = $_COOKIE['loginCookieUser'];
+	// }
+	
+	$user = 
 	$bookName = $_POST['bookName'];
 	$sellerEmail = $_POST['sellerEmail'];
 	$bookISBN = $_POST['bookISBN'];
 
 
 	$dbc = connectToDB();
-	$query = "UPDATE transaction SET receiver_id='$user' WHERE book_ibsn='$bookISBN'";
-	$result = performQuery($dbc, $query);
-	$row = mysqli_fetch_array($result,MYSQLI_NUM);
+	// $query = "UPDATE transaction SET receiver_id='$user' WHERE book_ibsn='$bookISBN'";
+	// $result = performQuery($dbc, $query);
+	// $row = mysqli_fetch_array($result,MYSQLI_NUM);
 
 	$subject = $bookName;
 	$receiver = $sellerEmail;
 	$message = "Your book has been requested by" . $user;
 	$message2 = "You requested a book from" . $sellerEmail;
-	mail($sellerEmail;,$subject,$message);
+	mail($sellerEmail,$subject,$message);
 	mail($user,$subject,$message2);
 	@disconnect_from_db($dbc, $resultEmail );
 
 	?>
-	<div class="jumbotron">
-	  <h1><?php echo $bookName; ?></h1>
-	  <p>
-	  Seller: <?php echo $SellerEmail; ?> <br>
-	  ISBN: <?php echo $bookISBN; ?> <br>
-	  The seller/lender has been informed of your request!
-	  </p>
-	  <p>
-	</div>
+		<script type="text/javascript">
+			var res = "\
+				<h1><?php echo $bookName; ?></h1>\
+				<p>\
+				Seller: <?php echo $SellerEmail; ?> <br>\
+				ISBN: <?php echo $bookISBN; ?> <br>\
+				The seller/lender has been informed of your request!\
+				</p>\
+				<p>";
+			$("#message").append(res);
+			// $(".jumbotron").append(res);
+		</script>
 	<?php
 	function connectToDB()
 	{

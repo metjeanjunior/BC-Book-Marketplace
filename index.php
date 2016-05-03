@@ -44,7 +44,7 @@
 	 	</div>
 
 	 	<div class="container">
-	 		<div id="result">
+	 		<div class="list-group" id="result">
 	 		</div>
 	 	</div>
 	 	
