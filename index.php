@@ -16,8 +16,9 @@
 		Here is something to keep you happy until launch :)</marquee><br>
 
 		<div class="header">
-			<a  id="login-ling" href="php/login.php">Login</a>
+			<a id="login-ling" href="php/login.php">Login</a>
 			<a id="add-link" href="php/addBook.php">Lend/Sell</a>
+			<a id="showcustomer" href="php/showCustomer.php">View Transactions and Settings</a>
 	 	</div>
 
 
