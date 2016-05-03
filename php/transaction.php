@@ -44,20 +44,20 @@ include("../include/dbconn.php");
 	$sellerEmail = $_POST['sellerEmail'];
 	$bookISBN = $_POST['bookISBN'];
 
+	if ( isset( $_POST['button'] ) ){
+		$dbc = connectToDB();
+		$query = "UPDATE transaction SET receiver_id='$user' WHERE book_ibsn='$bookISBN'";
+		$result = performQuery($dbc, $query);
+		$row = mysqli_fetch_array($result,MYSQLI_NUM);
 
-	$dbc = connectToDB();
-	// $query = "UPDATE transaction SET receiver_id='$user' WHERE book_ibsn='$bookISBN'";
-	// $result = performQuery($dbc, $query);
-	// $row = mysqli_fetch_array($result,MYSQLI_NUM);
-
-	$subject = $bookName;
-	$receiver = $sellerEmail;
-	$message = "Your book has been requested by" . $user;
-	$message2 = "You requested a book from" . $sellerEmail;
-	mail($sellerEmail,$subject,$message);
-	mail($user,$subject,$message2);
-	@disconnect_from_db($dbc, $resultEmail );
-
+		$subject = $bookName;
+		$receiver = $sellerEmail;
+		$message = "Your book has been requested by" . $user;
+		$message2 = "You requested a book from" . $sellerEmail;
+		mail($sellerEmail,$subject,$message);
+		mail($user,$subject,$message2);
+		@disconnect_from_db($dbc, $resultEmail );
+	}
 	?>
 		<script type="text/javascript">
 			var res = "\
