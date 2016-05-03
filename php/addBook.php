@@ -48,11 +48,12 @@
 			        <select name="condition" class="form-control" id="condition" required>
 				        <option value="" disabled selected>Book Condition</option>
 				        <option value="new">New</option>
-				        <option value="used - Like new">Used - Like New</option>
+				        <option value="used- Like new">Used - Like New</option>
 				        <option value="used - minor damage">Used - Minor Damage</option>
 				        <option value="used - damaged">Used - Damaged</option>
 			        </select>					
         			<input type="text" name="price" id="price" class="form-control" placeholder="Book Price ($)" required>
+        			<input type="hidden" name="image" id="image" class="form-control" placeholder="Book Image">	
 				</div>
 		        <button class="btn btn-md btn-primary btn-block" id="reset" type="submit" onsubmit="true">Add Book</button>
 	        </form>

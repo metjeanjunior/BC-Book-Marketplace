@@ -12,8 +12,9 @@ function fillForm()
 					    We found a bookmatch for the ISBN you provided!\
 					</div>";
 				$("#standby").html(res);		
-				$("input[name=book-name]").val(data.items[0].volumeInfo.title);		
-				$("textarea#description").val(data.items[0].volumeInfo.description);	
+				$("input[name=book-name]").val(data.items[0].volumeInfo.title);
+				$("textarea#description").val(data.items[0].volumeInfo.description);
+				$("input[name=image]").val(data.items[0].volumeInfo.imageLinks.thumbnail);
 			}, 0);
 
 			// $.each(data, function(i,info)
