@@ -80,7 +80,7 @@
                 var newDiv = "\
                     <div class=\"item  col-xs-4 col-lg-4\">\
                     <div class=\"thumbnail\">\
-                        <img class=\"group list-group-image\" src=\"http://placehold.it/400x250/000/fff\"/>\
+                        <img class=\"group list-group-image\" src=\""+ info.book_image +"\"/>\
                         <div class=\"caption\">\
                             <h4 class=\"group inner list-group-item-heading\">\
                                 "+ info.book_name + "-" + info.book_ibsn +"</h4> \
