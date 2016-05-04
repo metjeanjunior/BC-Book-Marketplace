@@ -52,6 +52,7 @@
 			        </select>
         			<input type="text" name="price" id="price" class="form-control" placeholder="Book Price ($)" required>
         			<input type="hidden" name="image" id="image" class="form-control" placeholder="Book Image">
+        			<input type="hidden" name="user" class="form-control" placeholder="Book Image" value="<?php echo $_COOKIE['loginCookieUser']?>">
 				</div>
 		        <button class="btn btn-md btn-primary btn-block" id="reset" type="submit" onsubmit="true">Add Book</button>
 	        </form>

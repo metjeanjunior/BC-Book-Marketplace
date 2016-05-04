@@ -3,7 +3,8 @@
 	include '../include/forceLogin.php';
 
 	$dbc = connect_to_db("metelusj");
-	$result = perform_query($dbc, "SELECT * from transaction");
+	$query = "SELECT * from transaction where sender_id like '%".$_COOKIE['loginCookieUser']."%' or receiver_id like '%".$_COOKIE['loginCookieUser']."%'";
+	$result = perform_query($dbc, $query);
 ?>
 
 <!DOCTYPE html>
