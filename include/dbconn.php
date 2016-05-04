@@ -17,7 +17,7 @@ function perform_query( $dbc, $query ){
 
 	//echo "My query is >$query< <br />";
 	$result = mysqli_query($dbc, $query) or
-			die( "bad query".mysqli_error( $dbc ) );
+			die( "bad query".mysqli_error( $dbc )."for the following:".$query );
 	return $result;
 }
 

@@ -3,9 +3,17 @@
 	include '../include/forceLogin.php';
 
 	$dbc = connect_to_db("metelusj");
-	// $query = "SELECT * from transaction where sender_id like '%".$_COOKIE['loginCookieUser']."%' or receiver_id like '%".$_COOKIE['loginCookieUser']."%'";
-	$query = "SELECT * from transaction";
+
+	$query  = "SELECT customer_id from customer where customer_email = '".$_COOKIE['loginCookieUser']."'";
 	$result = perform_query($dbc, $query);
+	$result = mysqli_fetch_row($result);
+	$senderID = $result[0];
+	echo $senderID;
+
+	// $query = "SELECT * from transaction";
+	$query = "SELECT * from transaction where sender_id = $senderID or receiver_id = $senderID";
+	$result = perform_query($dbc, $query);
+	// echo json_encode($result->fetch_assoc());
 ?>
 
 <!DOCTYPE html>
@@ -56,10 +64,17 @@
 							$email = mysqli_fetch_row($result2);
 							$sendEmail = $email[0];
 
-							$query = "Select customer_email from customer where customer_id = ".$row['receiver_id'];
-							$result2 = perform_query($dbc, $query);
-							$recEmail = mysqli_fetch_row($result2);
-							$recEmail = $recEmail[0];
+							if(is_null($row['receiver_id']))
+							{
+								$recEmail = '-';
+							}
+							else
+							{
+								$query = "Select customer_email from customer where customer_id = ".$row['receiver_id'];
+								$result2 = perform_query($dbc, $query);
+								$recEmail = mysqli_fetch_row($result2);
+								$recEmail = $recEmail[0];
+							}
 
 							$query = "Select book_id, book_name from book where seller_id = ".$row['sender_id']. " and book_ibsn = '".$row['book_ibsn']."' ";
 							// echo $query;

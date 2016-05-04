@@ -4,5 +4,5 @@
 		$selfLink = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 		header('Location: login.php?notLogged=true&redirect='.$selfLink);
 	}
-	else
-		echo $_COOKIE['loginCookieUser'];
+	// else
+	// 	echo $_COOKIE['loginCookieUser'];
