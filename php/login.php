@@ -64,7 +64,6 @@
 						    Please do so and try again.
 						</div>
 						<?php
-						echo $_GET['redirect'];
 					}
 					elseif (isset($_GET['success-pass-change']) and $_GET['success-pass-change'] == true)
 					{
