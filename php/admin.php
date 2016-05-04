@@ -1,6 +1,8 @@
 <?php
-include("../include/dbconn.php");
+  include("../include/dbconn.php");
+  include '../include/forceLogin.php';
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>

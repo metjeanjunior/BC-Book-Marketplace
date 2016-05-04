@@ -1,5 +1,6 @@
 <?php
-include("../include/dbconn.php");
+	include("../include/dbconn.php");
+	include '../include/forceLogin.php';
 ?>
 <!-- Inspired by: http://bootsnipp.com/snippets/featured/search-results -->
 <!DOCTYPE html>

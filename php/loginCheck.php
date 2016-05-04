@@ -1,6 +1,11 @@
 <?php
 	if (isset($_COOKIE['loginCookieUser']))
-		header("Location: ".$_GET['redirect']);
+	{
+		if (isset($_GET['redirect']))
+			header("Location: ".$_GET['redirect']);
+		else
+			header("Location: showCustomer.php");
+	}
 	if ( 0 == checklogin( $_POST['login-email'], $_POST['login-password']))
 	{
 		header("Location: login.php?badInfo=true");
@@ -13,11 +18,11 @@
 	{ 		
 		// Store the login information in cookies	
 		if (isset($_POST['remember']))
-			setcookie("loginCookieUser", "null", time() + (365 * 24 * 60 * 60));
+			setcookie("loginCookieUser", $_POST['login-email'], time() + (365 * 24 * 60 * 60));
 		else
-			setcookie("loginCookieUser", "null", 900);
+			setcookie("loginCookieUser", $_POST['login-email'], time() + 900);
 
-		// $_COOKIE['loginCookieUser']=
+		$_COOKIE['loginCookieUser']= $_POST['login-email'];
 		// echo "JUst set a cookie";
 		// foreach ($_COOKIE as $key=>$value)
 		// 	echo "\$_COOKIE['$key'] = $value<br />";

@@ -1,9 +1,9 @@
 <?php
-include ('../include/dbconn.php');
-$dbc = connect_to_db("metelusj");
+	include ('../include/dbconn.php');
+	include '../include/forceLogin.php';
 
-$result = perform_query($dbc, "SELECT * from transaction");
-
+	$dbc = connect_to_db("metelusj");
+	$result = perform_query($dbc, "SELECT * from transaction");
 ?>
 
 <!DOCTYPE html>
