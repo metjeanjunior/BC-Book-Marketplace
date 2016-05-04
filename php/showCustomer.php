@@ -8,7 +8,6 @@
 	$result = perform_query($dbc, $query);
 	$result = mysqli_fetch_row($result);
 	$senderID = $result[0];
-	echo $senderID;
 
 	// $query = "SELECT * from transaction";
 	$query = "SELECT * from transaction where sender_id = $senderID or receiver_id = $senderID";
@@ -175,15 +174,16 @@
 				<div class="col-md-4 col-md-offset-4" id="update-password-div" hidden="hidden">
 					<div class="panel-body">
 						<div class="text-center">
-							<form id="forgot-form" method="get" method="post" action="forgotPass.php" onsubmit="">
+							<form id="forgot-form" method="post" method="post" action="updatePass.php" onsubmit="">
 								<h3><i class="fa fa-lock fa-4x"></i></h3>
 								<h2 class="text-center">Dont like your old Password?</h2>
-								<p>You can reset your password here.</p>
+								<p>You can change it password here.</p>
 								<div class="form-group">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
 										<input type="email" name="old-password" id="old-password" class="form-control" placeholder="Old Password" required autofocus><br>
 										<input type="email" name="new-password" id="new-password" class="form-control" placeholder="New Password" required autofocus><br>
+										<input type="hidden" name="user" class="form-control" placeholder="Book Image" value="<?php echo $_COOKIE['loginCookieUser']?>">
 									</div>
 								</div>
 								<div class="form-group">

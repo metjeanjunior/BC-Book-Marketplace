@@ -36,7 +36,7 @@
 		        <input type="password" name="login-password" id="login-password" class="form-control" placeholder="Password" required>
 
 				<?php
-					if (isset($_GET['badInfo']) and $_GET['badInfo'] = true)
+					if (isset($_GET['badInfo']) and $_GET['badInfo'] == true)
 					{
 						?>
 						<div class="alert alert-danger fade in">
@@ -45,7 +45,7 @@
 						</div>
 						<?php
 					}
-					elseif (isset($_GET['error']) and $_GET['error'] = true)
+					elseif (isset($_GET['error']) and $_GET['error'] == true)
 					{
 						?>
 						<div class="alert alert-danger fade in">
@@ -55,7 +55,7 @@
 						</div>
 						<?php
 					}
-					elseif (isset($_GET['notLogged']) and $_GET['notLogged'] = true)
+					elseif (isset($_GET['notLogged']) and $_GET['notLogged'] == true)
 					{
 						?>
 						<div class="alert alert-danger fade in">
@@ -66,6 +66,26 @@
 						<?php
 						echo $_GET['redirect'];
 					}
+					elseif (isset($_GET['success-pass-change']) and $_GET['success-pass-change'] == true)
+					{
+						?>
+						<div class="alert alert-success fade in">
+						    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						    <strong>Success!</strong>
+						    Your password change was sucessfully processed. Please sign in using your new credetials.
+						</div>
+						<?php
+					}
+					elseif (isset($_GET['success-email-change']) and $_GET['success-email-change'] == true)
+					{
+						?>
+						<div class="alert alert-success fade in">
+						    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						    <strong>Success!</strong>
+						    Your email change was sucessfully processed. Please sign in using your new credetials.
+						</div>
+						<?php
+					}
 				?>
 
 		        <div class="checkbox" id="remember">
@@ -75,7 +95,7 @@
 		        </div>
 
 		        <?php
-		        	if (isset($_GET['redirect']) and $_GET['redirect'] = true)
+		        	if (isset($_GET['redirect']) and $_GET['redirect'] == true)
 		        	{
 		        		?>
 		        		<input type="text" hidden="hidden" name="redirect" value="<?php $_GET['redirect']?>">
@@ -115,7 +135,7 @@
 
 						<div class="alert alert-danger fade in" id="emailErr" hidden="hidden">
 							<?php
-								if (isset($_GET['success-forgot-email']) and $_GET['success-forgot-email'] = true)
+								if (isset($_GET['success-forgot-email']) and $_GET['success-forgot-email'] == true)
 								{
 									?>
 									<div class="alert alert-success fade in">
@@ -126,7 +146,7 @@
 									<?php
 									echo $_GET['redirect'];
 								}
-								elseif (isset($_GET['bad-forgot-email']) and $_GET['bad-forgot-email'] = true)
+								elseif (isset($_GET['bad-forgot-email']) and $_GET['bad-forgot-email'] == true)
 								{
 									?>
 									<div class="alert alert-danger fade in">
@@ -213,7 +233,7 @@
 			</div>
 			<div class="alert alert-danger fade in" id="emailErr" hidden="hidden">
 				<?php
-					if (isset($_GET['success-signup']) and $_GET['success-signup'] = true)
+					if (isset($_GET['success-signup']) and $_GET['success-signup'] == true)
 					{
 						?>
 						<div class="alert alert-success fade in">
@@ -224,7 +244,7 @@
 						<?php
 						echo $_GET['redirect'];
 					}
-					elseif (isset($_GET['bad-signup-username']) and $_GET['bad-signup-username'] = true)
+					elseif (isset($_GET['bad-signup-username']) and $_GET['bad-signup-username'] == true)
 					{
 						?>
 						<div class="alert alert-danger fade in">
@@ -235,7 +255,7 @@
 						<?php
 						echo $_GET['redirect'];
 					}
-					elseif (isset($_GET['bad-signup-email']) and $_GET['bad-signup-email'] = true)
+					elseif (isset($_GET['bad-signup-email']) and $_GET['bad-signup-email'] == true)
 					{
 						?>
 						<div class="alert alert-danger fade in">

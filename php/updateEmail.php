@@ -40,7 +40,8 @@
 				$subject = 'Email Update from bc book swap';
 				$body = "Dear valued customer,\n You recently updated your email. Please find use this email address below from now on.\n $currentemail";
 				mail($to, $subject, $body);
-				header("Location: showCustomer.php?success-current-email=true");
+				$selfLink = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+				header("Location: login.php?success-email-change=true?redirect=$selfLink");
 			}
 
 		}
