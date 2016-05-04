@@ -35,16 +35,15 @@ include("../include/dbconn.php");
 </html>
 <?php
 
-	// if(isset($_COOKIE['loginCookieUser'])) {
-	// 	$user = $_COOKIE['loginCookieUser'];
-	// }
-
-	$user =
+	$user = "";
 	$bookName = $_POST['bookName'];
 	$sellerEmail = $_POST['sellerEmail'];
 	$bookISBN = $_POST['bookISBN'];
 
 	if ( isset( $_POST['button'] ) ){
+		if(isset($_COOKIE['loginCookieUser'])) {
+			 $user = $_COOKIE['loginCookieUser'];
+		}
 		$dbc = connectToDB();
 		$query = "UPDATE transaction SET receiver_id='$user' WHERE book_ibsn='$bookISBN'";
 		$result = performQuery($dbc, $query);

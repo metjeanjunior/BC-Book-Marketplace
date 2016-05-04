@@ -14,7 +14,7 @@
 		But we are under construction
 		Here is something to keep you happy until launch :)</marquee><br>
 	<div id="logo">Thank you for submitting a book. A buyer will get back to you shortly.</div>
-	
+
 	</body>
 
 <?php
@@ -27,27 +27,37 @@
 	$price = round($price, 2);
 	$image = mysql_escape_string($_POST['image']);
 
-	$query = "INSERT into book (book_ibsn, book_name, book_description, book_price, book_condition, book_date_added, book_image) values 
+	$query = "INSERT into book (book_ibsn, book_name, book_description, book_price, book_condition, book_date_added, book_image) values
 			('$bookibsn', '$bookname', '$description', $price, '$condition', now(), '$image')";
 	performQuery($dbc, $query);
+	if(isset($_COOKIE['loginCookieUser'])){
+		$query = "select customer_id from customer where customer_email = '$_COOKIE['loginCookieUser']'";
+		$result = performQuery($dbc, $query);
+		$row = mysqli_fetch_array($result,MYSQLI_NUM);
+		$senderID = $row[0];
+
+		$query = "INSERT into transaction (sender_id, book_ibsn, transaction_price, transaction_date) values
+				('$senderID','$bookibsn', $price, now())";
+		performQuery($dbc, $query);
+	}
 
 	/*
 	if ( 0 == checklogin( $_POST['login-email'], $_POST['login-password']))
 	{
 		header("Location: login.php?badInfo=true");
-	} 
+	}
 	elseif ( -1 == checklogin( $_POST['login-email'], $_POST['login-password']))
-	{	
+	{
 		header("Location: login.php?error=true&redirect=".$_POST['redirect']);
 	}
-	else 
-	{ 
-	 
+	else
+	{
+
 	// Note: We currently don't have any sessions set up - at all. So there's no way to do login checks without them.
 	// Our code should probably "include[session.php]" or something like that; have a designated session.php file that checks whether the user is logged in
 
-		
-		// Store the login information in cookies	
+
+		// Store the login information in cookies
 		if (isset($_POST['remember']))
 			setcookie('loginCookieUser', $_POST['name'], time() + 900);
 	  	header("Location: ../index.php");
@@ -61,7 +71,7 @@
 		if ($dbc == 'bad')
 			return -1;
 		$encodepw = sha1($passwd);
-		$result = performQuery($dbc, 
+		$result = performQuery($dbc,
 			"select * FROM customer where customer_email='$name' and customer_password='$encodepw'");
 		$matches = mysqli_num_rows($result);
 		mysqli_free_result($result);
@@ -86,7 +96,7 @@
 
 	function performQuery($dbc, $query)
 	{
-		//echo "My query is >$query< <br />";	
+		//echo "My query is >$query< <br />";
 		$result = mysqli_query($dbc, $query) or die("bad query".mysqli_error($dbc));
 		return ($result);
 	}
