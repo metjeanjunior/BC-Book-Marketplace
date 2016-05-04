@@ -17,15 +17,15 @@
 		else
 			setcookie("loginCookieUser", "null", 900);
 
-		echo $_COOKIE['loginCookieUser'];
-		echo "JUst set a cookie";
-		foreach ($_COOKIE as $key=>$value)
-			echo "\$_COOKIE['$key'] = $value<br />";
-		// if(isset($_GET['redirect']))
-		// 	header("Location: ".$_GET['redirect']);
+		// $_COOKIE['loginCookieUser']=
+		// echo "JUst set a cookie";
+		// foreach ($_COOKIE as $key=>$value)
+		// 	echo "\$_COOKIE['$key'] = $value<br />";
+		if(isset($_GET['redirect']))
+			header("Location: ".$_GET['redirect']);
+		else
+		  	header("Location: ../index.php");
 		// echo $_GET['redirect'];
-		// else
-		//   	header("Location: ../index.php");
 	}
 	// checklogin sees if an entry exists with the name password pair passed.
 	// returns true if so, false otherwise.
