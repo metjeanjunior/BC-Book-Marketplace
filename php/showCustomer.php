@@ -181,8 +181,8 @@
 								<div class="form-group">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-										<input type="email" name="old-password" id="old-password" class="form-control" placeholder="Old Password" required autofocus><br>
-										<input type="email" name="new-password" id="new-password" class="form-control" placeholder="New Password" required autofocus><br>
+										<input type="password" name="old-password" id="old-password" class="form-control" placeholder="Old Password" required autofocus><br>
+										<input type="password" name="new-password" id="new-password" class="form-control" placeholder="New Password" required autofocus><br>
 										<input type="hidden" name="user" class="form-control" placeholder="Book Image" value="<?php echo $_COOKIE['loginCookieUser']?>">
 									</div>
 								</div>
