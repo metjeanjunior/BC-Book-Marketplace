@@ -32,7 +32,9 @@
 
 	$query  = "SELECT customer_id from customer where customer_email = '$senderID'";
 	$result = performQuery($dbc, $query);
-	
+	$result = mysqli_fetch_row($result);
+	$senderID = $result[0];
+
 	if($image == '')
 		$query = "INSERT into book (seller_id, book_ibsn, book_name, book_description, book_price, book_condition, book_date_added) values
 				('$senderID', '$bookibsn', '$bookname', '$description', $price, '$condition', now())";
@@ -40,12 +42,12 @@
 		$query = "INSERT into book (seller_id, book_ibsn, book_name, book_description, book_price, book_condition, book_date_added, book_image) values
 				('$senderID', $bookibsn', '$bookname', '$description', $price, '$condition', now(), '$image')";
 	
-	echo $query;
+	// echo $query;
 	performQuery($dbc, $query);
 
 	$query = "INSERT into transaction (sender_id, book_ibsn, transaction_price, transaction_date) values
 				('$senderID','$bookibsn', $price, now())";
-	echo $query;
+	// echo $query;
 	performQuery($dbc, $query);
 
 	function connectToDB()
