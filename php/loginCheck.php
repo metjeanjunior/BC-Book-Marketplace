@@ -8,7 +8,10 @@
 	}
 	if ( 0 == checklogin( $_POST['login-email'], $_POST['login-password']))
 	{
-		header("Location: login.php?badInfo=true");
+		if (isset($_GET['redirect']))
+			header("Location: login.php?badInfo=true&redirect=".$_GET['redirect']);
+		else
+			header("Location: login.php?badInfo=true");
 	} 
 	elseif ( -1 == checklogin( $_POST['login-email'], $_POST['login-password']))
 	{	
