@@ -22,6 +22,9 @@ $result = perform_query($dbc, "SELECT * from transaction");
         But we are under construction
         Here is something to keep you happy until launch :)
         </marquee>
+        <div>
+			<a  href="../index.php">Home</a>
+		</div>
         <div class="container">
             <div class="centerstuff">
                 <h2>Customer Portal</h2>
@@ -42,8 +45,8 @@ $result = perform_query($dbc, "SELECT * from transaction");
                     </tr>
                 </thead>
                 <tbody>
-                <?php 
-                    while($row = $result->fetch_assoc()) { 
+                <?php
+                    while($row = $result->fetch_assoc()) {
                 ?>
                     <tr>
                         <td><?php echo $row['transaction_id']; ?></td>
@@ -54,8 +57,8 @@ $result = perform_query($dbc, "SELECT * from transaction");
                         <td><?php echo $row['transaction_type']; ?></td>
                         <td><?php echo $row['transaction_date']; ?></td>
                     </tr>
-                <?php 
-                } 
+                <?php
+                }
                 ?>
                 </tbody>
             </table>
@@ -75,7 +78,7 @@ $result = perform_query($dbc, "SELECT * from transaction");
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
                                     <label for="current-email" class="sr-only">Current Email address</label>
-                                    <input type="email" name="current-email" id="current-email" class="form-control" placeholder="New Email address" required autofocus>    
+                                    <input type="email" name="current-email" id="current-email" class="form-control" placeholder="New Email address" required autofocus>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -83,7 +86,7 @@ $result = perform_query($dbc, "SELECT * from transaction");
                             </div>
                         </form>
                             <?php
-                                if (isset($_GET['success-current-email']) and $_GET['success-current-email'] = true) 
+                                if (isset($_GET['success-current-email']) and $_GET['success-current-email'] = true)
                                 {
                                     ?>
                                     <div class="alert alert-success fade in">
@@ -94,7 +97,7 @@ $result = perform_query($dbc, "SELECT * from transaction");
                                     <?php
                                     // echo $_GET['redirect'];
                                 }
-                                elseif (isset($_GET['bad-old-email']) and $_GET['bad-old-email'] = true) 
+                                elseif (isset($_GET['bad-old-email']) and $_GET['bad-old-email'] = true)
                                 {
                                     ?>
                                     <div class="alert alert-danger fade in">

@@ -21,7 +21,9 @@
 		<marquee>Thanks for visiting so soon!
 		But we are under construction
 		Here is something to keep you happy until launch :)</marquee><br>
-
+	<div>
+		<a  href="../index.php">Home</a>
+	</div>
 		<div class="container">
 			<form class="form-signin" id="add-book-form" method="post" action="addBookForm.php">
 				<h2 class="form-signin-heading">Add a new book</h2>
@@ -33,7 +35,7 @@
 						<div class="col-sm-10">
 							<label for="book-ibsn" class="sr-only">Fill out ISBN</label>
 							<input type="text" name="book-ibsn" id="book-ibsn" class="form-control" placeholder="Book ISBN" autofocus><br>
-							
+
 						</div>
 						<div class="col-sm-2">
 					        <button class="btn btn-success" id="autofill-book-button" type="button" id="forgot-login" onclick="fillForm();">Go!</button>
@@ -51,9 +53,9 @@
 				        <option value="used- Like new">Used - Like New</option>
 				        <option value="used - minor damage">Used - Minor Damage</option>
 				        <option value="used - damaged">Used - Damaged</option>
-			        </select>					
+			        </select>
         			<input type="text" name="price" id="price" class="form-control" placeholder="Book Price ($)" required>
-        			<input type="hidden" name="image" id="image" class="form-control" placeholder="Book Image">	
+        			<input type="hidden" name="image" id="image" class="form-control" placeholder="Book Image">
 				</div>
 		        <button class="btn btn-md btn-primary btn-block" id="reset" type="submit" onsubmit="true">Add Book</button>
 	        </form>

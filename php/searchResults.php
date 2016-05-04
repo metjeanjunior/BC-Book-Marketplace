@@ -16,19 +16,21 @@
         <marquee>Thanks for visiting so soon!
         But we are under construction
         Here is something to keep you happy until launch :)</marquee><br>
-
+	<div>
+		<a  href="../index.php">Home</a>
+	</div>
         <div class="container">
             <div class="row">
                 <form method="get" action="searchResults.php">
                     <div class="col-sm-6 col-sm-offset-3">
-                        <div id="imaginary_container"> 
+                        <div id="imaginary_container">
                             <div class="input-group stylish-input-group">
-                                <input type="text" class="form-control"  placeholder="Search" 
+                                <input type="text" class="form-control"  placeholder="Search"
                                     name="search-bar" id="search-bar-1" onkeyup="search(this.value)">
                                 <span class="input-group-addon">
                                     <button type="submit" onclick="">
                                         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                    </button>  
+                                    </button>
                                 </span>
                             </div>
                         </div>
@@ -45,13 +47,13 @@
                     </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
                         class="glyphicon glyphicon-th"></span>Grid</a>
                 </div>
-                
+
                 <script type="text/javascript">
                     $("#list").click();
                 </script>
             </div>
             <div id="products" class="row list-group">
-                
+
             </div>
         </div>
     </body>
@@ -61,7 +63,7 @@
     $dbc = connectToDB();
     if ($dbc == 'bad')
         header("Location: login.php?error=true&redirect=".$_POST['redirect']);
-    $query = "select * from book where book_name like '%$tofind%' or book_description like '%$tofind%' 
+    $query = "select * from book where book_name like '%$tofind%' or book_description like '%$tofind%'
         or book_ibsn like '%$tofind%'";
     $result = performQuery($dbc, $query);
     if (mysqli_num_rows($result) == 0)

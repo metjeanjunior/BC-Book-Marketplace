@@ -14,7 +14,9 @@
 		But we are under construction
 		Here is something to keep you happy until launch :)</marquee><br>
 	<div id="logo">Thank you for submitting a book. A buyer will get back to you shortly.</div>
-
+	<div>
+		<a  href="../index.php">Home</a>
+	</div>
 	</body>
 
 <?php

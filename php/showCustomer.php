@@ -25,6 +25,9 @@ $result = perform_query($dbc, "SELECT * from transaction");
 		But we are under construction
 		Here is something to keep you happy until launch :)
 		</marquee>
+		<div>
+			<a  href="../index.php">Home</a>
+		</div>
 		<div class="container">
 			<div class="centerstuff">
 				<h2>Customer Portal</h2>
@@ -44,8 +47,8 @@ $result = perform_query($dbc, "SELECT * from transaction");
 				    </div>
 				</div>
 				<div id="products" class="row list-group">
-					<?php 
-						while($row = $result->fetch_assoc()) { 
+					<?php
+						while($row = $result->fetch_assoc()) {
 							$query = "Select customer_email from customer where customer_id = ".$row['sender_id'];
 							$result2 = perform_query($dbc, $query);
 							$email = mysqli_fetch_row($result2);
@@ -69,7 +72,7 @@ $result = perform_query($dbc, "SELECT * from transaction");
 						    <div class="thumbnail">
 						        <div class="caption">
 						            <h4 class="group inner list-group-item-heading">
-						                <?php echo $bookInfoName."-".$row['book_ibsn']; ?></h4> 
+						                <?php echo $bookInfoName."-".$row['book_ibsn']; ?></h4>
 						            <p class="group inner list-group-item-text">
 						                On: <?php echo $row['transaction_date']; ?></p>
 						            <p>From: <?php echo $sendEmail; ?></p>
@@ -93,8 +96,8 @@ $result = perform_query($dbc, "SELECT * from transaction");
 						        </div>
 						    </div>
 						</div>
-					<?php 
-					} 
+					<?php
+					}
 					?>
 				</div>
 			</div>
@@ -116,7 +119,7 @@ $result = perform_query($dbc, "SELECT * from transaction");
 								<div class="input-group">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
 									<label for="current-email" class="sr-only">Current Email address</label>
-									<input type="email" name="current-email" id="current-email" class="form-control" placeholder="New Email address" required autofocus>	
+									<input type="email" name="current-email" id="current-email" class="form-control" placeholder="New Email address" required autofocus>
 								</div>
 							</div>
 							<div class="form-group">
@@ -124,7 +127,7 @@ $result = perform_query($dbc, "SELECT * from transaction");
 							</div>
 						</form>
 							<?php
-								if (isset($_GET['success-current-email']) and $_GET['success-current-email'] = true) 
+								if (isset($_GET['success-current-email']) and $_GET['success-current-email'] = true)
 								{
 									?>
 									<div class="alert alert-success fade in">
@@ -135,7 +138,7 @@ $result = perform_query($dbc, "SELECT * from transaction");
 									<?php
 									// echo $_GET['redirect'];
 								}
-								elseif (isset($_GET['bad-old-email']) and $_GET['bad-old-email'] = true) 
+								elseif (isset($_GET['bad-old-email']) and $_GET['bad-old-email'] = true)
 								{
 									?>
 									<div class="alert alert-danger fade in">
@@ -173,7 +176,7 @@ $result = perform_query($dbc, "SELECT * from transaction");
 
 							<div class="alert alert-danger fade in" id="emailErr" hidden="hidden">
 								<?php
-									if (isset($_GET['success-forgot-email']) and $_GET['success-forgot-email'] = true) 
+									if (isset($_GET['success-forgot-email']) and $_GET['success-forgot-email'] = true)
 									{
 										?>
 										<div class="alert alert-success fade in">
@@ -184,7 +187,7 @@ $result = perform_query($dbc, "SELECT * from transaction");
 										<?php
 										echo $_GET['redirect'];
 									}
-									elseif (isset($_GET['bad-forgot-email']) and $_GET['bad-forgot-email'] = true) 
+									elseif (isset($_GET['bad-forgot-email']) and $_GET['bad-forgot-email'] = true)
 									{
 										?>
 										<div class="alert alert-danger fade in">

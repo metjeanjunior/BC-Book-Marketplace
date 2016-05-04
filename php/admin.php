@@ -10,6 +10,9 @@ include("../include/dbconn.php");
 	<link rel="stylesheet" type="text/css" href="../css/admin.css" />
 </head>
 <body>
+	<div>
+		<a  href="../index.php">Home</a>
+	</div>
 	<div id="admin">Admin Page</div>
 <?php
 	if ( isset( $_POST['submitEmail'] ) )

@@ -18,7 +18,9 @@
 		<marquee>Thanks for visiting so soon!
 		But we are under construction
 		Here is something to keep you happy until launch :)</marquee><br>
-		
+		<div>
+			<a  href="../index.php">Home</a>
+		</div>
 		<div class="container" id="div-forms">
 			<?php
 				if(isset($_GET['redirect']))
@@ -34,7 +36,7 @@
 		        <input type="password" name="login-password" id="login-password" class="form-control" placeholder="Password" required>
 
 				<?php
-					if (isset($_GET['badInfo']) and $_GET['badInfo'] = true) 
+					if (isset($_GET['badInfo']) and $_GET['badInfo'] = true)
 					{
 						?>
 						<div class="alert alert-danger fade in">
@@ -43,7 +45,7 @@
 						</div>
 						<?php
 					}
-					elseif (isset($_GET['error']) and $_GET['error'] = true) 
+					elseif (isset($_GET['error']) and $_GET['error'] = true)
 					{
 						?>
 						<div class="alert alert-danger fade in">
@@ -53,7 +55,7 @@
 						</div>
 						<?php
 					}
-					elseif (isset($_GET['notLogged']) and $_GET['notLogged'] = true) 
+					elseif (isset($_GET['notLogged']) and $_GET['notLogged'] = true)
 					{
 						?>
 						<div class="alert alert-danger fade in">
@@ -72,7 +74,7 @@
 		          </label>
 		        </div>
 
-		        <?php 
+		        <?php
 		        	if (isset($_GET['redirect']) and $_GET['redirect'] = true)
 		        	{
 		        		?>
@@ -113,7 +115,7 @@
 
 						<div class="alert alert-danger fade in" id="emailErr" hidden="hidden">
 							<?php
-								if (isset($_GET['success-forgot-email']) and $_GET['success-forgot-email'] = true) 
+								if (isset($_GET['success-forgot-email']) and $_GET['success-forgot-email'] = true)
 								{
 									?>
 									<div class="alert alert-success fade in">
@@ -124,7 +126,7 @@
 									<?php
 									echo $_GET['redirect'];
 								}
-								elseif (isset($_GET['bad-forgot-email']) and $_GET['bad-forgot-email'] = true) 
+								elseif (isset($_GET['bad-forgot-email']) and $_GET['bad-forgot-email'] = true)
 								{
 									?>
 									<div class="alert alert-danger fade in">
@@ -145,56 +147,56 @@
 			<div class="container-fluid">
 				<form  id="register-form" method="post" action="signup.php" hidden="hidden">
 				    <section class="container">
-						<div class="container-page">				
+						<div class="container-page">
 							<div class="col-md-6">
 								<h3 class="dark-grey">Registration</h3>
-								
+
 								<div class="form-group col-lg-12">
 									<label for="signup-username" class="sr-only">Username</label>
 									<input type="text" name="signup-username" id="signup-username" class="form-control" placeholder="Username" required autofocus><br>
 								</div>
-												
+
 								<div class="form-group col-lg-6">
 									<label for="signup-email" class="sr-only">Email address</label>
 									<input type="email" name="signup-email" id="signup-email" class="form-control" placeholder="Email address" required autofocus><br>
 								</div>
-								
+
 								<div class="form-group col-lg-6">
 									<label for="signup-re-email" class="sr-only">Repeat Email Address</label>
 									<input type="email" id="signup-re-email" class="form-control" placeholder="Re-enter Email address" required autofocus><br>
-								</div>			
-								
+								</div>
+
 								<div class="form-group col-lg-6">
 									<label for="signup-password" class="sr-only">Password</label>
 							        <input type="password" name="signup-password" id="signup-password" class="form-control" placeholder="Password" required>
 								</div>
-								
+
 								<div class="form-group col-lg-6">
 									<label for="signup-re-password" class="sr-only">Repeat Password</label>
 							        <input type="password" id="signup-re-password" class="form-control" placeholder="Re-enter Password" required>
 								</div>
-								
+
 								<div class="col-sm-6">
 									<input type="checkbox" class="checkbox" />Sigh up for our newsletter
 								</div>
 
 								<div class="col-sm-6">
 									<input type="checkbox" class="checkbox" />Send notifications to this email
-								</div>				
-							
+								</div>
+
 							</div>
-						
+
 							<div class="col-md-6">
 								<h3 class="dark-grey">Terms and Conditions</h3>
 								<p>
-									By clicking on "Register", you understand that we do nothing more than connect 
+									By clicking on "Register", you understand that we do nothing more than connect
 									students togheter.
 								</p>
-								<p> 
-									We don not even host a payment option. 
+								<p>
+									We don not even host a payment option.
 								</p>
 								<p>
-									You also fully understand that should an issue arise with a transcation, we are neither responsible nor can we help in any way. 
+									You also fully understand that should an issue arise with a transcation, we are neither responsible nor can we help in any way.
 								</p>
 								<p>
 									If some of this does not make sense, feel free to reach out to us through
@@ -211,7 +213,7 @@
 			</div>
 			<div class="alert alert-danger fade in" id="emailErr" hidden="hidden">
 				<?php
-					if (isset($_GET['success-signup']) and $_GET['success-signup'] = true) 
+					if (isset($_GET['success-signup']) and $_GET['success-signup'] = true)
 					{
 						?>
 						<div class="alert alert-success fade in">
@@ -222,7 +224,7 @@
 						<?php
 						echo $_GET['redirect'];
 					}
-					elseif (isset($_GET['bad-signup-username']) and $_GET['bad-signup-username'] = true) 
+					elseif (isset($_GET['bad-signup-username']) and $_GET['bad-signup-username'] = true)
 					{
 						?>
 						<div class="alert alert-danger fade in">
@@ -233,7 +235,7 @@
 						<?php
 						echo $_GET['redirect'];
 					}
-					elseif (isset($_GET['bad-signup-email']) and $_GET['bad-signup-email'] = true) 
+					elseif (isset($_GET['bad-signup-email']) and $_GET['bad-signup-email'] = true)
 					{
 						?>
 						<div class="alert alert-danger fade in">
@@ -247,7 +249,7 @@
 				?>
 			</div>
 		</div>
-		
+
 		<footer class="panel-footer footer">
 		<!-- <footer class="footer"> -->
 	 	    <div class="container">
