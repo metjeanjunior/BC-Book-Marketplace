@@ -10,9 +10,11 @@
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="../css/global.css" />
 	<link rel="stylesheet" type="text/css" href="../css/admin.css" />
+  <script src="js/searchbar.js"></script>
 </head>
 <body>
 	<div>
+    <marquee id="quote"></marquee><br>
 		<a  href="../index.php">Home</a>
 	</div>
 	<div id="admin">Admin Page</div>

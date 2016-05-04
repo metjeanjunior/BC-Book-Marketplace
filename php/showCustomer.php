@@ -30,10 +30,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/viewRes.css">
 	</head>
 	<body>
-		<marquee>Thanks for visiting so soon!
-		But we are under construction
-		Here is something to keep you happy until launch :)
-		</marquee>
+		<marquee id="quote"></marquee><br>
 		<div>
 			<a  href="../index.php">Home</a>
 		</div>

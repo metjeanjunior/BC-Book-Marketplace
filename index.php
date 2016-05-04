@@ -11,9 +11,7 @@
 	</head>
 
 	<body>
-		<marquee>Thanks for visiting so soon!
-		But we are under construction
-		Here is something to keep you happy until launch :)</marquee><br>
+		<marquee id="quote"></marquee><br>
 
 		<div class="header">
 			<a id="login-ling" href="php/login.php">Login</a>
