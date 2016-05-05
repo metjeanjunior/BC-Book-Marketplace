@@ -14,6 +14,10 @@
   	header("Location: http://cscilab.bc.edu/~metelusj/marketplace/");
 ?>
 
+<?php
+// 
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,46 +55,62 @@
 <script type="text/javascript" src="../js/validate.js"> </script>
 <?php
 function displayEmailForm(){
+
+	$dbnameCus = "metelusj";
+	$dbcCus = @connect_to_db($dbnameCus);
+	$queryCus = "SELECT customer_email FROM customer";
+	$result = @perform_query($dbcCus, $queryCus);
+
+
 ?>
-<div>
+<div class="container">
 <br><br><br>
 <form name="emailF" class="form-horizontal" onsubmit="return validateEmail();" method="post">
-  <fieldset>
-    <legend><font color="white">Email a User</font></legend>
-    <div class="form-group">
-      <label for="inputSubject" class="col-lg-2 control-label">Subject</label>
-      <div class="col-lg-10">
-        <input type="text" class="form-control" name="subject" value="">
-      </div>
-      <style>#sEMSG{text-align:center;}</style>
-      <span id="sEMSG" class="warning"></span><br>
-    </div>
-    <div class="form-group">
-	  <label for="inputMessage" class="col-lg-2 control-label">Message</label>
-	  <div class="col-lg-10">
-	  	<textarea name="message" class="form-control" value="" rows="4" cols="50"></textarea>
-	  </div>
-	  <style>#mEMSG{text-align:center;}</style>
-	  <span id="mEMSG" class="warning"></span><br>
-    </div>
-    <div class="form-group">
-	  <label for="inputReceiver" class="col-lg-2 control-label">Receiver Email</label>
-	  <div class="col-lg-10">
-	    <input type="text" class="form-control" name="receiver" value="">
-	  </div>
-	  <style>#rEMSG{text-align:center;}</style>
-	  <span id="rEMSG" class="warning"></span><br>
-    </div>
-    <div class="form-group">
-      <div class="col-lg-10 col-lg-offset-2">
-      	<input type="submit" name="submitEmail" class="btn btn-primary" value="Submit" />
-      </div>
-    </div>
-  </fieldset>
-</form>
-</div>
+	<fieldset>
+    	<legend><font color="white">Email a User</font></legend>
+	    <div class="form-group">
+	      <label for="inputSubject" class="col-lg-2 control-label">Subject</label>
+	      <div class="col-lg-10">
+	        <input type="text" class="form-control" name="subject" value="">
+	      </div>
+	      <style>#sEMSG{text-align:center;}</style>
+	      <span id="sEMSG" class="warning"></span><br>
+	    </div>
+	    <div class="form-group">
+		  <label for="inputMessage" class="col-lg-2 control-label">Message</label>
+		  <div class="col-lg-10">
+		  	<textarea name="message" class="form-control" value="" rows="4" cols="50"></textarea>
+		  </div>
+		  <style>#mEMSG{text-align:center;}</style>
+		  <span id="mEMSG" class="warning"></span><br>
+	    </div>
+	    <div class="form-group">
+		  <label for="inputReceiver" class="col-lg-2 control-label">Receiver Email</label>
+		  <div class="col-lg-10">
+		  	<select class="form-control" name="receiver">
+		  		<option value="" disable selected>Select User Email</option>
+		  		<?php while($row = mysqli_fetch_assoc($result)) { ?>
+		  			<option value="<?php echo($row['customer_email'])?>"> <?php echo($row['customer_email'])?> </option> 
+		  		<?php
+		  		}
+		  		@disconnect_from_db($dbcCus, $result);
+		  		?>
+		  	</select>
+		  </div>
+		  <style>#rEMSG{text-align:center;}</style>
+		  <span id="rEMSG" class="warning"></span><br>
+	    </div>
+	    <div class="form-group">
+	      <div class="col-lg-10 col-lg-offset-2">
+	      	<input type="submit" name="submitEmail" class="btn btn-primary" value="Submit" />
+	      </div>
+	    </div>
+	  </fieldset>
+	</form>
+	</div>
 <?php
 }
+
 function handleEmailForm(){
 	$subject = $_POST['subject'];
 	$receiver = $_POST['receiver'];
@@ -101,18 +121,18 @@ function handleEmailForm(){
 	$dbc = @connect_to_db($dbname);
 	$resultEmail = @perform_query($dbc, $queryEmails);
 	$resultAdmin = @perform_query($dbc, $queryAdmins);
-	$row = @mysqli_fetch_array($resultEmail, MYSQLI_ASSOC);
-	$row = @mysqli_fetch_array($resultAdmin, MYSQLI_ASSOC);
-	$email = $row['customer_email'];
-	$admin = $row['admin_email'];
+	$row1 = @mysqli_fetch_array($resultEmail, MYSQLI_ASSOC);
+	$row2 = @mysqli_fetch_array($resultAdmin, MYSQLI_ASSOC);
+	$email = $row1['customer_email'];
+	$admin = $row2['admin_email'];
 	echo "$email $admin";
 	mail($email,$subject,$message);
 	mail($admin,$subject,$message);
 	@disconnect_from_db($dbc, $resultEmail );
 }
 function displayNewAdminForm(){
-?>
-<div>
+?>	
+<div class="container">
 <br><br><br>
 <form name="newAdmin" class="form-horizontal" onsubmit="return validateNewAdmin();" method="post">
   <fieldset>
@@ -156,8 +176,14 @@ function handleNewAdminForm(){
 	@disconnect_from_db($dbc, $result );
 }
 function displayRemoveBookForm(){
+	$dbnameRmBook = "metelusj";
+	$dbcRmBook = @connect_to_db($dbnameRmBook);
+	$queryRmBook = "SELECT book_name FROM book ORDER BY book_id ASC";
+	$result = @perform_query($dbcRmBook, $queryRmBook);
+
+
 ?>
-<div>
+<div class="container">
 <br><br><br>
 <form name="removeBook" class="form-horizontal" onsubmit="return validateRemoveBook();" method="post">
   <fieldset>
@@ -165,7 +191,15 @@ function displayRemoveBookForm(){
     <div class="form-group">
       <label for="inputBookName" class="col-lg-2 control-label">Book Name</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" name="bookName" value="">
+		<select class="form-control" name="bookName">
+			<option value="" disable selected>Select Book to Remove</option>
+			<?php while($row = mysqli_fetch_assoc($result)) { ?>
+				<option value="<?php echo($row['book_name'])?>"> <?php echo($row['book_name'])?> </option> 
+			<?php
+			}
+			@disconnect_from_db($dbcRmBook, $result);
+			?>
+		</select>
       </div>
       <style>#bMSG{text-align:center;}</style>
       <span id="bMSG" class="warning"></span><br>
@@ -190,8 +224,14 @@ function handleRemoveBookForm(){
 	@disconnect_from_db($dbc,$result);
 }
 function displayRemoveUserForm(){
+	$dbnameRmUser = "metelusj";
+	$dbcRmUser = @connect_to_db($dbnameRmUser);
+	$queryRmUser = "SELECT customer_email FROM customer";
+	$result = @perform_query($dbcRmUser, $queryRmUser);
+
+
 ?>
-<div>
+<div class="container">
 <br><br><br>
 <form name="removeUser" class="form-horizontal" onsubmit="return validateRemoveUser();" method="post">
   <fieldset>
@@ -199,7 +239,15 @@ function displayRemoveUserForm(){
     <div class="form-group">
       <label for="inputUserName" class="col-lg-2 control-label">User Email</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" name="userName" value="">
+		<select class="form-control" name="userName">
+			<option value="" disable selected>Select User to Remove</option>
+			<?php while($row = mysqli_fetch_assoc($result)) { ?>
+				<option value="<?php echo($row['customer_email'])?>"> <?php echo($row['customer_email'])?> </option> 
+			<?php
+			}
+			@disconnect_from_db($dbcRmUser, $result);
+			?>
+		</select>
       </div>
       <style>#uMSG{text-align:center;}</style>
       <span id="uMSG" class="warning"></span><br>
@@ -224,8 +272,14 @@ function handleRemoveUserForm(){
 	@disconnect_from_db($dbc, $result );
 }
 function displayRemoveAdminForm(){
+	$dbnameRmAdmin = "metelusj";
+	$dbcRmAdmin = @connect_to_db($dbnameRmAdmin);
+	$queryRmAdmin = "SELECT admin_email FROM admin";
+	$result = @perform_query($dbcRmAdmin, $queryRmAdmin);
+
+
 ?>
-<div>
+<div class="container">
 <br><br><br>
 <form name="removeAdmin" class="form-horizontal" onsubmit="return validateRemoveAdmin();" method="post">
   <fieldset>
@@ -233,7 +287,15 @@ function displayRemoveAdminForm(){
     <div class="form-group">
       <label for="inputAName" class="col-lg-2 control-label">Admin Email</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" name="aUsername" value="">
+		<select class="form-control" name="aUsername">
+			<option value="" disable selected>Select Admin to Remove</option>
+			<?php while($row = mysqli_fetch_assoc($result)) { ?>
+				<option value="<?php echo($row['admin_email'])?>"> <?php echo($row['admin_email'])?> </option> 
+			<?php
+			}
+			@disconnect_from_db($dbcRmAdmin, $result);
+			?>
+		</select>
       </div>
       <style>#aMSG{text-align:center;}</style>
       <span id="aMSG" class="warning"></span><br>
