@@ -40,8 +40,8 @@
 				('$senderID', '$bookibsn', '$bookname', '$description', $price, '$condition', now())";
 	else
 		$query = "INSERT into book (seller_id, book_ibsn, book_name, book_description, book_price, book_condition, book_date_added, book_image) values
-				('$senderID', $bookibsn', '$bookname', '$description', $price, '$condition', now(), '$image')";
-	
+				('$senderID', '$bookibsn', '$bookname', '$description', $price, '$condition', now(), '$image')";
+
 	// echo $query;
 	performQuery($dbc, $query);
 
