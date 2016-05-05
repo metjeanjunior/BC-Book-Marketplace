@@ -62,7 +62,7 @@
     if ($dbc == 'bad')
         header("Location: login.php?error=true&redirect=".$_POST['redirect']);
     $query = "select * from book where book_name like '%$tofind%' or book_description like '%$tofind%'
-        or book_ibsn like '%$tofind%'";
+        or book_ibsn like '%$tofind%' ORDER by book_id ASC";
     $result = performQuery($dbc, $query);
     if (mysqli_num_rows($result) == 0)
     {
