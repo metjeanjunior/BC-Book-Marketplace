@@ -33,7 +33,6 @@
 	</body>
 </html>
 <?php
-
 	$user = "";
 	$bookName = $_POST['bookName'];
 	$sellerEmail = $_POST['sellerEmail'];
@@ -59,6 +58,22 @@
 		mail($sellerEmail,$subject,$message);
 		mail($user,$subject,$message2);
 		@disconnect_from_db($dbc, $resultEmail );
+	}
+	else{
+		$bookID = $_POST['bookID'];
+		$dbc = connectToDB();
+		if ($dbc == 'bad')
+			header("Location: viewBook.php?error=true");
+		$query = "select * from book where book_id = '$bookID'";
+		$result = performQuery($dbc, $query);
+		$row = mysqli_fetch_array($result,MYSQLI_NUM);
+		$bookSellerID = $row[5];
+		$bookName = $row[2];
+		$bookISBN = $row[1];
+		$query = "select * from customer where customer_id = '$bookSellerID'";
+		$result = performQuery($dbc, $query);
+		$row = mysqli_fetch_array($result,MYSQLI_NUM);
+		$sellerEmail = $row[3];
 	}
 	?>
 		<script type="text/javascript">

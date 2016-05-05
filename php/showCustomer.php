@@ -101,7 +101,7 @@
 						                        <input type="submit" class="btn btn-success" value="View Book">
 						                    </form>
 						                    <form method="post" action="transaction.php">
-						                        <input type="text" name="bookID" value=""+ <?php echo $row['transaction_id'] ?> +"" hidden="hidden">
+						                        <input type="text" name="bookID" value="<?php echo $bookInfoID ?>" hidden="hidden">
 						                        <input type="submit" class="btn btn-success" value="View Transaction">
 						                    </form>
 						                </div>
