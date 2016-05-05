@@ -1,6 +1,17 @@
 <?php
   include("../include/dbconn.php");
   include '../include/forceLogin.php';
+
+  $user = $_COOKIE['loginCookieUser'];
+  $admin = "";
+  $query = "SELECT admin_email FROM admin WHERE admin_email = '$user';";
+  $dbname = "metelusj";
+  $dbc = @connect_to_db($dbname);
+  $result = @perform_query($dbc, $query);
+  $row = @mysqli_fetch_array($result, MYSQLI_ASSOC);
+  $admin = $row['admin_email'];
+  if($admin != $user)
+  	header("Location: http://cscilab.bc.edu/~metelusj/marketplace/");
 ?>
 
 <!DOCTYPE html>
