@@ -39,12 +39,16 @@
 	$sellerEmail = $_POST['sellerEmail'];
 	$bookISBN = $_POST['bookISBN'];
 
-	if ( isset( $_POST['button'] ) ){
+	if ( isset( $_POST['perform'] ) ){
 		if(isset($_COOKIE['loginCookieUser'])) {
 			 $user = $_COOKIE['loginCookieUser'];
 		}
 		$dbc = connectToDB();
-		$query = "UPDATE transaction SET receiver_id='$user' WHERE book_ibsn='$bookISBN'";
+		$query = "select * from customer where customer_email = '$user'";
+		$result = performQuery($dbc, $query);
+		$row = mysqli_fetch_array($result,MYSQLI_NUM);
+		$buyerID = $row[0];
+		$query = "UPDATE transaction SET receiver_id='$buyerID' WHERE book_ibsn='$bookISBN'";
 		$result = performQuery($dbc, $query);
 		$row = mysqli_fetch_array($result,MYSQLI_NUM);
 

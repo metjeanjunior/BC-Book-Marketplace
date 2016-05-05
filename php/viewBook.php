@@ -85,7 +85,7 @@ include("../include/dbconn.php");
 	  	<input type="text" name="bookDate" value="<?php echo $bookDate; ?>" hidden="hidden">
 	  	<input type="text" name="bookName" value="<?php echo $bookName; ?>" hidden="hidden">
 
-	   	<input type="submit" class="btn btn-primary btn-lg" value="Perform Transaction">
+	   	<input type="submit" name="perform" class="btn btn-primary btn-lg" value="Perform Transaction">
       </form>
 	</div>
 	<?php
